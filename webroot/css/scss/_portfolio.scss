@@ -1,0 +1,18 @@
+.portfolio-header {
+
+	.container-fluid {
+		width: 90%;
+	}
+	margin-top: 50px;
+	font-family: $secondary--font;
+
+	.profile-image {
+		background: transparent url('../../img/profile.jpg') no-repeat;
+		background-size: 375px;
+		background-position: center top;
+		height: 175px;
+		width: 190px;
+		border-radius: 50%;
+	}
+
+}

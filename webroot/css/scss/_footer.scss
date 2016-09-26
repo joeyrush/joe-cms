@@ -1,0 +1,29 @@
+footer {
+	border-top: 6px solid rgba(92,92,108, 1);
+	position:relative;
+	bottom: 0px;
+	left: 0;
+	background-image: linear-gradient(to bottom, rgba(92, 92, 108, 0.7), rgba(92, 92, 108, 0.7)), url('../../img/buildings.jpg');
+	background-repeat: no-repeat;
+	background-size: 100% auto;
+	background-position: center bottom;
+	color: white;
+	p {
+		font-style: italic;
+		font-size: 1rem;
+		font-family: $secondary--font;
+	}
+	p, i {
+		padding-top: 20px;
+	}
+
+	a {
+		color: white;
+		font-size: 2rem;
+		margin-right: 8px;
+
+		&:hover {
+			color: lighten($primary--colour, 20%);
+		}
+	}
+}

@@ -1,0 +1,18 @@
+<footer>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-6">
+				<div class="text-md-left">
+					<p>Copyright &copy; Joseph Rushton 2016</p>
+				</div>
+			</div>
+			<div class="col-md-6 col-md-offset-5">
+				<div class="text-md-right">
+					<a href="#"><i class="fa fa-facebook-official" aria-hidden="true"></i></a>
+					<a href="#"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
+					<a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>

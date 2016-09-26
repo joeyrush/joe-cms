@@ -1,0 +1,34 @@
+// border bottom sliding in from middle
+.sliding-middle-out {
+	display: inline-block;
+	position: relative;
+	padding-bottom: 3px;
+}
+.sliding-middle-out:after {
+	content: '';
+	display: block;
+	margin: auto;
+	height: 3px;
+	width: 0px;
+	background: transparent;
+	transition: width .5s ease, background-color .5s ease;
+}
+.sliding-middle-out:hover:after {
+	width: 100%;
+	background: white;
+}
+
+@keyframes slide-left-to-right {
+	0% {left:-100%;}
+	100% {left: 0;}
+}
+
+@keyframes spikes-slide-down {
+	0% { top: 40px;}
+	100% { top: 64px; }
+}
+
+@keyframes nav-fade-in {
+	0% { opacity: 0;}
+	100% { opacity: 1;}
+}
