@@ -1,18 +1,169 @@
-.portfolio-header {
+
+.portfolio-wrapper {
+	background: linear-gradient(rgba(255,255,255,0.95), rgba(255,255,255,0.8), rgba(0,0,0,0.5)), url('../../img/mac2.jpg') no-repeat center center fixed;
+	background-size: cover;
+	width: 100%;
+	height: 100%;
 
 	.container-fluid {
 		width: 90%;
 	}
-	margin-top: 50px;
-	font-family: $secondary--font;
 
-	.profile-image {
-		background: transparent url('../../img/profile.jpg') no-repeat;
-		background-size: 375px;
-		background-position: center top;
-		height: 175px;
-		width: 190px;
-		border-radius: 50%;
+	.portfolio-header {	
+		margin-top: -10px;
+		padding-top: 20px;
+		font-family: $secondary--font;
+
+
+		.profile-image {
+			background: transparent url('../../img/profile.jpg') no-repeat;
+			background-size: 375px;
+			background-position: center top;
+			height: 175px;
+			width: 190px;
+			border-radius: 50%;
+		}
+
 	}
 
+	#item1 {
+		max-height: 620px;
+		width: 100%;
+	}
+	#item2, #item3, #item4, #item5, #item6, #item7, div.half {
+		width: 100%;
+		max-height: 300px;
+	}
+	#item8 {
+		width:100%;
+		max-height: 620px;
+	}
+
+	.items-wrapper {
+		margin-bottom: 50px;
+	}
+
+	.item-wrapper {
+		position:relative;
+
+		.portfolio__overlay {
+			opacity:0;
+			transition: all 0.4s;
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			background: rgba(darken($primary--colour,20%),0.7);
+			color:white;
+
+			&:hover {
+				opacity:1;
+			}
+			
+			div {
+				margin-top: 40%;
+				background: $primary--variation;
+				padding: 10px;
+				border-top: 2px solid $primary--colour;
+				border-bottom: 2px solid $primary--colour;
+
+				h3 {
+					
+					font-size: 2rem;
+				}
+
+				a {
+					color: white;
+					text-decoration: underline;
+					font-weight: 600;
+
+					&:hover {
+						text-decoration: none;
+					}
+				}
+			}
+
+			
+		}
+	}
+
+	.portfolio-item {
+		display: block;
+		margin-top: 20px;
+		opacity: 0;
+		background-color: $primary--colour;
+		border: 3px solid lighten($primary--colour, 20%);
+
+		&.is-visible-1 {
+			animation: portfolio-anim-1 0.3s ease-in-out forwards;
+		}
+
+		&.is-visible-2 {
+			animation: portfolio-anim-2 0.5s ease-in forwards;
+		}
+
+		&.is-visible-3 {
+			animation: portfolio-anim-3 0.3s ease-in forwards;
+		}
+		
+		&.is-visible-4 {
+			animation: portfolio-anim-4 0.2s ease-in forwards;
+		}
+	}
+}
+
+
+
+
+
+@keyframes portfolio-anim-1 {
+	0% {
+		opacity: 0;
+		transform: scale(0.3);
+		transform: rotateX(45deg);
+		transform: translateY(200px);
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes portfolio-anim-2 {
+	0% {
+		opacity: 0;
+		transform: rotateX(50deg);
+		transform: translate3d(200px);
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes portfolio-anim-3 {
+	0% {
+		opacity: 1;
+		transform: scale(0.1);
+		transform: rotateX(90deg);
+		transform: translateY(700px);
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes portfolio-anim-4 {
+	0% {
+		opacity: 0;
+		transform: translateY(300px);
+		transform: rotateX(90deg);
+	}
+	50% {
+
+	}
+	70% {
+		
+	}
+	100% {
+		opacity: 1;
+	}
 }

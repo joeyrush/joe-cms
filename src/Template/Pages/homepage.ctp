@@ -1,14 +1,16 @@
     <div class="jumbotron jumbotron-home">
       <div class="container-fluid">
       	<div class="row">
-      		<div class="col-md-4 offset-md-1">
-      			<div class="home-profile"></div>
-      		</div>
-      		<div class="col-md-7">
-		        <h1 class="display-3">Joseph Rushton</h1>
-		        <p>Just incase you didn't quite get it from the web address and size 50 font above, my names Joe and I make pretty websites. I like programming, lifting, playing guitar and getting drunk.</p>
-		        <p><a class="btn" href="#" role="button">Find Out More</a></p>
-		    </div>
+      		<div class="photo-text-wrapper">
+	      		<div class="col-md-4 offset-md-1">
+	      			<div class="home-profile"></div>
+	      		</div>
+	      		<div class="col-md-7" id="text-wrapper">
+			        <h1 class="display-3">Joseph Rushton</h1>
+			        <p>Just incase you didn't quite get it from the web address and size 55 font above, my name is Joe and I make pretty websites. I like writing robust code, lifting heavy weights and playing clean guitar riffs.</p>
+			        <p><a class="btn" href="#" role="button">Find Out More</a></p>
+			    </div>
+			</div>
 	    </div>
       </div>
     </div>
@@ -77,22 +79,22 @@
 			<div class="row">
 				<div class="col-md-6 text-md-center">
 					<h2>Drop me a line..</h2>
-					<hr>
+					<h3><small>Ask me how much I bench or tell me how bad my website is, I'm always happy to chat <i class="fa fa-smile-o" aria-hidden="true"></i></small></h3>
+					
 					<div class="quotes">
 						<div class="quote" id="quote1">
 							<blockquote><p>"Random inspiring quote that cycles round automatically forever and ever"</p></blockquote>
 							<p class="text-md-right">~ Author</p>
 						</div>
 						<div class="quote">
-							<blockquote><p>"Another quote that loops round in an infinite loop"</p></blockquote>
+							<blockquote><p>"Another quote that loops round in an infinite loop for eternity"</p></blockquote>
 							<p class="text-md-right">~ Author2</p>
 						</div>
 						<div class="quote">
-							<blockquote><p>"The third and final quote of these series of quotes"</p></blockquote>
+							<blockquote><p>"The third and final quote of these series of quotes that cycle round automiatcally"</p></blockquote>
 							<p class="text-md-right">~ Author3</p>
 						</div>
 					</div>
-					<hr>
 				</div>
 				<div class="col-md-6 text-md-center">
 					<?php echo $this->Form->create('Contact') ?>

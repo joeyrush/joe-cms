@@ -1,11 +1,11 @@
 .navbar {
-	position:relative;
-	animation: slide-left-to-right 0.5s forwards;
+	//animation: slide-left-to-right 0.5s forwards;
 	border-radius: 0px;
 	padding-left: 5%;
 	padding-top: 15px;
 	background: $primary--colour; 
 	font-family: $secondary--font;
+	box-shadow: inset 0 15px 9px -15px white;
 
 	// the farthest right nav icon
 	.pull-right li:nth-child(2) {
@@ -18,7 +18,7 @@
 	.home-active {
 		border: 1.9px solid white;
 		border-radius: 50%;
-		background-color: #8781bd;
+		background-color: $primary--variation;
 	}
 	.fa-home {
 		padding: 5px;
@@ -61,4 +61,49 @@
 		border-bottom: 3px solid white;
 		padding-bottom: 0px;
 	}
+}
+
+.navbar-fixed-top {
+	opacity: 0;
+	animation: nav-fade-in 0.3s ease-in-out forwards;
+
+	background: white;
+	border-bottom: 5px solid $primary--variation;
+	height: 50px;
+
+	.nav-contents {
+		position:relative;
+		top: -15px;
+	}
+
+	ul li a {
+		color: $primary--colour;
+	}
+
+	ul, .navbar-brand {
+		opacity:1;
+		animation: none;
+	}
+
+	.fa-home {
+		color: $primary--colour;
+
+		&:hover {
+			color: $primary--variation;
+		}
+	}
+
+	.home-active {
+		color: white;
+		border: 1.9px solid $primary--colour;
+	}
+
+	.active {
+		border-bottom: 3px solid $primary--colour;
+		padding-bottom: 0px;
+	}
+}
+
+.hidden {
+	display:none;
 }

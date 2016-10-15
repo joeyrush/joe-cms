@@ -1,3 +1,11 @@
+* {
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
 @import 'variables';
 @import 'animate';
 @import 'typography';
@@ -6,5 +14,8 @@
 // pages
 @import 'homepage';
 @import 'portfolio';
+@import 'outsiteofwork';
+@import 'blog';
+@import 'gallery';
 
 @import 'footer';

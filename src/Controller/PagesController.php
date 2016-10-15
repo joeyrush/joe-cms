@@ -59,6 +59,11 @@ class PagesController extends AppController
         $this->_setActivePage($pages);
         $this->set(compact('pages'));
 
+        // homepage specific
+        if ($page == 'homepage') {
+            
+        }
+
         try {
             $this->render(implode('/', $path));
         } catch (MissingTemplateException $e) {

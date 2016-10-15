@@ -23,7 +23,9 @@
     <?= $this->fetch('content') ?>
 
     <?php echo $this->element('site_footer'); ?>
-    <?= $this->Html->script('https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js') ?>
+    <?= $this->Html->script('minified/jquery-3.1.1.min.js') ?>
+    <?= $this->Html->script('minified/masonry.pkgd.min.js') ?>
+
     <?php 
         echo $this->Html->script(
             'https://cdnjs.cloudflare.com/ajax/libs/tether/1.2.0/js/tether.min.js', 
