@@ -24,7 +24,6 @@
 
     <?php echo $this->element('site_footer'); ?>
     <?= $this->Html->script('minified/jquery-3.1.1.min.js') ?>
-    <?= $this->Html->script('minified/masonry.pkgd.min.js') ?>
 
     <?php 
         echo $this->Html->script(

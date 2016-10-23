@@ -1,5 +1,5 @@
 .navbar {
-	//animation: slide-left-to-right 0.5s forwards;
+	animation: slide-left-to-right 0.5s forwards;
 	border-radius: 0px;
 	padding-left: 5%;
 	padding-top: 15px;
@@ -7,12 +7,52 @@
 	font-family: $secondary--font;
 	box-shadow: inset 0 15px 9px -15px white;
 
-	// the farthest right nav icon
-	.pull-right li:nth-child(2) {
-		margin-left: -35px;
+	@media (max-width: $screen-sm-max) {
+		border-bottom: 5px solid white;
 	}
+
+	button.navbar-toggler {
+		background: $primary--variation;
+		border: 1px solid white;
+		color: white;
+		width: 180px;
+		margin-left: 50%;
+		transform: translateX(-50%);
+		margin-bottom: 5px;
+
+		&:focus {
+			border: 1px solid silver;
+			outline: none;
+		}
+	}
+
+	@media (max-width: $screen-sm-max) {
+		.nav-link {
+			display: inline-block;
+		}
+	}
+
+	// the farthest right nav icon
+	@media (min-width: $screen-md-min) {
+		.nav-icons li:nth-child(2) {
+			margin-left: -35px;
+		}
+	}
+
+	.nav-icons {
+		@media (max-width: $screen-sm-max) {
+			li {
+				display:inline-block;
+			}
+
+			ul {
+				text-align: center;
+			}
+		}
+	}
+
 	// linkedin / email icon hover
-	.pull-right li i:hover{
+	.nav-icons li i:hover{
 		opacity:0.4;
 	}
 	.home-active {
@@ -45,6 +85,11 @@
 
 	.navbar-nav .nav-item {
 		margin-left: 50px;
+
+		@media (max-width: $screen-sm-max) {
+			margin-left: 0;
+			text-align: center;
+		}
 	}
 
 	ul li a{
@@ -69,7 +114,16 @@
 
 	background: white;
 	border-bottom: 5px solid $primary--variation;
-	height: 50px;
+
+	@media (min-width: $screen-md-min) {
+		height: 50px;
+	}
+
+	@media (max-width: $screen-sm-max) {
+		ul {
+			margin-top:25px;
+		}
+	}
 
 	.nav-contents {
 		position:relative;

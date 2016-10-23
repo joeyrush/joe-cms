@@ -5,22 +5,28 @@ body {
 }
 
 .jumbotron-home {
-	text-align: center;
 
 	h1 {
-		font-family: $secondary--font;
 		color: darken($primary--colour, 20%);
-		font-size: 6.5rem;
+		font-size: 55px;
+		text-align: left;
+
+		&:after {
+			content: '...';
+		}
 	}
 
 	p {
+		font-family: $secondary--font;
 		color:darken($primary--colour, 15%);
-		font-size: 1.5rem;
+		font-size: 20px;
+		text-align: left;
 	}
 
 	.btn {
 		color: $primary--colour;
 		font-family: $secondary--font;
 		font-size: 1.2rem;
+		text-align: right;
 	}
 }

@@ -24,19 +24,41 @@
 			border-radius: 50%;
 		}
 
-	}
+		@media (max-width: 1450px) {
+			.text {
+				margin-left: 10%;
+			}
+		}
 
-	#item1 {
-		max-height: 620px;
-		width: 100%;
-	}
-	#item2, #item3, #item4, #item5, #item6, #item7, div.half {
-		width: 100%;
-		max-height: 300px;
-	}
-	#item8 {
-		width:100%;
-		max-height: 620px;
+		@media (max-width: $screen-md-min) {
+			.text {
+				margin-left: 150px;
+				margin-top: 30px;
+			}
+		}
+
+		@media (max-width: $screen-sm-min) {
+			.text {
+				margin-left: 0;
+				margin-right: 0;
+
+				> div {
+					text-align: center;
+					p {
+						float: none;
+					}
+				}
+				h1 {
+					text-align: center;
+				}
+			}
+
+			.profile-image {
+				margin-left: auto;
+				margin-right: auto;
+			}
+		}
+
 	}
 
 	.items-wrapper {
@@ -88,6 +110,7 @@
 	}
 
 	.portfolio-item {
+		width: 100%;
 		display: block;
 		margin-top: 20px;
 		opacity: 0;
