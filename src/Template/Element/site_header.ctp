@@ -37,6 +37,9 @@
 		<div class="nav-contents">
 			<a class="navbar-brand hidden-md-down" href="<?=$this->Url->build('/');?>"><i class="fa fa-home <?=($page == 'homepage') ? 'home-active' : ''?>" aria-hidden="true"></i></a>
 			<ul class="nav navbar-nav">
+				<li class="nav-item hidden-lg-up">
+					<a href="<?=$this->Url->build('/');?>" class="<?=($page == 'homepage') ? 'active' : 'sliding-middle-out-2'?> nav-link">HOME</a>
+				</li>
 				<?php foreach ($pages as $menu): ?>
 				<li class="nav-item">
 					<?php 

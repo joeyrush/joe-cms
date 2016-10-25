@@ -105,6 +105,11 @@
 	.active {
 		border-bottom: 3px solid white;
 		padding-bottom: 0px;
+
+		@media (max-width: $screen-sm-max) {
+			margin-bottom: 5px;
+			margin-top: -10px;
+		}
 	}
 }
 

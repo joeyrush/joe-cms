@@ -14,13 +14,31 @@ body {
 	background-size: cover;
 	height: 800px;
 
+	@media (max-width: $screen-sm-max) {
+		height: auto;
+	}
+
 	.container-fluid {
 		margin-top: 5px;
 	}
 	
+
 	#text-wrapper {
 		margin-top: 135px;
-		margin-left: -120px;
+		margin-left: 65px;
+		@media (max-width: 1300px) {
+			margin-top: 80px;
+			background: rgba(255,255,255,0.5);
+			border: 1px solid white;
+			border-left: none;
+			padding:10px;
+			font-size: 20px;
+		}
+
+		@media (max-width: $screen-sm-max) {
+			margin-top: 20px;
+			margin-left: 0px;
+		}
 	}
 
 	h1 {
@@ -34,7 +52,13 @@ body {
 	}
 
 	h1, p {
-		width: 70%;
+		width: 80%;
+
+		@media (max-width: $screen-sm-max) {
+			text-align: center;
+			margin-left: auto;
+			margin-right: auto;
+		}
 
 	}
 	.btn {
@@ -42,6 +66,7 @@ body {
 		color:white;
 		text-shadow: none;
 		background: darken($primary--colour, 10%);
+		font-size: 16px;
 
 		&:hover {
 			background: $primary--colour;
@@ -57,17 +82,17 @@ body {
 	background-size: 750px;
 	background-position: center top;
 	height: 350px;
-	width: 380px;
+	width: 100%;
 	border-radius: 50%;
 	-webkit-box-shadow: 10px 10px 10px -5px rgba(0,0,0,0.69);
 	-moz-box-shadow: 10px 10px 10px -5px rgba(0,0,0,0.69);
 	box-shadow: 10px 10px 10px -5px rgba(0,0,0,0.69);
 	animation: circletosquare 0.5s ease-in forwards;
 
-	&:hover {
-		background: transparent url('../../img/profile-3.jpg') no-repeat;
-		background-size: 750px;
-		background-position: center top;
+	@media (max-width: $screen-sm-max) {
+		margin-top: 0px;
+		margin-left: 0px;
+		width: auto;
 	}
 }
 
@@ -134,10 +159,25 @@ body {
 
 .jumbotron-portfolio {
 	.col-portfolio {
-		height: 425px;
+		height: 475px;
+		@media (max-width: $screen-xs-max) {
+			height: 600px;
+		}
 	}
+	
+	
 	.text {
 		position:relative;
+		top: 15px;
+
+		@media (max-width: $screen-sm-max) {
+			left: 50px;
+		}
+
+		@media (max-width: $screen-xs-max) {
+			left: 0px;
+			top: -140px;
+		}
 	}
 	padding-top: 5rem;
 	padding-bottom: 2rem;
@@ -145,16 +185,27 @@ body {
 	background-position: 50% 50%;
 	background-size:100% auto;
 
+	@media (max-width: $screen-xs-max) {
+		background-size:cover;
+	}
+
 	h2 {
 		text-shadow: 2px 2px white;
 		margin-top: 30px;
 		font-family: $secondary--font;
-		font-size: 5rem;
+		font-size: 60px;
+		@media (max-width: 1300px) {
+			font-size: 30px;
+		}
 	}
 	p {
 		font-family: $secondary--font;
 		color: $primary--colour;
 		text-shadow: 2px 2px white;
+
+		@media (max-width: 850px) {
+			font-size: 15px;
+		}
 
 		a {
 			text-shadow: 2px 2px white;
@@ -170,18 +221,45 @@ body {
 		width: 380px;
 		border: 3px solid $primary--colour;
 		border-radius: 4px;
+
+		@media (max-width: $screen-sm-max) and (min-width: $screen-xs-max) {
+			width: 253px;
+			height: 166px;
+		}
 	}
 
 	.img-1 {
 		left: -75px;
+
+		// @media (max-width: $screen-sm-max) and (min-width: $screen-xs-max) {
+		// 	top: -80px;
+		// }
+		@media (max-width: $screen-xs-max) {
+			left: 25px;
+		}
 	}
 	.img-2 {
 		top: -200px;
 		left: -25px;
+
+		@media (max-width: $screen-sm-max) and (min-width: $screen-xs-max) {
+			top: -125px;
+		}
+		@media (max-width: $screen-xs-max) {
+			left: 75px;
+		}
 	}
 	.img-3 {
 		top: -400px;
 		left: 25px;
+
+		@media (max-width: $screen-sm-max) and (min-width: $screen-xs-max) {
+			top: -250px;
+		}
+
+		@media (max-width: $screen-xs-max) {
+			left: 125px;
+		}
 	}
 
 	.scribble-bg {
@@ -193,6 +271,17 @@ body {
 		background-image: url('../../img/scribble.png');
 		background-position: center center;
 		background-repeat: no-repeat;
+
+		@media (max-width: $screen-sm-max) {
+			left: 0px;
+		}
+
+		@media (max-width: $screen-xs-max) {
+			top: -300px;
+			left: -75px;
+		}
+
+		
 	}
 }
 
@@ -203,18 +292,44 @@ body {
 	padding-top: 150px;
 	padding-bottom: 150px;
 
-	h2, h3 {
-		color:darken($primary--colour, 20%);
-	}
+	.contact--text {
+		@media (max-width: $screen-sm-max) {
+			margin-left:-30px;
+		}
+		@media (max-width: $screen-xs-max) {
+			margin-top: -50px;
+			margin-bottom: -50px;
+			margin-left:0px;
+		}
+		
+		h2, h3 {
+			color:darken($primary--colour, 20%);
+		}
 
-	h2 {
-		font-family: $secondary--font;
-		font-size: 3rem;
-	}
+		h3 > small {
+			@media (max-width: $screen-sm-max) {
+				font-size: 18px;
+			}
+		}
 
-	p {
-		color: $primary--colour;
+		h2 {
+			font-family: $secondary--font;
+			font-size: 3rem;
+
+			@media (max-width: $screen-sm-max) {
+				font-size: 25px;
+			}
+		}
+
+		p {
+			color: $primary--colour;
+
+			@media (max-width: $screen-sm-max) {
+				font-size: 14px;
+			}
+		}
 	}
+	
 	#name, #email, #message {
 		font-style: italic;
 		width: 400px;
@@ -225,6 +340,10 @@ body {
 		padding: 5px;
 		float:right;
 		transition: all 0.2s;
+
+		@media (max-width: $screen-sm-max) {
+			width: 100%;
+		}
 
 		&:focus {
 			background-color: $primary--colour;
@@ -259,5 +378,21 @@ body {
 			color: lighten($secondary--colour, 25%);
 			font-family: $secondary--font;
 		}
+
+		@media (max-width: $screen-xs-max) {
+			margin-bottom: 0px;
+
+			p {
+				color: white;
+			}
+		}
 	}
+
+	.contact--form {
+		@media (max-width: $screen-xs-max) {
+			margin-top: 100px;
+		}
+	}
+
+	
 }

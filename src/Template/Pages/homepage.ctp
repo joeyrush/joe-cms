@@ -2,13 +2,13 @@
       <div class="container-fluid">
       	<div class="row">
       		<div class="photo-text-wrapper">
-	      		<div class="col-md-4 offset-md-1">
+	      		<div class="col-md-3 offset-md-1">
 	      			<div class="home-profile"></div>
 	      		</div>
 	      		<div class="col-md-7" id="text-wrapper">
 			        <h1 class="display-3">Joseph Rushton</h1>
 			        <p>Just incase you didn't quite get it from the web address and size 55 font above, my name is Joe and I make pretty websites. I like writing robust code, lifting heavy weights and playing clean guitar riffs.</p>
-			        <p><a class="btn" href="#" role="button">Find Out More <i class="fa fa-share" aria-hidden="true"></i></a></p>
+			        <p class="text-md-right text-sm-center"><a class="btn" href="#" role="button">Find Out More <i class="fa fa-share" aria-hidden="true"></i></a></p>
 			    </div>
 			</div>
 	    </div>
@@ -58,15 +58,39 @@
 			<div class="row">
 				<div class="col-md-6 text-md-center col-portfolio">
 					<div>
-						<?php echo $this->Html->image('http://placehold.it/380x250/888888/000000', array('class' => 'img-1')); ?>
-						<?php echo $this->Html->image('http://placehold.it/380x250/aaaaaa/123123', array('class' => 'img-2')); ?>
-						<?php echo $this->Html->image('http://placehold.it/380x250/151515/ffffff', array('class' => 'img-3')); ?>
+						<?php echo $this->Image->resize('abc', array(
+							'width' => 380,
+							'height' => 250,
+							'htmlAttributes' => array(
+								'class' => 'img-1'
+							),
+							'crop' => true,
+							'autocrop' => true
+						)); ?>
+						<?php echo $this->Image->resize('abc', array(
+							'width' => 380,
+							'height' => 250,
+							'htmlAttributes' => array(
+								'class' => 'img-2'
+							),
+							'crop' => true,
+							'autocrop' => true
+						)); ?>
+						<?php echo $this->Image->resize('abc', array(
+							'width' => 380,
+							'height' => 250,
+							'htmlAttributes' => array(
+								'class' => 'img-3'
+							),
+							'crop' => true,
+							'autocrop' => true
+						)); ?>
 					</div>
 				</div>
 				<div class="col-md-6 text-md-center">
 					<div class="scribble-bg"></div>
 					<div class="text">
-						<h2>Portfolio</h2>
+						<h2 class="text-xs-center">Portfolio</h2>
 						<p>I've categorized all of my work to make it nice and easy for you to see the projects I've created or contributed towards. <a href="#">View Full Portfolio</a></p>
 					</div>
 				</div>
@@ -77,7 +101,7 @@
 	<div class="jumbotron jumbotron-contact">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-6 text-md-center">
+				<div class="col-md-6 text-md-center contact--text">
 					<h2>Holla at me..</h2>
 					<h3><small>Ask me how much I bench or tell me how bad my website is, I'm always happy to chat <i class="fa fa-smile-o" aria-hidden="true"></i></small></h3>
 					
@@ -96,7 +120,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-md-6 text-md-center">
+				<div class="col-md-6 text-md-center contact--form">
 					<?php echo $this->Form->create('Contact') ?>
 						<?php echo $this->Form->input('name', array('placeholder' => 'Name', 'label' => false)) ?>
 						<?php echo $this->Form->input('email', array('placeholder' => 'Email', 'label' => false)) ?>
@@ -104,7 +128,6 @@
 						<?php echo $this->Form->submit('Send', array('id' => 'send')) ?>
 
 					<?php echo $this->Form->end() ?>
-					</form>
 				</div>
 			</div>
 		</div>

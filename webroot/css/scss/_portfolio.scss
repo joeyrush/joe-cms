@@ -82,8 +82,14 @@
 				opacity:1;
 			}
 			
-			div {
+			div.short {
+				margin-top: 12%;
+			}
+
+			div.tall {
 				margin-top: 40%;
+			}
+			div {
 				background: $primary--variation;
 				padding: 10px;
 				border-top: 2px solid $primary--colour;
@@ -91,7 +97,16 @@
 
 				h3 {
 					
-					font-size: 2rem;
+					font-size: 18px;
+				}
+
+				p {
+					@media (min-width: $screen-xs-max) and (max-width: 1350px) {
+						display:none;
+					}
+					@media (min-width: $screen-xs-max) and (max-width: 1500px) {
+						font-size: 12px;
+					}
 				}
 
 				a {

@@ -7,13 +7,40 @@ footer {
 	background-size: 100% auto;
 	background-position: center bottom;
 	color: white;
+
+	border-top: 5px solid #333;
+
+	@media (max-width: $screen-xs-max) {
+		background-position: center 0%;
+		border-top: 4px solid $primary--variation;
+	}
+
 	p {
 		font-style: italic;
 		font-size: 1rem;
 		font-family: $secondary--font;
+
+		@media (max-width: $screen-sm-max) {
+			width: 300px;
+			margin-left:auto;
+			margin-right:auto;
+		}
 	}
 	p, i {
 		padding-top: 20px;
+
+		@media (max-width: $screen-xs-max) {
+			color: darken($primary--colour, 5%);
+			font-weight: 800;
+		}
+	}
+
+	i {
+
+		@media (max-width: $screen-sm-max) {
+			padding-top: 5px;
+		}
+
 	}
 
 	a {
@@ -23,6 +50,10 @@ footer {
 
 		&:hover {
 			color: lighten($primary--colour, 20%);
+		}
+
+		@media (max-width: $screen-xs-max) {
+			color: $primary--colour;
 		}
 	}
 }
