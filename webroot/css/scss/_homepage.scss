@@ -136,6 +136,12 @@ body {
 			height: 95px;
 		}
 	}
+
+	a {
+		&:hover {
+			text-decoration: none;
+		}
+	}
 }
 
 .key-skill {
@@ -152,7 +158,7 @@ body {
 		border-color: lighten($primary--colour, 20%);
 	}
 
-	&:hover > img, &:hover > h2{
+	&:hover > a > img, &:hover > a > h2{
 		opacity: 0.5;
 	}
 }

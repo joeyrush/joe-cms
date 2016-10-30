@@ -10,7 +10,8 @@
         "mobiledetect/mobiledetectlib": "2.*",
         "cakephp/migrations": "~1.0",
         "cakephp/plugin-installer": "*",
-        "twbs/bootstrap": "4.0.0-alpha.4"
+        "twbs/bootstrap": "4.0.0-alpha.4",
+        "dereuromark/cakephp-ajax": "dev-master"
     },
     "require-dev": {
         "psy/psysh": "@stable",

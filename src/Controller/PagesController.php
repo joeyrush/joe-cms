@@ -54,15 +54,6 @@ class PagesController extends AppController
             $subpage = $path[1];
         }
         $this->set(compact('page', 'subpage'));
-        $pages = TableRegistry::get('Pages');
-        $pages = $pages->find('all', array('fields' => ['name', 'url']))->all()->toArray();
-        $this->_setActivePage($pages);
-        $this->set(compact('pages'));
-
-        // homepage specific
-        if ($page == 'homepage') {
-            
-        }
 
         try {
             $this->render(implode('/', $path));
@@ -74,21 +65,4 @@ class PagesController extends AppController
         }
     }
 
-    /**
-     * Compares the url of each page and determines whether its the active one
-     * @param $pages
-     * @return $pages modified with active key of true or false
-     */
-    protected function _setActivePage($pages) {
-        $currentUrl = Router::normalize($this->request->here);
-        foreach ($pages as &$page) {
-            if ($page['url'] == $currentUrl) {
-                $page['active'] = true;
-            } else {
-                $page['active'] = false;
-            }
-        }
-
-        return $pages;
-    }
 }

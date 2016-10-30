@@ -32,10 +32,10 @@
 		}
 	}
 
-	// the farthest right nav icon
+	// remove the margins of the nav icons
 	@media (min-width: $screen-md-min) {
-		.nav-icons li:nth-child(2) {
-			margin-left: -35px;
+		.nav-icons .nav-item{
+			margin-left: 5px !important;
 		}
 	}
 

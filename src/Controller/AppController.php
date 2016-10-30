@@ -16,6 +16,11 @@ namespace App\Controller;
 
 use Cake\Controller\Controller;
 use Cake\Event\Event;
+use Cake\Core\Configure;
+use Cake\Network\Exception\NotFoundException;
+use Cake\View\Exception\MissingTemplateException;
+use Cake\ORM\TableRegistry;
+use Cake\Routing\Router;
 
 /**
  * Application Controller
@@ -58,5 +63,51 @@ class AppController extends Controller
         ) {
             $this->set('_serialize', true);
         }
+    }
+
+    /**
+     * Called before the controller action. You can use this method to configure and customize components
+     * or perform logic that needs to happen before each controller action.
+     *
+     * @param \Cake\Event\Event $event An Event instance
+     * @return \Cake\Network\Response|null
+     * @link http://book.cakephp.org/3.0/en/controllers.html#request-life-cycle-callbacks
+     */
+    public function beforeFilter(Event $event)
+    {
+        // find navbar menu items and pass to the view
+        $pages = TableRegistry::get('Pages');
+        $pages = $pages->find('all')->all()->toArray();
+        $this->_setActivePage($pages);
+        $this->set(compact('pages'));
+
+        return parent::beforeFilter($event);
+    }
+
+    /**
+     * Compares the url of each page and determines whether its the active one
+     * @param $pages
+     * @return $pages modified with active key of true or false
+     */
+    protected function _setActivePage($pages) {
+        $currentUrl = $this->request->here;
+
+        foreach ($pages as &$page) {
+            // build url from page controller/action/pass fields
+            if (!empty($page['pass'])) {
+                $pageUrl = Router::url(array('controller' => $page['controller'], 'action' => $page['action'], $page['pass']));
+            } else {
+                $pageUrl = Router::url(array('controller' => $page['controller'], 'action' => $page['action']));
+            }
+
+            // compare page record url to current url and seemlessly set active to true or false
+            if (strpos($currentUrl, $pageUrl) !== false) {
+                $page['active'] = true;
+            } else {
+                $page['active'] = false;
+            }
+        }
+
+        return $pages;
     }
 }

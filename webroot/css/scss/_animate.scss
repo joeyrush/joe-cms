@@ -54,6 +54,27 @@
 }
 
 @keyframes circletosquare {
-	0% {border-raius: 50%;}
-	100% {border-radius: 4px;}
+	0% {opacity:0; border-raius: 50%;}
+	100% {opacity: 1; border-radius: 4px;}
+}
+
+@keyframes spin-in {
+	0% {
+		opacity: 0;
+		-moz-transform: rotateY(0deg);
+      	-ms-transform: rotateY(0deg);
+      	transform: rotateY(0deg);
+	}
+	60% {
+		opacity: 1;
+		-moz-transform: rotateY(-400deg);
+      	-ms-transform: rotateY(-400deg);
+      	transform: rotateY(-400deg);
+	}
+	100% {
+		opacity: 1;
+		-moz-transform: rotateY(-360deg);
+      	-ms-transform: rotateY(-360deg);
+      	transform: rotateY(-360deg);
+	}
 }

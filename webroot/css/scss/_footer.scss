@@ -2,11 +2,11 @@ footer {
 	position:relative;
 	bottom: 0px;
 	left: 0;
-	background-image: linear-gradient(to bottom, rgba($primary--colour, 0.2), rgba($primary--colour, 0.2)), url('../../img/buildings.jpg');
+	background-image: linear-gradient(to right, rgba(255,255,255, 0.1), rgba(255,255,255, 0.7)), url('../../img/buildings.jpg');
 	background-repeat: no-repeat;
 	background-size: 100% auto;
-	background-position: center bottom;
-	color: white;
+	background-position: left center;
+	color: $primary--colour;
 
 	border-top: 5px solid #333;
 
@@ -15,10 +15,18 @@ footer {
 		border-top: 4px solid $primary--variation;
 	}
 
+	.footer-icons {
+		margin-top: 10px;
+	}
+
 	p {
 		font-style: italic;
 		font-size: 1rem;
 		font-family: $secondary--font;
+		background: white;
+		padding: 3px;
+		position:relative;
+		top: 18px;
 
 		@media (max-width: $screen-sm-max) {
 			width: 300px;
@@ -27,33 +35,56 @@ footer {
 		}
 	}
 	p, i {
-		padding-top: 20px;
-
+		
 		@media (max-width: $screen-xs-max) {
 			color: darken($primary--colour, 5%);
 			font-weight: 800;
 		}
 	}
 
-	i {
+	.fa-facebook-official {
+		&:hover {
+			color: #3B5998;
+		}
+	}
 
+	.fa-twitter-square {
+		&:hover {
+			color: #55acee;
+		}
+	}
+
+	.fa-instagram {
+		&:hover {
+			color: #e95950;
+		}
+	}
+
+	
+
+	i {
 		@media (max-width: $screen-sm-max) {
 			padding-top: 5px;
 		}
-
 	}
 
 	a {
-		color: white;
+		color: darken($primary--colour, 5%);
 		font-size: 2rem;
 		margin-right: 8px;
 
-		&:hover {
-			color: lighten($primary--colour, 20%);
-		}
+		
 
 		@media (max-width: $screen-xs-max) {
 			color: $primary--colour;
 		}
+	}
+
+	.fa-github-alt {
+		display: inline;
+	}
+
+	.row {
+		padding-bottom: 15px;
 	}
 }

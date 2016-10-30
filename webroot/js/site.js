@@ -23,18 +23,7 @@ $(document).scroll(function(){
 });
 
 $(document).ready(function(){
-	// generate a random animation number
-	var animateNumber = Math.round(Math.random()*3) + 1;
-	// generate a random delay between each animation between 100-350ms
-	var animateDelay = Math.round(Math.random()*250) + 100;
-	// apply the random number to determine which anim class to select
-	var className = 'is-visible-'+animateNumber;
-
-	$('.portfolio-item').each(function(i){
-		setTimeout(function(){
-			$('.portfolio-item').eq(i).addClass(className);
-		}, animateDelay * i);
-	});
+	initRandomPortfolioAnimation();
 
 	// random quotes fade-in-fade-out
 	var divs = $('.quote').hide(),
@@ -49,4 +38,35 @@ $(document).ready(function(){
 	    i = ++i % divs.length;
 
 	})();
+
+	$('select[name="ProjectCategory"]').on('change', function(){
+		$.ajax({
+			method: 'POST',
+			url: '/joe-cms/projects/list_ajax',
+			data: {categoryId: $(this).val()},
+			success: function(data){
+
+				$('.items-wrapper').html(data.content);
+
+				// apply the animations
+				initRandomPortfolioAnimation();
+			}
+		});
+	});
 });
+
+function initRandomPortfolioAnimation() {
+	// generate a random animation number
+	var animateNumber = Math.round(Math.random()*3) + 1;
+	// generate a random delay between each animation between 100-350ms
+	var animateDelay = Math.round(Math.random()*250) + 100;
+	// apply the random number to determine which anim class to select
+	var className = 'is-visible-'+animateNumber;
+
+	// add the animate class to each item to trigger it
+	$('.portfolio-item').each(function(i){
+		setTimeout(function(){
+			$('.portfolio-item').eq(i).addClass(className);
+		}, animateDelay * i);
+	});
+}

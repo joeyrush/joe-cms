@@ -10,6 +10,7 @@
 
     <?= $this->fetch('meta') ?>
     <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Monda" rel="stylesheet">
     <?= $this->Html->css('bootstrap.min.css') ?>
     <?= $this->Html->css('minified/site.min.css') ?>
     <?= $this->Html->css('https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css') ?>

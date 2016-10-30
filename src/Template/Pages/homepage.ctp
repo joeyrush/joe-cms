@@ -17,36 +17,81 @@
 
 	<div class="jumbotron jumbotron-key-skills">
 		<div class="container-fluid">
-			<span>Areas of Expertise</span>
+			<span><i class="fa fa-star" aria-hidden="true"></i> Areas of Expertise</span>
 			<div class="row">
 				<div class="col-md-2 offset-md-1 text-md-center">
 					<div class="key-skill">
-						<?php echo $this->Html->image('/img/front-end.png', array('class' => 'img-responsive')); ?>
-						<h2>Front-end <br>Web Development</h2>
+						<?php 
+							$img = $this->Html->image('/img/front-end.png', array('class' => 'img-responsive')); 
+							$text = "<h2>Front-end <br>Web Development</h2>";
+							echo $this->Html->link($img . ' ' . $text, array(
+									'controller' => 'projects',
+									'action' => 'index',
+									2
+								), 
+								array('escape' => false)
+							);
+						?>
 					</div>
 				</div>
 				<div class="col-md-2 text-md-center">
 					<div class="key-skill">
-						<?php echo $this->Html->image('/img/php.png'); ?>
-						<h2>Back-end <br>Web Development</h2>
+						<?php 
+							$img = $this->Html->image('/img/php.png', array('class' => 'img-responsive')); 
+							$text = "<h2>Back-end <br>Web Development</h2>";
+							echo $this->Html->link($img . ' ' . $text, array(
+									'controller' => 'projects',
+									'action' => 'index',
+									1
+								), 
+								array('escape' => false)
+							);
+						?>
 					</div>
 				</div>	
 				<div class="col-md-2 text-md-center">
 					<div class="key-skill">
-						<?php echo $this->Html->image('/img/mysql.png'); ?>
-						<h2>SQL and Database <br>Development</h2>
+						<?php 
+							$img = $this->Html->image('/img/mysql.png', array('class' => 'img-responsive')); 
+							$text = "<h2>SQL and Database <br>Development</h2>";
+							echo $this->Html->link($img . ' ' . $text, array(
+									'controller' => 'projects',
+									'action' => 'index',
+									4
+								), 
+								array('escape' => false)
+							);
+						?>
 					</div>
 				</div>	
 				<div class="col-md-2 text-md-center">
 					<div class="key-skill">
-						<?php echo $this->Html->image('/img/cakephp.png'); ?>
-						<h2>CakePHP <br>MVC Framework</h2>
+						<?php 
+							$img = $this->Html->image('/img/cakephp.png', array('class' => 'img-responsive')); 
+							$text = "<h2>CakePHP <br>MVC Framework</h2>";
+							echo $this->Html->link($img . ' ' . $text, array(
+									'controller' => 'projects',
+									'action' => 'index',
+									3
+								), 
+								array('escape' => false)
+							);
+						?>
 					</div>
 				</div>
 				<div class="col-md-2 text-md-center">
 					<div class="key-skill">
-						<?php echo $this->Html->image('/img/photoshop.png', array('class' => 'img-responsive')); ?>
-						<h2>Web and Graphic <br>Design</h2>
+						<?php 
+							$img = $this->Html->image('/img/photoshop.png', array('class' => 'img-responsive')); 
+							$text = "<h2>Web and Graphic <br>Design</h2>";
+							echo $this->Html->link($img . ' ' . $text, array(
+									'controller' => 'projects',
+									'action' => 'index',
+									5
+								), 
+								array('escape' => false)
+							);
+						?>
 					</div>
 				</div>
 			</div>
@@ -91,7 +136,7 @@
 					<div class="scribble-bg"></div>
 					<div class="text">
 						<h2 class="text-xs-center">Portfolio</h2>
-						<p>I've categorized all of my work to make it nice and easy for you to see the projects I've created or contributed towards. <a href="#">View Full Portfolio</a></p>
+						<p>I've categorized all of my work to make it nice and easy for you to see the projects I've created or contributed towards. <?php echo $this->Html->link('View Full Portfolio', array('controller' => 'projects', 'action' => 'index'))?></p>
 					</div>
 				</div>
 			</div>
