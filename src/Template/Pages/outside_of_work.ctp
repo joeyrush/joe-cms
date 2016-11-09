@@ -52,7 +52,7 @@
 				<div class="col-md-6 col-xs-12">
 					<div class="text">
 						<h2>Health and Fitness</h2>
-						<p>I'm big on working out, and I'm not just saying that to sound cool. Weight lifting, cardio, eating clean and making websites is the majority of my life.</p>
+						<p>I'm big on working out, and I'm not just saying that to sound cool. Weight lifting, cardio, eating clean and making websites probably take up the majority of my life.</p>
 					</div>
 				</div>
 				<div class="col-md-6 col-xs-12 text-xs-center fitness">

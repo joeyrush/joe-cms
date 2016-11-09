@@ -30,13 +30,13 @@
 		<div class="nav-icons pull-lg-right">
 			<ul class="nav navbar-nav">
 				<li class="nav-item">
-					<a class="nav-link" href="#"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+					<?php echo $this->Html->link('<i class="fa fa-envelope" aria-hidden="true"></i>', '/#mailto', array('escape' => false, 'class' => 'nav-link')); ?>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="#"><i class="fa fa-github-square" aria-hidden="true"></i></a>
+					<a class="nav-link" href="https://github.com/joeyrush"><i class="fa fa-github-square" aria-hidden="true"></i></a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="#"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+					<a class="nav-link" href="https://www.linkedin.com/in/joseph-rushton-530aba111"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
 				</li>
 			</ul>
 		</div>
@@ -72,13 +72,13 @@
 				<div class="nav-icons pull-lg-right text-sm-center">
 					<ul class="nav navbar-nav">
 						<li class="nav-item">
-							<a class="nav-link" href="#"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+							<?php echo $this->Html->link('<i class="fa fa-envelope" aria-hidden="true"></i>', '/#mailto', array('escape' => false, 'class' => 'nav-link')); ?>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="#"><i class="fa fa-github-square" aria-hidden="true"></i></a>
+							<a class="nav-link" href="https://github.com/joeyrush"><i class="fa fa-github-square" aria-hidden="true"></i></a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="#"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+							<a class="nav-link" href="https://www.linkedin.com/in/joseph-rushton-530aba111"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
 						</li>
 					</ul>
 				</div>
