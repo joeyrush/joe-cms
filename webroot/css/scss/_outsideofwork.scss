@@ -11,11 +11,26 @@
 		margin-top: 50px;
 		margin-bottom: 50px;
 
+		@media (max-width: $screen-xs-max) {
+			margin-bottom: 0;
+		}
+
 		h1 {
 			margin-top: 40px;
 			margin-bottom: -40px;
 			font-family: $secondary--font;
 			font-style: italic;
+
+			@media (max-width: 1620px) {
+				margin-left: 120px;
+			}
+
+			@media (max-width: $screen-xs-max) {
+				margin-top: 0px;
+				margin-left: 0px;
+				text-align: center;
+				font-size: 30px;
+			}
 		}
 
 		.container-fluid {
@@ -38,6 +53,15 @@
 
 			animation: spin-in 1s forwards;
 			animation-delay: 0.5s;
+
+			@media (max-width: 1300px) {
+				margin-left: -5px;
+			}
+
+			@media (max-width: $screen-xs-max) {
+				margin-left: auto;
+				margin-right: auto;
+			}
 		}
 
 		.intro-text {
@@ -50,11 +74,20 @@
 			background-size: contain;
 			background-position: right;
 			background-repeat: no-repeat;
-			padding: 20px 100px 20px 100px;
+			padding: 20px 100px;
 			font-size: 18px;
 			width: 80%;
 			margin-left: auto;
 			margin-right: auto;
+
+			@media (max-width: 1300px) {
+				margin-top: -20px;
+			}
+
+			@media (max-width: $screen-xs-max) {
+				margin-top: 50px;
+				padding: 20px;
+			}
 		}
 	}
 
@@ -71,7 +104,11 @@
 		}
 
 		.text {
+			background: white;
+			color: $primary--colour;
 			border-bottom: 4px solid $primary--colour;
+			border-top: 4px solid $primary--colour;
+
 			border-radius: 7px 7px 7px 35px;
 			padding: 25px;
 			width: 80%;
@@ -81,22 +118,12 @@
 			h2 {
 				font-family: $secondary--font;
 			}
-
-			p {
-				margin-left: 50px;
-				padding-right: 10px;
+			@media (min-width: 1200px) {
+				p {
+					margin-left: 15px;
+				}
+				
 			}
-		}
-
-		.text__spiral-2 {
-			background: linear-gradient(rgba(255,255,255,0.9),rgba(255,255,255,0.9), rgba($primary--colour,0.8)), url('../../img/spiral2.jpg'), white;
-			background-size: contain;
-			background-repeat: no-repeat;
-		}
-
-		.text__spiral-1 {
-			background: linear-gradient(rgba(255,255,255,0.9),rgba(255,255,255,0.9), rgba($primary--colour,0.8)), url('../../img/spiral3.jpg'), white no-repeat center right;
-			background-size: contain;
 		}
 
 		.buttons {
@@ -106,6 +133,10 @@
 			margin-left: auto;
 			margin-right: auto;
 			text-align: center;
+
+			@media (max-width: $screen-xs-max) {
+				margin-bottom: 20px;
+			}
 
 			a {
 				font-family: $secondary--font;
@@ -138,6 +169,21 @@
 			}
 		}
 		
+		.fitness .instagram-media{
+			display: inline-block !important;
+		}
+
+		.fb-gallery {
+			@media (max-width: 1175px) {
+				width: 100%;
+			}
+		}
+		.fb-gallery-text {
+			@media (max-width: 1175px) {
+				width: 100%;
+			}
+		}
+
 	}
 
 }
