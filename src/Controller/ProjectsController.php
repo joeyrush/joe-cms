@@ -48,7 +48,9 @@ class ProjectsController extends AppController {
 			$this->set('currentAjaxCategory', $this->Projects->Categories->get($categoryId));
 	    }
 
-		$this->set('ajaxProjects', $projects->toArray());
+	    $ajaxProjects = $projects->toArray();
+
+		$this->set('ajaxProjects', $ajaxProjects);
 	    $this->viewClass = 'Ajax.Ajax'; // Only necessary without the Ajax component
 	}
 }

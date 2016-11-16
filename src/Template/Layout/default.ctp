@@ -17,6 +17,9 @@
     
     <?= $this->fetch('css') ?>
     <?= $this->fetch('script') ?>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script>
+
 </head>
 <body>
     <?php echo $this->element('site_header'); ?>
@@ -24,7 +27,8 @@
     <?= $this->fetch('content') ?>
 
     <?php echo $this->element('site_footer'); ?>
-    <?= $this->Html->script('minified/jquery-3.1.1.min.js') ?>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/galleria/1.4.5/galleria.min.js"></script>
 
     <?php 
         echo $this->Html->script(

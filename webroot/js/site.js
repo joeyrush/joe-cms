@@ -53,6 +53,30 @@ $(document).ready(function(){
 			}
 		});
 	});
+
+	// if galleria class is available on the current page, we want to run it!
+	if ($('.galleria')) {
+		Galleria.loadTheme('/joe-cms/webroot/galleria/themes/classic/galleria.classic.min.js');
+    	Galleria.run('.galleria', {
+		    // configure
+			autoplay: true,
+			lightbox: true,
+			idleMode: true,
+
+		    // extend theme
+			extend: function() {
+				var gallery = this; // "this" is the gallery instance
+
+				//fullscreen button
+				this.addElement('fscr');
+				this.appendChild('stage','fscr');
+				var fscr = this.$('fscr').click(function() {
+				gallery.toggleFullscreen();
+				});
+			}
+		});
+	}
+	
 });
 
 function initRandomPortfolioAnimation() {
@@ -69,4 +93,34 @@ function initRandomPortfolioAnimation() {
 			$('.portfolio-item').eq(i).addClass(className);
 		}, animateDelay * i);
 	});
+}
+
+function initModalToggle(data) {
+	$('.portfolio__overlay a').on('click', function(){
+		var dataId = $(this).data('id');
+
+		if (dataId != null && data != null) {
+			switchModalContent(data[dataId]);
+		}
+	});
+}
+
+/*
+ * Swaps out the modal content (title, description, urls and images) with the data
+ * array passed through.
+ */
+function switchModalContent(data) {
+	$('.project__modal .modal-body h2').html(data['title']);
+	$('.project__modal .project__text p').html(data['description']);
+	$('.project__modal .modal-header a').attr("href", data['url']);
+
+	var newImages = [];
+
+	// loop through and append each image to the images array
+	$.each(data['images'], function(key, value) {
+		newImages.push({image : '../'+value.filepath});
+	});
+
+	// using Galleria api to load the new set of images
+	Galleria.get(0).load(newImages);
 }

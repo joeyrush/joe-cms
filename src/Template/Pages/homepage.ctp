@@ -7,8 +7,7 @@
 	      		</div>
 	      		<div class="col-md-7" id="text-wrapper">
 			        <h1 class="display-3">Joseph Rushton</h1>
-			        <p>Just incase you didn't quite get it from the web address and size 55 font above, my name is Joe and I make pretty websites. I like writing robust code, lifting heavy weights and playing clean guitar riffs.</p>
-			        <p class="text-md-right text-sm-center"><a class="btn" href="#" role="button">Find Out More <i class="fa fa-share" aria-hidden="true"></i></a></p>
+			        <p>Just incase you didn't quite get it from the web address and size 55 font above, my name is Joe and I make pretty websites. I like writing robust code, lifting heavy weights and playing clean guitar riffs. <a href="pages/outside-of-work">Read More</a></p>
 			    </div>
 			</div>
 	    </div>

@@ -2,6 +2,11 @@ body {
 	overflow-x: hidden;
 }
 
+// hide galleria images by default incase js doesnt load
+.galleria img {
+	display:none;
+}
+
 .jumbotron {
 	border-radius: 0px;
 	margin-bottom: 0px;
@@ -26,6 +31,7 @@ body {
 	#text-wrapper {
 		margin-top: 135px;
 		margin-left: 65px;
+
 		@media (max-width: 1300px) {
 			margin-top: 80px;
 			background: rgba(255,255,255,0.5);
@@ -39,6 +45,20 @@ body {
 			margin-top: 20px;
 			margin-left: 0px;
 		}
+
+		a {
+			color: $primary--variation;
+			text-decoration: underline;
+
+			&:hover {
+				color: $primary--colour;
+				text-decoration: none;
+			}
+		}
+
+		.button {
+			width: 80%;
+		}
 	}
 
 	h1 {
@@ -48,11 +68,14 @@ body {
 
 	p {
 		color:$primary--colour;
-		//text-shadow: 2px 2px $primary--variation;
+		font-family: $tertiary--font;
 	}
 
 	h1, p {
 		width: 80%;
+		background: rgba(255,255,255,0.8);
+		padding: 4px;
+		border-radius: 4px;
 
 		@media (max-width: $screen-sm-max) {
 			text-align: center;

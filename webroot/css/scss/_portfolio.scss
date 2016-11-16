@@ -214,3 +214,117 @@
 		opacity: 1;
 	}
 }
+
+// MODAL BELOW HERE ----------------------
+.project__modal {
+	.modal-content {
+		background: $primary--colour;
+		border: 3px solid white;
+		border-radius: 0 15px 0 0;
+		color: white;
+
+		h2 {
+			font-family: $secondary--font;
+			text-align: center;
+			padding: 10px;
+			border-radius: 5px;
+		}
+
+		.project__text {
+			padding: 20px;
+			color: white;
+
+			img {
+				display: block;
+				margin-left: auto;
+				margin-right: auto;
+			}
+
+			p {
+				margin-bottom: 0;
+			}
+
+			h2 {
+				font-family: $tertiary--font;
+			}
+		}	
+	}
+
+	.modal-lg {
+		max-width: 1400px;
+	}
+
+	.modal-header {
+		padding:0px;
+
+		a {
+			font-family: $secondary--font;
+			display: block;
+			letter-spacing: 2px;
+			font-size: 25px;
+			text-align: center;
+			background: white;
+			color: $primary--colour;
+			border-radius: 0 10px 0 0;
+			transition: all 0.25s;
+
+
+			&:hover {
+				background: $secondary--colour;
+				color: white;
+				text-decoration: none;
+			}
+		}
+	}
+
+	 .galleria{ height: 500px; background: white; }
+	 .galleria-theme-classic {background: white;}
+
+	 .fieldset {
+	    border: 2px groove threedface;
+	    border-top: none;
+	    padding: 0.5em;
+	    margin-left:auto;
+	    margin-right: auto;
+	    margin-top: 20px;
+	    color: white;
+	    font-family: $secondary--font;
+	    display: inline-block;
+
+	    img {
+	    	margin-right: 10px;
+	    	margin-left: 10px;
+	    	width: 60px;
+	    	height: auto;
+	    }
+
+	    > p {
+		    margin: -1em -0.5em 0;
+
+		    > span {
+			    float: left;
+			}
+
+			&:before {
+		        border-top: 2px groove threedface;
+		        content: ' ';
+		        float: left;
+		        margin: 0.5em 2px 0 -1px;
+		        width: 0.75em;
+		    }
+
+		    &:after {
+		        border-top: 2px groove threedface;
+		        content: ' ';
+		        display: block;
+		        height: 1.5em;
+		        left: 2px;
+		        margin: 0 1px 0 0;
+		        overflow: hidden;
+		        position: relative;
+		        top: 0.5em;
+		    }
+		}
+	}
+}
+	
