@@ -105,8 +105,11 @@
 				border-bottom: 2px solid $primary--colour;
 
 				h3 {
-					
 					font-size: 18px;
+
+					@media (min-width: $screen-xs-max) and (max-width: 1065px) {
+						font-size: 13px;
+					}
 				}
 
 				p {
@@ -125,6 +128,10 @@
 
 					&:hover {
 						text-decoration: none;
+					}
+
+					@media (min-width: $screen-xs-max) and (max-width: 1065px) {
+						font-size: 11px;
 					}
 				}
 			}
@@ -277,7 +284,7 @@
 		}
 	}
 
-	 .galleria{ height: 500px; background: white; }
+	 .galleria{ height: 650px; background: white; }
 	 .galleria-theme-classic {background: white;}
 
 	 .fieldset {

@@ -75,6 +75,11 @@ Router::scope('/', function (RouteBuilder $routes) {
     $routes->fallbacks('DashedRoute');
 });
 
+Router::connect('/blog', array(
+    'controller' => 'BlogPosts',
+    'action' => 'index'
+));
+
 Router::scope('/pages', function (RouteBuilder $routes) {
     $routes->connect('/*', ['controller' => 'Pages', 'action' => 'display']);
 });

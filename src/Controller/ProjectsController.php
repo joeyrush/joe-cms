@@ -16,7 +16,16 @@ class ProjectsController extends AppController {
 			'Categories'
 		]);
 
+		/*
+		Even though we have $categoryId as a param - we aren't really using that for the time being
+		as we override it if POST data is available. This way we don't have to do anything with the urls yet
+		 */
+		if (!empty($this->request->data['category'])) {
+			$categoryId = $this->request->data['category'];
+		}
+
 		if ($categoryId) {
+			// if we've got a category id either from params or POST then attach a condition on the fly to reduce the result set
 			$projects = $projects->matching('Categories', function ($q) use ($categoryId) {
 				return $q->where(['Categories.id' => $categoryId]);
 			});
@@ -28,6 +37,10 @@ class ProjectsController extends AppController {
 		$this->set(compact('projects'));
 	}
 
+	/**
+	 * This method is triggered via AJAX when the Project category selector is changed
+	 * @return void
+	 */
 	public function listAjax() {
 	    //$this->request->onlyAllow('ajax');
 	    if (!$this->request->is('post')) {

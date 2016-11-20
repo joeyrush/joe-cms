@@ -25,6 +25,8 @@ $(document).scroll(function(){
 $(document).ready(function(){
 	initRandomPortfolioAnimation();
 
+	var webroot = root();
+
 	// random quotes fade-in-fade-out
 	var divs = $('.quote').hide(),
     i = 0;
@@ -42,7 +44,7 @@ $(document).ready(function(){
 	$('select[name="ProjectCategory"]').on('change', function(){
 		$.ajax({
 			method: 'POST',
-			url: '/joe-cms/projects/list_ajax',
+			url: webroot + '/projects/list_ajax',
 			data: {categoryId: $(this).val()},
 			success: function(data){
 
@@ -55,8 +57,8 @@ $(document).ready(function(){
 	});
 
 	// if galleria class is available on the current page, we want to run it!
-	if ($('.galleria')) {
-		Galleria.loadTheme('/joe-cms/webroot/galleria/themes/classic/galleria.classic.min.js');
+	if ($('.galleria').length) {
+		Galleria.loadTheme(webroot + '/webroot/galleria/themes/classic/galleria.classic.min.js');
     	Galleria.run('.galleria', {
 		    // configure
 			autoplay: true,
@@ -76,7 +78,7 @@ $(document).ready(function(){
 			}
 		});
 	}
-	
+
 });
 
 function initRandomPortfolioAnimation() {
@@ -118,9 +120,67 @@ function switchModalContent(data) {
 
 	// loop through and append each image to the images array
 	$.each(data['images'], function(key, value) {
-		newImages.push({image : '../'+value.filepath});
+		newImages.push({image : value.filepath});
 	});
 
 	// using Galleria api to load the new set of images
 	Galleria.get(0).load(newImages);
 }
+
+/**
+ * JS method for getting the webroot - localhost would be dev:8080/joe-cms
+ * @return string
+ */
+function root() {
+    var scripts = document.getElementsByTagName( 'script' ),
+        script = scripts[scripts.length - 1],
+        path = script.getAttribute( 'src' ).split( '/' ),
+        pathname = location.pathname.split( '/' ),
+        notSame = false,
+        same = 0;
+
+    for ( var i in path ) {
+        if ( !notSame ) {
+            if ( path[i] == pathname[i] ) {
+                same++;
+            } else {
+                notSame = true;
+            }
+        }
+    }
+    return location.origin + pathname.slice( 0, same ).join( '/' );
+}
+
+var $animation_elements = $('.scroll-to-display');
+/**
+ * call this on scroll & resize to hide/display page elements based on whether they are within view or not
+ * @param  {String} targetElement - the element to hide and show e.g. '.wrapper'
+ * @param  {String} classToAdd - the name of the class that will be added when the element is within the viewport
+ * @param  {Boolean} fadeOut - if true, the classToAdd will be removed when element is out of viewport
+ * @return void
+ */
+function check_if_in_view(targetElement, classToAdd, fadeOut) {
+	
+	var window_height = $(window).height();
+	var window_top_position = $(window).scrollTop();
+	var window_bottom_position = (window_top_position + window_height);
+ 
+	$.each($animation_elements, function() {
+		var $element = $(this);
+		var element_height = $element.outerHeight();
+		var element_top_position = $element.offset().top;
+		var element_bottom_position = (element_top_position + element_height);
+ 
+		// Check to see if this current container is within viewport
+		if ((element_bottom_position >= window_top_position) &&
+		(element_top_position <= window_bottom_position)) {
+			$element.addClass(classToAdd);
+		} else if (fadeOut) {
+			$element.removeClass(classToAdd);
+		}
+  });
+}
+
+$(window).on('scroll resize', function() {
+	check_if_in_view('.scroll-to-display', 'visible', true);
+});

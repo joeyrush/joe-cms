@@ -1,12 +1,3 @@
-body {
-	overflow-x: hidden;
-}
-
-// hide galleria images by default incase js doesnt load
-.galleria img {
-	display:none;
-}
-
 .jumbotron {
 	border-radius: 0px;
 	margin-bottom: 0px;
@@ -160,9 +151,14 @@ body {
 		}
 	}
 
-	a {
-		&:hover {
-			text-decoration: none;
+	button {
+		// remove some defaults
+		background: none;
+		border: none;
+
+		&:focus {
+			border: none;
+			outline: none;
 		}
 	}
 }
@@ -181,7 +177,7 @@ body {
 		border-color: lighten($primary--colour, 20%);
 	}
 
-	&:hover > a > img, &:hover > a > h2{
+	&:hover > form > button > img, &:hover > form > button > h2{
 		opacity: 0.5;
 	}
 }

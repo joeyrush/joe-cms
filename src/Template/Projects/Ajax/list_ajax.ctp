@@ -214,6 +214,7 @@
 	</div>
 	<div class="row">
 		<?php foreach ($ajaxProjects as $key => $project) : 
+			// everything after the 6th project can just fly into a 3 column grid layout
 			if ($key <= 7) {
 				continue;
 			}

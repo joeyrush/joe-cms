@@ -468,6 +468,7 @@
 
 <script>
 	$(document).ready(function(){
+		$('.galleria').css('height', '450px');
 		initModalToggle(<?=json_encode($projects);?>);
 	})
 </script>

@@ -20,11 +20,11 @@
 	<div class="outside-of-work-content">
 		<div class="section--1">
 			<div class="container-fluid">
-				<div class="row">
+				<div class="row scroll-to-display">
 					<div class="col-md-6 col-xs-12">
 						<div class="text">
-							<h2>Guitar</h2>
-							<p>..and Ukulele (just to throw that in there).<br>I've been playing guitar for several years on and off. Entirely self-taught, because its 2016 and who needs real guitar lessons when you have a million hours of youtube tutorials plus an infinite supply of online guitar tabs, software and websites available at any time.<br>The main reason I'm putting this here, is to give me a reason to actually record some guitar clips.</p>
+							<h2>Guitar / Music <i class="fa fa-music" aria-hidden="true"></i></h2>
+							<p>I've been playing guitar for a while now. I'm  self-taught, because its 2016 and who needs real guitar lessons when you have a million hours of youtube tutorials plus an infinite supply of online guitar tabs, software and websites available.<br>The main reason I'm putting this here, is to hopefully spark some motivation to record some guitar clips.</p>
 						</div>
 						<div class="buttons">
 							<a href="#" class="btn--even">View Videos</a>
@@ -40,7 +40,7 @@
 		<hr>
 		<div class="section--2">
 			<div class="container-fluid">
-				<div class="row">
+				<div class="row scroll-to-display">
 					<div class="col-md-6 col-xs-12 text-xs-center fb-gallery">
 						<div class="galleria">
 							<?php
@@ -52,7 +52,7 @@
 					</div>
 					<div class="col-md-6 col-xs-12 fb-gallery-text">
 						<div class="text">
-							<h2>Charity Work</h2>
+							<h2>Charity Work <i class="fa fa-hand-peace-o" aria-hidden="true"></i></h2>
 							<p>I try to get involved with charity work every now and then. I'm a firm believer of treating others the same way you want to be treated. The event documented to the left (or above if you're on a mobile device) was a project that involved producing care packages and then distributing them around Sheffield City Centre during the winter of 2015 with a group of close friends.</p>
 						</div>
 						<div class="buttons">
@@ -68,11 +68,12 @@
 
 		<div class="section--3">
 			<div class="container-fluid">
-				<div class="row">
+				<div class="row scroll-to-display">
 					<div class="col-md-6 col-xs-12">
 						<div class="text">
-							<h2>Health and Fitness</h2>
+							<h2>Health and Fitness <i class="fa fa-apple" aria-hidden="true"></i></h2>
 							<p>I'm big on working out, and I'm not just saying that to sound cool. Weight lifting, cardio, eating clean and making websites probably take up the majority of my life.</p>
+							<p>If you need any lifting advice or want to talk about nutrition etc.. you know where to <?=$this->Html->link('contact me.', '/#mailto'); ?></p>
 						</div>
 					</div>
 					<div class="col-md-6 col-xs-12 text-xs-center fitness">
@@ -87,7 +88,7 @@
 
 		<div class="section--4">
 			<div class="container-fluid">
-				<div class="row">
+				<div class="row scroll-to-display">
 					<div class="col-md-6 offset-md-3 col-xs-12">
 						<div class="text">
 							<h2>Gaming <i class="fa fa-gamepad" aria-hidden="true"></i></h2>

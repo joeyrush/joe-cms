@@ -91,7 +91,7 @@
 		}
 
 		#warning {
-			margin-top: 150px;
+			margin-top: 50px;
 		}
 	}
 
@@ -101,8 +101,15 @@
 		margin-right: auto;
 		margin-bottom: 100px;
 
+		// galleria styling specific to this page:
 		.galleria {
 			height: 450px;
+			border-radius: 10px;
+		}
+		.galleria-theme-classic {background: white; border-radius: 10px; padding: 10px;}
+		.galleria-thumbnails {
+			margin-left: auto;
+			margin-right:auto;
 		}
 
 		.section--1 {
@@ -162,7 +169,7 @@
 			margin-right: auto;
 			margin-top: 50px;
 			h2 {
-				font-family: $secondary--font;
+				font-family: $tertiary--font;
 			}
 			@media (min-width: 1200px) {
 				p {
@@ -185,7 +192,7 @@
 			}
 
 			a {
-				font-family: $secondary--font;
+				font-family: $tertiary--font;
 				color:white;
 				border: 1px solid $primary--colour;
 				border-top: none;
@@ -201,7 +208,7 @@
 				transition: 0.5s all;
 
 				&:hover {
-					background: darken($primary--variation, 15%);
+					background: $primary--colour;
 				}
 			}
 			.btn--even {
@@ -210,7 +217,7 @@
 				
 
 				&:hover {
-					background: darken($primary--variation, 15%);
+					background: $primary--variation;
 				}
 			}
 		}

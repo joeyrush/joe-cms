@@ -1,6 +1,13 @@
-<?php 
-	$home = $this->Url->build('/'); 
-?>
+<?php $home = $this->Url->build('/'); ?>
+<div id="loading">
+	<div id="loading-center">
+		<div id="loading-center-absolute">
+			<div class="text-xs-center"><h1>Loading, please wait..</h1></div>
+			<div id="object"></div>
+		</div>
+	</div>
+</div>
+
 <nav class="navbar navbar-static-top">
   <button class="navbar-toggler hidden-lg-up" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><i class="fa fa-bars" aria-hidden="true"></i> View Menu</button>
 	<div class="zigzag hidden-md-down"></div>
@@ -48,10 +55,10 @@
 	<div class="zigzag"></div>
 	<div class="collapse navbar-toggleable-md" id="navbarResponsive2">
 		<div class="nav-contents">
-			<a class="navbar-brand hidden-md-down" href="<?=$this->Url->build('/');?>"><i class="fa fa-home <?=($home == $this->request->here) ? 'home-active' : ''?>" aria-hidden="true"></i></a>
+			<a class="navbar-brand hidden-md-down" href="<?=$home;?>"><i class="fa fa-home <?=($home == $this->request->here) ? 'home-active' : ''?>" aria-hidden="true"></i></a>
 			<ul class="nav navbar-nav">
 				<li class="nav-item hidden-lg-up">
-					<a href="<?=$this->Url->build('/');?>" class="<?=($home == $this->request->here) ? 'active' : 'sliding-middle-out-2'?> nav-link">HOME</a>
+					<a href="<?=$home;?>" class="<?=($home == $this->request->here) ? 'active' : 'sliding-middle-out-2'?> nav-link">HOME</a>
 				</li>
 				<?php foreach ($pages as $menu): ?>
 				<li class="nav-item">

@@ -23,13 +23,20 @@
 						<?php 
 							$img = $this->Html->image('/img/front-end.png', array('class' => 'img-responsive')); 
 							$text = "<h2>Front-end <br>Web Development</h2>";
-							echo $this->Html->link($img . ' ' . $text, array(
+
+							// we create a mini form as we need to post the category id to the projects listing
+							echo $this->Form->create('Project', array(
+								'url' => array(
 									'controller' => 'projects',
-									'action' => 'index',
-									2
-								), 
-								array('escape' => false)
-							);
+									'action' => 'index'
+								)
+							));
+							echo $this->Form->button($img . ' ' . $text, array(
+								'value' => 2,
+								'name' => 'category'
+							));
+
+							echo $this->Form->end();
 						?>
 					</div>
 				</div>
@@ -38,13 +45,19 @@
 						<?php 
 							$img = $this->Html->image('/img/php.png', array('class' => 'img-responsive')); 
 							$text = "<h2>Back-end <br>Web Development</h2>";
-							echo $this->Html->link($img . ' ' . $text, array(
+
+							echo $this->Form->create('Project', array(
+								'url' => array(
 									'controller' => 'projects',
-									'action' => 'index',
-									1
-								), 
-								array('escape' => false)
-							);
+									'action' => 'index'
+								)
+							));
+							echo $this->Form->button($img . ' ' . $text, array(
+								'value' => 1,
+								'name' => 'category'
+							));
+
+							echo $this->Form->end();
 						?>
 					</div>
 				</div>	
@@ -53,13 +66,18 @@
 						<?php 
 							$img = $this->Html->image('/img/mysql.png', array('class' => 'img-responsive')); 
 							$text = "<h2>SQL and Database <br>Development</h2>";
-							echo $this->Html->link($img . ' ' . $text, array(
+							echo $this->Form->create('Project', array(
+								'url' => array(
 									'controller' => 'projects',
-									'action' => 'index',
-									4
-								), 
-								array('escape' => false)
-							);
+									'action' => 'index'
+								)
+							));
+							echo $this->Form->button($img . ' ' . $text, array(
+								'value' => 4,
+								'name' => 'category'
+							));
+
+							echo $this->Form->end();
 						?>
 					</div>
 				</div>	
@@ -68,13 +86,18 @@
 						<?php 
 							$img = $this->Html->image('/img/cakephp.png', array('class' => 'img-responsive')); 
 							$text = "<h2>CakePHP <br>MVC Framework</h2>";
-							echo $this->Html->link($img . ' ' . $text, array(
+							echo $this->Form->create('Project', array(
+								'url' => array(
 									'controller' => 'projects',
-									'action' => 'index',
-									3
-								), 
-								array('escape' => false)
-							);
+									'action' => 'index'
+								)
+							));
+							echo $this->Form->button($img . ' ' . $text, array(
+								'value' => 3,
+								'name' => 'category'
+							));
+
+							echo $this->Form->end();
 						?>
 					</div>
 				</div>
@@ -83,13 +106,18 @@
 						<?php 
 							$img = $this->Html->image('/img/photoshop.png', array('class' => 'img-responsive')); 
 							$text = "<h2>Web and Graphic <br>Design</h2>";
-							echo $this->Html->link($img . ' ' . $text, array(
+							echo $this->Form->create('Project', array(
+								'url' => array(
 									'controller' => 'projects',
-									'action' => 'index',
-									5
-								), 
-								array('escape' => false)
-							);
+									'action' => 'index'
+								)
+							));
+							echo $this->Form->button($img . ' ' . $text, array(
+								'value' => 5,
+								'name' => 'category'
+							));
+
+							echo $this->Form->end();
 						?>
 					</div>
 				</div>
@@ -144,10 +172,11 @@
 
 	<a name="mailto"></a>
 	<div class="jumbotron jumbotron-contact">
+		<?= $this->Flash->render() ?>
 		<div class="container">
 			<div class="row">
 				<div class="col-md-6 text-md-center contact--text">
-					<h2>Holla at me..</h2>
+					<h2>Give me a shout..</h2>
 					<h3><small>Ask me how much I bench or tell me how bad my website is, I'm always happy to chat <i class="fa fa-smile-o" aria-hidden="true"></i></small></h3>
 					
 					<div class="quotes">
@@ -166,7 +195,12 @@
 					</div>
 				</div>
 				<div class="col-md-6 text-md-center contact--form">
-					<?php echo $this->Form->create('Contact') ?>
+					<?php echo $this->Form->create('ContactForm', array(
+						'url' => array(
+							'controller' => 'contact_form',
+							'action' => 'email'
+						)
+					)); ?>
 						<?php echo $this->Form->input('name', array('placeholder' => 'Name', 'label' => false)) ?>
 						<?php echo $this->Form->input('email', array('placeholder' => 'Email', 'label' => false)) ?>
 						<?php echo $this->Form->input('message', array('type' => 'textarea', 'placeholder' => 'Message', 'label' => false)) ?>
