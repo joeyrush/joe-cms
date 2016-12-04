@@ -14,7 +14,7 @@
 	<div class="col-md-4 col-sm-12">
 		<?php if (!empty($ajaxProjects[0])) : ?>
 		<div class="item-wrapper">
-			<?php echo $this->Image->resize($ajaxProjects[0]['images'][0]['filepath'], array(
+			<?php echo $this->Image->resize('/files/Images/' . $ajaxProjects[0]['images'][0]['filename'], array(
 				'width' => 570, 
 				'height' => 610, 
 				'htmlAttributes' => array(
@@ -40,7 +40,7 @@
 		<div class="item-wrapper">
 			<div class="half">
 				<!-- <img class="portfolio-item" id="item2" src="http://placehold.it/540x280"> -->
-				<?php echo $this->Image->resize($ajaxProjects[1]['images'][0]['filepath'], array(
+				<?php echo $this->Image->resize('/files/Images/' . $ajaxProjects[1]['images'][0]['filename'], array(
 					'width' => 540, 
 					'height' => 280, 
 					'htmlAttributes' => array(
@@ -64,7 +64,7 @@
 		<?php if (!empty($ajaxProjects[2])) : ?>
 		<div class="item-wrapper">
 			<div class="half">
-				<?php echo $this->Image->resize($ajaxProjects[2]['images'][0]['filepath'], array(
+				<?php echo $this->Image->resize('/files/Images/' . $ajaxProjects[2]['images'][0]['filename'], array(
 					'width' => 540, 
 					'height' => 280, 
 					'htmlAttributes' => array(
@@ -90,7 +90,7 @@
 		<?php if (!empty($ajaxProjects[3])) : ?>
 		<div class="item-wrapper">
 			<div class="half">
-				<?php echo $this->Image->resize($ajaxProjects[3]['images'][0]['filepath'], array(
+				<?php echo $this->Image->resize('/files/Images/' . $ajaxProjects[3]['images'][0]['filename'], array(
 					'width' => 540, 
 					'height' => 280, 
 					'htmlAttributes' => array(
@@ -114,7 +114,7 @@
 		<?php if (!empty($ajaxProjects[4])) : ?>
 		<div class="item-wrapper">
 			<div class="half">
-				<?php echo $this->Image->resize($ajaxProjects[4]['images'][0]['filepath'], array(
+				<?php echo $this->Image->resize('/files/Images/' . $ajaxProjects[4]['images'][0]['filename'], array(
 					'width' => 540, 
 					'height' => 280, 
 					'htmlAttributes' => array(
@@ -141,7 +141,7 @@
 			<?php if (!empty($ajaxProjects[5])) : ?>
 			<div class="item-wrapper">
 				<div class="half">
-					<?php echo $this->Image->resize($ajaxProjects[5]['images'][0]['filepath'], array(
+					<?php echo $this->Image->resize('/files/Images/' . $ajaxProjects[5]['images'][0]['filename'], array(
 						'width' => 540, 
 						'height' => 280, 
 						'htmlAttributes' => array(
@@ -165,7 +165,7 @@
 			<?php if (!empty($ajaxProjects[6])) : ?>
 			<div class="item-wrapper">
 				<div class="half">
-					<?php echo $this->Image->resize($ajaxProjects[6]['images'][0]['filepath'], array(
+					<?php echo $this->Image->resize('/files/Images/' . $ajaxProjects[6]['images'][0]['filename'], array(
 						'width' => 540, 
 						'height' => 280, 
 						'htmlAttributes' => array(
@@ -190,7 +190,7 @@
 		<div class="col-md-8 col-sm-12">
 			<?php if (!empty($ajaxProjects[7])) : ?>
 			<div class="item-wrapper">
-				<?php echo $this->Image->resize($ajaxProjects[7]['images'][0]['filepath'], array(
+				<?php echo $this->Image->resize('/files/Images/' . $ajaxProjects[7]['images'][0]['filename'], array(
 						'width' => 1110, 
 						'height' => 580, 
 						'htmlAttributes' => array(
@@ -221,7 +221,7 @@
 		?>
 		<div class="col-md-4 col-sm-12">
 			<div class="item-wrapper">
-				<?php echo $this->Image->resize($project['images'][0]['filepath'], array(
+				<?php echo $this->Image->resize('/files/Images/' . $project['images'][0]['filename'], array(
 					'width' => 540, 
 					'height' => 280, 
 					'htmlAttributes' => array(

@@ -6,20 +6,18 @@
 			</div>
 
 			<div class="blog__content">
-				<h2>Blog Post Title</h2>
+				<h2><?=$blogPost['name'];?></h2>
 				<span class="date"><i class="fa fa-calendar" aria-hidden="true"></i> 20th November 2016</span>
 				<div class="tags__wrapper">
-					<h5>Tags: <span class="tag">CakePHP</span> <span class="tag">Programming</span></h5>
-				</div>
+					<h5>Tags: <?php foreach ($blogPost['tags'] as $tag): ?>
 
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere quidem eum ducimus suscipit tempore, explicabo, adipisci fugiat a quibusdam itaque eveniet vitae soluta minima illo sint non, cumque dicta magnam? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit eos nulla dolorem eveniet laborum facere. Ratione similique, laborum explicabo aperiam? Cum expedita porro modi maiores, voluptate voluptas amet fugit? Illum.<p>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem est voluptates repellat minus itaque nisi veniam velit magnam sunt aspernatur, quibusdam nesciunt, nihil ad quos reiciendis, atque voluptas eos ratione.</p>
-<pre>
-<code>public function foo() {
-	echo 'foo';
-}
-</code></pre>
-				<p>This is inline code: <code>BlogPostsController.php</code></p>
+					<span class="tag"><?=$tag['name'];?></span>
+
+					<?php endforeach; ?>
+
+					</h5>
+				</div>
+				<?=$blogPost['body'];?>
 			</div>
 			<div class="blog-foot">
 				<?php 

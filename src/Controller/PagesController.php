@@ -55,6 +55,12 @@ class PagesController extends AppController
         }
         $this->set(compact('page', 'subpage'));
 
+        if ($page == 'outside-of-work') {
+            $this->loadModel('Videos');
+            $videos = $this->Videos->find('all')->where(['Videos.is_active' => 1]);
+            $this->set('videos', $videos->toArray());
+        }
+
         try {
             $this->render(implode('/', $path));
         } catch (MissingTemplateException $e) {

@@ -84,6 +84,15 @@ Router::scope('/pages', function (RouteBuilder $routes) {
     $routes->connect('/*', ['controller' => 'Pages', 'action' => 'display']);
 });
 
+Router::prefix('Admin', function ($routes) {
+    $routes->fallbacks('InflectedRoute');
+
+    $routes->connect('/', ['controller' => 'Users', 'action' => 'login']);
+    $routes->connect('/index', ['controller' => 'Pages', 'action' => 'display', 'admin_dashboard']);
+
+
+});
+
 /**
  * Load all plugin routes.  See the Plugin documentation on
  * how to customize the loading of plugin routes.

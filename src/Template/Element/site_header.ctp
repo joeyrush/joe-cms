@@ -58,12 +58,12 @@
 			<a class="navbar-brand hidden-md-down" href="<?=$home;?>"><i class="fa fa-home <?=($home == $this->request->here) ? 'home-active' : ''?>" aria-hidden="true"></i></a>
 			<ul class="nav navbar-nav">
 				<li class="nav-item hidden-lg-up">
-					<a href="<?=$home;?>" class="<?=($home == $this->request->here) ? 'active' : 'sliding-middle-out-2'?> nav-link">HOME</a>
+					<a href="<?=$home;?>" class="<?=($home == $this->request->here) ? 'active' : 'sliding-middle-out'?> nav-link">HOME</a>
 				</li>
 				<?php foreach ($pages as $menu): ?>
 				<li class="nav-item">
 					<?php 
-						$class = $menu['active'] ? 'active ' : 'sliding-middle-out-2 ';
+						$class = $menu['active'] ? 'active ' : 'sliding-middle-out ';
 						$class .= 'nav-link';
 						$url = array(
 							'controller' => $menu['controller'],

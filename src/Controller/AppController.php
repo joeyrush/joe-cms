@@ -48,6 +48,19 @@ class AppController extends Controller
 
         $this->loadComponent('RequestHandler');
         $this->loadComponent('Flash');
+        $this->loadComponent('Auth', [
+            'loginRedirect' => [
+                'controller' => 'Pages',
+                'action' => 'display',
+                'admin_dashboard'
+            ],
+            'logoutRedirect' => [
+                'prefix' => false,
+                'controller' => 'Pages',
+                'action' => 'display',
+                'homepage'
+            ]
+        ]);
     }
 
     /**
@@ -81,7 +94,29 @@ class AppController extends Controller
         $this->_setActivePage($pages);
         $this->set(compact('pages'));
 
+        $this->Auth->allow(['view', 'display']);
+
+        $this->set('user', $this->Auth->user());
+
         return parent::beforeFilter($event);
+    }
+
+    protected function _processImages(&$data) {
+        // check for images in request data - wont ever be empty as file upload forms always have an array for name/size/type even if no file is selected.
+        if (!empty($data['images'])) {
+            foreach ($data['images'] as $key => &$image) {
+
+                if (empty($image['filename']['name'])) {
+                    // if the filename is empty we unset it in the data array to stop it causing validation errors
+                    unset($data['images'][$key]);
+                } else {
+                    // otherwise we build up the data array for the uploaded image ready for saving
+                    $image['model'] = $this->modelClass;
+                }
+            }
+        }
+
+        return $data;
     }
 
     /**
@@ -109,5 +144,18 @@ class AppController extends Controller
         }
 
         return $pages;
+    }
+
+    /**
+     * checks all of the projects and adds in placeholder images if there are none set to avoid undefined index error on front-end
+     * @param &$projects
+     */
+    protected function _addPlaceholderImageIfEmpty(&$data) {
+        foreach ($data as &$item) {
+            if (empty($item['images'])) {
+                $item['images'][0]['filename'] = 'upload-empty.png';
+            }
+        }
+        unset($item);
     }
 }

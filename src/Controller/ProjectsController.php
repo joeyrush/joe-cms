@@ -2,8 +2,16 @@
 namespace App\Controller;
 
 use App\Controller\AppController;
+use Cake\Event\Event;
 
 class ProjectsController extends AppController {
+
+	public function beforeFilter(Event $event)
+    {
+        $this->Auth->allow(['index', 'listAjax']);
+
+        return parent::beforeFilter($event);
+    }
 
 	public function index($categoryId = null) {
 		// populate dropdown
@@ -34,6 +42,8 @@ class ProjectsController extends AppController {
 
 		$projects = $projects->toArray();
 
+		$this->_addPlaceholderImageIfEmpty($projects);
+		
 		$this->set(compact('projects'));
 	}
 
@@ -62,6 +72,8 @@ class ProjectsController extends AppController {
 	    }
 
 	    $ajaxProjects = $projects->toArray();
+
+	    $this->_addPlaceholderImageIfEmpty($ajaxProjects);
 
 		$this->set('ajaxProjects', $ajaxProjects);
 	    $this->viewClass = 'Ajax.Ajax'; // Only necessary without the Ajax component

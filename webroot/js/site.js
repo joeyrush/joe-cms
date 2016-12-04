@@ -20,9 +20,19 @@ $(document).scroll(function(){
 			'opacity':'1'
 		});
 	}
+
+	if ($('.controls').length > 0) {
+		initControls();
+	}
+
+	if ($('.scroll-to-display').length > 0) {
+		check_if_in_view('.scroll-to-display', 'visible', true);
+	}
+
 });
 
 $(document).ready(function(){
+	initSmoothScroll();
 	initRandomPortfolioAnimation();
 
 	var webroot = root();
@@ -58,12 +68,17 @@ $(document).ready(function(){
 
 	// if galleria class is available on the current page, we want to run it!
 	if ($('.galleria').length) {
+		// we grab the css height property and pass that through just to make sure there are no issues with height setting
+		var galleriaHeight = $('.galleria').height();
+
 		Galleria.loadTheme(webroot + '/webroot/galleria/themes/classic/galleria.classic.min.js');
     	Galleria.run('.galleria', {
+			height: galleriaHeight,
 		    // configure
 			autoplay: true,
 			lightbox: true,
 			idleMode: true,
+			wait: true,
 
 		    // extend theme
 			extend: function() {
@@ -82,18 +97,27 @@ $(document).ready(function(){
 });
 
 function initRandomPortfolioAnimation() {
+	$('.portfolio__overlay').hide();
+
 	// generate a random animation number
 	var animateNumber = Math.round(Math.random()*3) + 1;
-	// generate a random delay between each animation between 100-350ms
-	var animateDelay = Math.round(Math.random()*250) + 100;
+	// generate a random delay between each animation between 35-350ms
+	var animateDelay = Math.round(Math.random()*250) + 35;
 	// apply the random number to determine which anim class to select
 	var className = 'is-visible-'+animateNumber;
+
+	// this will store the total time spent animating so we can trigger stuff afterwards
+	var totalAnimTime = 0;
 
 	// add the animate class to each item to trigger it
 	$('.portfolio-item').each(function(i){
 		setTimeout(function(){
 			$('.portfolio-item').eq(i).addClass(className);
+			// re-enable overlay as each item is animated in
+			$('.portfolio__overlay').eq(i).show();
 		}, animateDelay * i);
+
+		totalAnimTime += animateDelay*i;
 	});
 }
 
@@ -120,11 +144,22 @@ function switchModalContent(data) {
 
 	// loop through and append each image to the images array
 	$.each(data['images'], function(key, value) {
-		newImages.push({image : value.filepath});
+		// if the image is the placeholder one, dont add it to the gallery
+		if (value.filename == 'upload-empty.png') {
+			return true;
+		}
+		newImages.push({image : 'files/Images/'+value.filename});
 	});
 
-	// using Galleria api to load the new set of images
-	Galleria.get(0).load(newImages);
+	// if there aren't any images - hide the gallery - else load the new set of images
+	if (newImages.length == 0) {
+		// $('.galleria').hide();
+	} else {
+		// using Galleria api to load the new set of images
+		Galleria.get(0).load(newImages);
+	}
+
+	
 }
 
 /**
@@ -181,6 +216,52 @@ function check_if_in_view(targetElement, classToAdd, fadeOut) {
   });
 }
 
-$(window).on('scroll resize', function() {
-	check_if_in_view('.scroll-to-display', 'visible', true);
-});
+function initSmoothScroll() {
+	$('a[href*=#]:not([href=#])').click(function() {
+	    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') 
+	        || location.hostname == this.hostname) {
+
+	        var target = $(this.hash);
+	        target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+	           if (target.length) {
+	             $('html,body').animate({
+	                 scrollTop: target.offset().top
+	            }, 1000);
+	            return false;
+	        }
+	    }
+	});
+}
+
+/*
+enable up/down controls - dynamically set links and show/hide based on scroll location
+ */
+function initControls() {
+	var guitar = $("a[name='guitar']").offset().top;
+	var fitness = $("a[name='fitness']").offset().top;
+	var charity = $("a[name='charity']").offset().top;
+	var gaming = $("a[name='gaming']").offset().top;
+	var scrollTop = $(this).scrollTop();
+
+	if (scrollTop > (guitar - 20)) {
+		$('.controls').fadeIn();
+		$('#up').attr('href', '#top');
+		$('#down').attr('href', '#fitness');
+	} else {
+		$('.controls').fadeOut();
+	}
+
+	if (scrollTop > (fitness - 20)) {
+		$('#up').attr('href', '#guitar');
+		$('#down').attr('href', '#charity');
+	}
+
+	if (scrollTop > (charity - 20)) {
+		$('#up').attr('href', '#fitness');
+		$('#down').attr('href', '#gaming');
+	}
+
+	if (scrollTop > (gaming - 20)) {
+		$('#up').attr('href', '#charity');
+	}
+}

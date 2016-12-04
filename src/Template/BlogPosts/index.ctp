@@ -20,7 +20,7 @@
 					<div class="row">
 						<div class="col-md-4">
 							<?php
-								$img = $this->Image->resize($blogPost['images'][0]['filepath'], array(
+								$img = $this->Image->resize('/files/Images/' . $blogPost['images'][0]['filename'], array(
 									'width' => 299, 
 									'height' => 250,
 									'quality' => 100,
@@ -40,7 +40,7 @@
 						<div class="col-md-8">
 							<div class="blog__text">
 								<?=$this->Html->link('<h2>' . $blogPost['name'] . '</h2>', $url, array('escape' => false)); ?></a>
-								<p class="date"><i class="fa fa-calendar" aria-hidden="true"></i> <?=$this->Time->format($blogPost['created'], 'd/M/Y');?></p>
+								<p class="date"><i class="fa fa-calendar" aria-hidden="true"></i> <?=$this->Time->format($blogPost['created'], \IntlDateFormatter::MEDIUM);?></p>
 								<p><?=$this->Text->truncate($blogPost['body'], 120);?></p>
 							</div>
 						</div>

@@ -10,6 +10,26 @@ body {
 	overflow-x: hidden;
 }
 
+.row.no-gutters {
+  margin-right: 0;
+  margin-left: 0;
+
+  & > [class^="col-"],
+  & > [class*=" col-"] {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+.modal-open {
+	// this is to stop the content from shifting when we open the modal.
+	padding-right: 17px !important;
+
+	.modal {
+		overflow-y:scroll;
+	}
+}
+
 // hide galleria images by default incase js doesnt load
 .galleria img {
 	display:none;

@@ -11,8 +11,9 @@
     <?= $this->fetch('meta') ?>
     <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Monda" rel="stylesheet">
-    <?= $this->Html->css('bootstrap.min.css') ?>
+    <?= $this->Html->css('minified/bootstrap.min.css') ?>
     <?= $this->Html->css('minified/site.min.css') ?>
+    <?= $this->Html->css('minified/jquery.fancybox.css') ?>
     <?= $this->Html->css('https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css') ?>
     
     <?= $this->fetch('css') ?>
@@ -44,6 +45,8 @@
     <?= $this->Html->script('minified/bootstrap.min.js') ?>
     <?= $this->Html->script('minified/site.min.js') ?>
     <?= $this->Html->script('https://cdnjs.cloudflare.com/ajax/libs/galleria/1.4.5/galleria.min.js'); ?>
+    <?= $this->Html->script('minified/jquery.fancybox.pack.js'); ?>
+    <?= $this->Html->script('minified/jquery.fancybox-media.js'); ?>
 
     <!-- Syntax Highlighting -->
     <?= $this->Html->script('//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/highlight.min.js'); ?>

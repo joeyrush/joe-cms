@@ -1,0 +1,87 @@
+body {
+	background: url('../img/grid.png');
+}
+
+h1, h2, h3, h4, h5 {
+	font-family: 'Orbitron', sans-serif;
+}
+
+p{
+	font-family: 'PT Sans', sans-serif;
+}
+
+.container {
+	padding: 50px;
+	background: white;
+	background-size:contain;
+}
+
+.admin__dashboard {
+	margin-top: 20px;
+}
+
+.admin__dashboard .row {
+	margin-top: 20px;
+}
+
+.admin__dashboard .menu__item {
+	margin:20px;
+	padding: 20px;
+	display:inline-block;
+	width: 300px;
+
+	text-transform: uppercase;
+	font-weight: 500;
+
+	transition: all 0.15s;
+
+	border-top: 4px solid #2d3d56;
+	border-bottom: 2px solid #2d3d56;
+}
+
+.admin__dashboard .menu__item.menu--odd {
+	background: #ddd;
+	color: #466089;
+}
+
+.admin__dashboard .menu__item.menu--even {
+	background-color: #466089;
+	color: white;
+}
+
+.admin__dashboard .menu__item i {
+	display: block;
+}
+
+.admin__dashboard .menu__item:hover {
+	text-decoration: none;
+	background-color: #142033;
+	color: white;
+}
+
+
+button[type="submit"] {
+	background: #333;
+	border-radius: 2px;
+	margin-bottom: 20px;
+}
+button[type="submit"]:hover {
+	background: #777;
+}
+
+.top-bar {
+	background: #466089 !important;
+}
+
+.top-bar ul {
+	background: #2d3d56 !important;
+}
+
+.top-bar-section ul a {
+	background: #466089 !important;
+	font-family: 'Orbitron', sans-serif !important;
+}
+
+.top-bar-section ul a:hover {
+	background: #2d3d56 !important;
+}

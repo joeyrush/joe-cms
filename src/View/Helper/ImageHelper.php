@@ -35,6 +35,25 @@ class ImageHelper extends Helper {
 			${$key} = $option;
 		}
 
+		// if the path contains http or www. - assume its an external image, download it and then pass in the local path into the resize method
+		if (strpos($path, 'http') !== false || strpos($path, 'www.') !== false) {
+			// strip protocol
+			$newPath = preg_replace('/^https?:\/\//', '', $path);
+			// replace slashes with dashes
+			$newPath = str_replace('/', '-', $newPath);
+			// replace all but last dot (extension) with slash
+			$newPath = preg_replace('/\.(?=.*\.)/', '-', $newPath);
+
+			$newPath = 'img/external/' . $newPath;
+
+			// if we don't already have an image from this url, download it
+			if (!file_exists($newPath)) {
+				file_put_contents($newPath, fopen($path, 'r'));
+			}
+
+			$path = $newPath;
+		}
+
 		$relFile = Image::resize($path, $options);
 
 		//Return only the URL
