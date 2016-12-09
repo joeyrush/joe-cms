@@ -41,6 +41,10 @@
 			.row {
 				margin-bottom: 25px;
 				margin-left: 25px;
+
+				@media (max-width: $screen-sm-max) {
+					margin-left: 0px;
+				}
 			}
 
 			a:hover {
@@ -54,8 +58,6 @@
 
 
 			img {
-				width: 300px;
-				height: 250px;
 				border: 3px solid white;
 
 				@media (max-width: 436px) {
@@ -67,6 +69,11 @@
 				padding: 20px;
 				width: 80%;
 				font-family: $secondary--font;
+				margin-left: 25px;
+
+				p {
+					font-family: $primary--font;
+				}
 
 				@media (max-width: 1199px) {
 					margin-left: 110px;
@@ -90,7 +97,6 @@
 				}
 
 				.date {
-					margin-top: -5px;
 					font-weight: 600;
 					font-size: 14px;
 				}
@@ -121,6 +127,14 @@
 				margin-left: 10px;
 				margin-right: 10px;
 
+				label {
+					cursor: pointer;
+				}
+
+				label > div {
+					margin-right: 10px;
+				}
+
 				input {
 					margin-right: 5px;
 				}
@@ -142,7 +156,7 @@
 // overrides for the details page
 .blog__detail {
 	.blog__wrapper {
-		background: linear-gradient(rgba(255,255,255,0.7), rgba(255,255,255,0.7));
+		background: linear-gradient(rgba(255,255,255,0.9), rgba(255,255,255,0.9));
 
 		.blog-head h1 {
 			font-size: 20px;
@@ -185,10 +199,12 @@
 			}
 
 			span.code {
+				margin-left: 3px;
+				margin-right: 3px;
 				color: white;
 				background: $primary--colour;
 				padding: 3px;
-				font-family: "Courier New", Courier, monospace;
+				font-family: Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
 			}
 
 			pre code {
@@ -198,6 +214,16 @@
 			p > code {
 				background: $primary--colour;
 				color: white;
+			}
+
+			img {
+				max-width: 100%;
+				height: auto;
+			}
+
+			iframe {
+				max-width: 100%;
+				height: auto;
 			}
 		}
 

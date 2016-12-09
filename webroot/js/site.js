@@ -32,6 +32,8 @@ $(document).scroll(function(){
 });
 
 $(document).ready(function(){
+
+	initCustomCheckbox();
 	initSmoothScroll();
 	initRandomPortfolioAnimation();
 
@@ -52,6 +54,10 @@ $(document).ready(function(){
 	})();
 
 	$('select[name="ProjectCategory"]').on('change', function(){
+		// show the loader and lower the opacity of the project listing - reverse this on ajax success
+		$('.items-wrapper .row').css('opacity', 0.2);
+		$('#ajaxLoader').show();
+
 		$.ajax({
 			method: 'POST',
 			url: webroot + '/projects/list_ajax',
@@ -62,6 +68,11 @@ $(document).ready(function(){
 
 				// apply the animations
 				initRandomPortfolioAnimation();
+
+				$('#ajaxLoader').hide();
+				$('.items-wrapper .row').css('opacity', 1);
+
+
 			}
 		});
 	});
@@ -79,6 +90,7 @@ $(document).ready(function(){
 			lightbox: true,
 			idleMode: true,
 			wait: true,
+			transition: 'fade',
 
 		    // extend theme
 			extend: function() {
@@ -126,6 +138,8 @@ function initModalToggle(data) {
 		var dataId = $(this).data('id');
 
 		if (dataId != null && data != null) {
+			// hide the old images - the new ones will automatically show when calling the load() method
+			$('.galleria img').hide();
 			switchModalContent(data[dataId]);
 		}
 	});
@@ -142,23 +156,28 @@ function switchModalContent(data) {
 
 	var newImages = [];
 
+	var categoryButtons = '';
+	// loop through the associated categories and create a form button for each then replace the forms html
+	$.each(data['categories'], function(key, value) {
+		categoryButtons += '<button value="'+value.id+'" name="category" type="submit">'+value.name+'</button>';
+	});
+	$('.project__modal .modal-body form').html(categoryButtons);
+
 	// loop through and append each image to the images array
 	$.each(data['images'], function(key, value) {
 		// if the image is the placeholder one, dont add it to the gallery
-		if (value.filename == 'upload-empty.png') {
-			return true;
-		}
-		newImages.push({image : 'files/Images/'+value.filename});
+		if (value.filename != 'upload-empty.png' && value.filename != '' ) {
+			newImages.push({image : 'files/Images/'+value.filename});
+		} 
 	});
 
 	// if there aren't any images - hide the gallery - else load the new set of images
-	if (newImages.length == 0) {
-		// $('.galleria').hide();
-	} else {
+	if (newImages.length > 0) {
 		// using Galleria api to load the new set of images
 		Galleria.get(0).load(newImages);
+	} else {
+		Galleria.get(0).load({image : 'img/no-image.png'});
 	}
-
 	
 }
 
@@ -217,20 +236,31 @@ function check_if_in_view(targetElement, classToAdd, fadeOut) {
 }
 
 function initSmoothScroll() {
-	$('a[href*=#]:not([href=#])').click(function() {
-	    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') 
-	        || location.hostname == this.hostname) {
+	if ($('.smooth-scroll').length > 0) {
+		$('.smooth-scroll').click(function() {
+		    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') 
+		        || location.hostname == this.hostname) {
 
-	        var target = $(this.hash);
-	        target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-	           if (target.length) {
-	             $('html,body').animate({
-	                 scrollTop: target.offset().top
-	            }, 1000);
-	            return false;
-	        }
-	    }
-	});
+		        var target = $(this.hash);
+		        target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+		           if (target.length) {
+		             $('html,body').animate({
+		                 scrollTop: target.offset().top
+		            }, 1000);
+		            return false;
+		        }
+		    }
+		});
+	}
+}
+
+function initCustomCheckbox() {
+	if ($('.custom-checkbox').length > 0) {
+		$('.custom-checkbox').iCheck({
+			checkboxClass: 'icheckbox_flat-purple',
+			radioClass: 'iradio_flat-purple',
+		});
+	}
 }
 
 /*

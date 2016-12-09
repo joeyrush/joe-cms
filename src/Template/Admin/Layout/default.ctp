@@ -34,6 +34,22 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
     <?= $this->Html->css('https://fonts.googleapis.com/css?family=PT+Sans') ?>
     <?= $this->Html->css('admin.css') ?>
 
+    <script src='//cdn.tinymce.com/4/tinymce.min.js'></script>
+    <script>
+      tinymce.init({
+        selector: '#tinymce',
+        theme: 'modern',
+        width: 600,
+        height: 300,
+        plugins: [
+          'advlist autolink link image lists charmap print preview hr anchor pagebreak spellchecker',
+          'searchreplace wordcount visualblocks visualchars code fullscreen insertdatetime media nonbreaking',
+          'save table contextmenu directionality emoticons template paste textcolor codesample'
+        ],
+        toolbar: 'insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image | print preview media fullpage | forecolor backcolor emoticons | codesample'
+      });
+    </script>
+
     <?= $this->fetch('meta') ?>
     <?= $this->fetch('css') ?>
     <?= $this->fetch('script') ?>

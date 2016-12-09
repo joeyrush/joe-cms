@@ -12,8 +12,8 @@
 	}
 
 	button.navbar-toggler {
-		background: $primary--variation;
-		border: 1px solid white;
+		background: none;
+		border: 1px solid silver;
 		color: white;
 		width: 180px;
 		margin-left: 50%;
@@ -21,8 +21,13 @@
 		margin-bottom: 5px;
 
 		&:focus {
-			border: 1px solid silver;
-			outline: none;
+			background: white;
+			color: $primary--colour;
+		}
+
+		&:hover {
+			background: white;
+			color: $primary--colour;
 		}
 	}
 
@@ -118,7 +123,7 @@
 	animation: nav-fade-in 0.3s ease-in-out forwards;
 
 	background: $primary--colour;
-	border-bottom: 2px solid white;
+	border-bottom: 2px solid $primary--variation;
 	outline: 5px solid $secondary--colour;
 
 	@media (min-width: $screen-md-min) {

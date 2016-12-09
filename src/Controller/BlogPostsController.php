@@ -31,6 +31,7 @@ class BlogPostsController extends AppController {
 			});
 		}
 
+		$blogPosts = $blogPosts->group('BlogPosts.id');
 		$blogPosts = $blogPosts->toArray();
 
 		$this->_addPlaceholderImageIfEmpty($blogPosts);

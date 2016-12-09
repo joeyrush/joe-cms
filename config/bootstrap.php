@@ -223,3 +223,15 @@ if (Configure::read('debug')) {
 }
 
 Plugin::loadAll();
+
+// switch(env('HTTP_HOST')) {
+//     case 'dev:8080':
+    
+//     break;
+//     case 'joerushton.com':
+
+//     break;
+
+//     default:
+//     break;
+// }

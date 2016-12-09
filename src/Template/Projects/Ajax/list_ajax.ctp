@@ -1,3 +1,4 @@
+<div id="ajaxLoader"><h4>Fetching Projects...</h4></div>
 <?php if (!empty($currentAjaxCategory)) : ?>
 	<h1><?=$currentAjaxCategory['name'];?></h1>
 <?php else : ?>
@@ -28,8 +29,10 @@
 				<div class="tall">
 					<h3><?=$ajaxProjects[0]['title']?></h3>
 					<p><?=$ajaxProjects[0]['description']?></p>
-					<a href="#" data-toggle="modal" data-target="#findOutMore" data-id="0">Find Out More</a> |
-					<a href="#">Visit Project</a>
+					<a href="#" data-toggle="modal" data-target="#findOutMore" data-id="0">Find Out More</a>
+					<?php if(!empty($ajaxProjects[0]['url'])) : ?>
+						| <a href="<?=$ajaxProjects[0]['url'];?>" target="_blank">Visit Project</a>
+					<?php endif; ?>
 				</div>
 			</div>
 		</div>
@@ -55,8 +58,10 @@
 				<div class="short">
 					<h3><?=$ajaxProjects[1]['title']?></h3>
 					<p><?=$ajaxProjects[1]['description']?></p>
-					<a href="#" data-toggle="modal" data-target="#findOutMore" data-id="1">Find Out More</a> |
-					<a href="#">Visit Project</a>
+					<a href="#" data-toggle="modal" data-target="#findOutMore" data-id="1">Find Out More</a>
+					<?php if(!empty($ajaxProjects[1]['url'])) : ?>
+						| <a href="<?=$ajaxProjects[1]['url'];?>" target="_blank">Visit Project</a>
+					<?php endif; ?>
 				</div>
 			</div>
 		</div>
@@ -79,8 +84,10 @@
 				<div class="short">
 					<h3><?=$ajaxProjects[2]['title']?></h3>
 					<p><?=$ajaxProjects[2]['description']?></p>
-					<a href="#" data-toggle="modal" data-target="#findOutMore" data-id="2">Find Out More</a> |
-					<a href="#">Visit Project</a>
+					<a href="#" data-toggle="modal" data-target="#findOutMore" data-id="2">Find Out More</a>
+					<?php if(!empty($ajaxProjects[2]['url'])) : ?>
+						| <a href="<?=$ajaxProjects[2]['url'];?>" target="_blank">Visit Project</a>
+					<?php endif; ?>
 				</div>
 			</div>
 		</div>
@@ -105,8 +112,10 @@
 				<div class="short">
 					<h3><?=$ajaxProjects[3]['title']?></h3>
 					<p><?=$ajaxProjects[3]['description']?></p>
-					<a href="#" data-toggle="modal" data-target="#findOutMore" data-id="3">Find Out More</a> |
-					<a href="#">Visit Project</a>
+					<a href="#" data-toggle="modal" data-target="#findOutMore" data-id="3">Find Out More</a>
+					<?php if(!empty($ajaxProjects[3]['url'])) : ?>
+						| <a href="<?=$ajaxProjects[3]['url'];?>" target="_blank">Visit Project</a>
+					<?php endif; ?>
 				</div>
 			</div>
 		</div>
@@ -129,8 +138,10 @@
 				<div class="short">
 					<h3><?=$ajaxProjects[4]['title']?></h3>
 					<p><?=$ajaxProjects[4]['description']?></p>
-					<a href="#" data-toggle="modal" data-target="#findOutMore" data-id="4">Find Out More</a> |
-					<a href="#">Visit Project</a>
+					<a href="#" data-toggle="modal" data-target="#findOutMore" data-id="4">Find Out More</a>
+					<?php if(!empty($ajaxProjects[4]['url'])) : ?>
+						| <a href="<?=$ajaxProjects[4]['url'];?>" target="_blank">Visit Project</a>
+					<?php endif; ?>
 				</div>
 			</div>
 		</div>
@@ -156,8 +167,10 @@
 					<div class="short">
 						<h3><?=$ajaxProjects[5]['title']?></h3>
 						<p><?=$ajaxProjects[5]['description']?></p>
-						<a href="#" data-toggle="modal" data-target="#findOutMore" data-id="5">Find Out More</a> |
-						<a href="#">Visit Project</a>
+						<a href="#" data-toggle="modal" data-target="#findOutMore" data-id="5">Find Out More</a>
+						<?php if(!empty($ajaxProjects[5]['url'])) : ?>
+						| <a href="<?=$ajaxProjects[5]['url'];?>" target="_blank">Visit Project</a>
+					<?php endif; ?>
 					</div>
 				</div>
 			</div>
@@ -180,8 +193,10 @@
 					<div class="short">
 						<h3><?=$ajaxProjects[6]['title']?></h3>
 						<p><?=$ajaxProjects[6]['description']?></p>
-						<a href="#" data-toggle="modal" data-target="#findOutMore" data-id="6">Find Out More</a> |
-						<a href="#">Visit Project</a>
+						<a href="#" data-toggle="modal" data-target="#findOutMore" data-id="6">Find Out More</a>
+						<?php if(!empty($ajaxProjects[6]['url'])) : ?>
+						| <a href="<?=$ajaxProjects[6]['url'];?>" target="_blank">Visit Project</a>
+					<?php endif; ?>
 					</div>
 				</div>
 			</div>
@@ -204,8 +219,10 @@
 					<div class="short">
 						<h3><?=$ajaxProjects[7]['title']?></h3>
 						<p><?=$ajaxProjects[7]['description']?></p>
-						<a href="#" data-toggle="modal" data-target="#findOutMore" data-id="7">Find Out More</a> |
-						<a href="#">Visit Project</a>
+						<a href="#" data-toggle="modal" data-target="#findOutMore" data-id="7">Find Out More</a>
+						<?php if(!empty($ajaxProjects[7]['url'])) : ?>
+						| <a href="<?=$ajaxProjects[7]['url'];?>" target="_blank">Visit Project</a>
+					<?php endif; ?>
 					</div>
 				</div>
 			</div>
@@ -235,8 +252,10 @@
 					<div class="short">
 						<h3><?=$project['title']?></h3>
 						<p><?=$project['description']?></p>
-						<a href="#" data-toggle="modal" data-target="#findOutMore" data-id="<?=$key;?>">Find Out More</a> |
-						<a href="#">Visit Project</a>
+						<a href="#" data-toggle="modal" data-target="#findOutMore" data-id="<?=$key;?>">Find Out More</a>
+						<?php if(!empty($project['url'])) : ?>
+						| <a href="<?=$project['url'];?>" target="_blank">Visit Project</a>
+					<?php endif; ?>
 					</div>
 				</div>
 			</div>

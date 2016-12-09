@@ -94,7 +94,10 @@ class AppController extends Controller
         $this->_setActivePage($pages);
         $this->set(compact('pages'));
 
-        $this->Auth->allow(['view', 'display']);
+        // if prefix is empty, we aren't in /admin
+        if (empty($this->request->prefix)) {
+            $this->Auth->allow(['view', 'display']);
+        }
 
         $this->set('user', $this->Auth->user());
 

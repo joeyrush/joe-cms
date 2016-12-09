@@ -130,7 +130,7 @@
 			<div class="row">
 				<div class="col-md-6 text-md-center col-portfolio">
 					<div>
-						<?php echo $this->Image->resize('abc', array(
+						<?php echo $this->Image->resize('img/uploads/portfolio/item01.png', array(
 							'width' => 380,
 							'height' => 250,
 							'htmlAttributes' => array(
@@ -139,7 +139,7 @@
 							'crop' => true,
 							'autocrop' => true
 						)); ?>
-						<?php echo $this->Image->resize('abc', array(
+						<?php echo $this->Image->resize('img/uploads/portfolio/item02.png', array(
 							'width' => 380,
 							'height' => 250,
 							'htmlAttributes' => array(
@@ -148,7 +148,7 @@
 							'crop' => true,
 							'autocrop' => true
 						)); ?>
-						<?php echo $this->Image->resize('abc', array(
+						<?php echo $this->Image->resize('img/uploads/portfolio/item03.png', array(
 							'width' => 380,
 							'height' => 250,
 							'htmlAttributes' => array(

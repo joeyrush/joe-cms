@@ -18,6 +18,7 @@ use Cake\Core\Configure;
 use Cake\Network\Exception\NotFoundException;
 use Cake\View\Exception\MissingTemplateException;
 use App\Controller\AppController;
+use Cake\Event\Event;
 
 /**
  * Static content controller
@@ -28,7 +29,6 @@ use App\Controller\AppController;
  */
 class PagesController extends AppController
 {
-
     /**
      * Displays a view
      *

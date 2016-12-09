@@ -25,8 +25,6 @@
 
 		@media (max-width: 1300px) {
 			margin-top: 80px;
-			background: rgba(255,255,255,0.5);
-			border: 1px solid white;
 			border-left: none;
 			padding:10px;
 			font-size: 20px;
@@ -188,6 +186,10 @@
 		@media (max-width: $screen-xs-max) {
 			height: 600px;
 		}
+
+		@media (max-width: 620px) {
+			height: 380px;
+		}
 	}
 	
 	
@@ -244,12 +246,17 @@
 		position: relative;
 		height: 250px;
 		width: 380px;
-		border: 3px solid $primary--colour;
+		border: 3px solid white;
 		border-radius: 4px;
 
 		@media (max-width: $screen-sm-max) and (min-width: $screen-xs-max) {
 			width: 253px;
 			height: 166px;
+		}
+
+		@media (max-width: 620px) {
+			width: 180px;
+			height: 120px;
 		}
 	}
 
@@ -273,6 +280,16 @@
 		@media (max-width: $screen-xs-max) {
 			left: 75px;
 		}
+
+		@media (max-width: 620px) {
+			top: 25px;
+			left: -125px;
+		}
+
+		@media (max-width: 442px) {
+			left:65px;
+			top:-80px;
+		}
 	}
 	.img-3 {
 		top: -400px;
@@ -284,6 +301,16 @@
 
 		@media (max-width: $screen-xs-max) {
 			left: 125px;
+		}
+
+		@media (max-width: 620px) {
+			left: 100px;
+			top: -65px;
+		}
+
+		@media (max-width: 442px) {
+			left:110px;
+			top:-160px;
 		}
 	}
 
@@ -304,6 +331,11 @@
 		@media (max-width: $screen-xs-max) {
 			top: -300px;
 			left: -75px;
+		}
+
+		@media (max-width: 620px) {
+			top: -285px;
+			left: -95px;
 		}
 
 		

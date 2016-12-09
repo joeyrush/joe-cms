@@ -15,15 +15,12 @@
     <?= $this->Html->css('minified/site.min.css') ?>
     <?= $this->Html->css('minified/jquery.fancybox.css') ?>
     <?= $this->Html->css('https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css') ?>
+    <?= $this->Html->css('../flat/purple.css') ?>
     
     <?= $this->fetch('css') ?>
     <?= $this->fetch('script') ?>
-
-    <?php
-        // using an older jquery cdn for compatibility with galleria
-        echo $this->Html->script("https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js");
-    ?>
-
+    
+    <?= $this->Html->script('https://code.jquery.com/jquery-2.2.4.min.js', ['integrity' => 'sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=', 'crossorigin' => 'anonymous']) ?>
 </head>
 <body>
     <?php echo $this->element('site_header'); ?>
@@ -43,7 +40,7 @@
         ); 
     ?>
     <?= $this->Html->script('minified/bootstrap.min.js') ?>
-    <?= $this->Html->script('minified/site.min.js') ?>
+    <?= $this->Html->script('minified/icheck.min.js') ?>
     <?= $this->Html->script('https://cdnjs.cloudflare.com/ajax/libs/galleria/1.4.5/galleria.min.js'); ?>
     <?= $this->Html->script('minified/jquery.fancybox.pack.js'); ?>
     <?= $this->Html->script('minified/jquery.fancybox-media.js'); ?>
@@ -51,5 +48,12 @@
     <!-- Syntax Highlighting -->
     <?= $this->Html->script('//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/highlight.min.js'); ?>
     <?= $this->Html->css('//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/styles/codepen-embed.min.css'); ?>
+
+    <?php
+        // load the site specific js after the external libraries as this is where they will be initialized
+        echo $this->Html->script('minified/site.min.js') 
+    ?>
+    
+    
 </body>
 </html>

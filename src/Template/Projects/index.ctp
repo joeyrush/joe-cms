@@ -26,6 +26,7 @@
 			<hr>
 		</div>
 		<div class="items-wrapper">
+			<div id="ajaxLoader"><h4>Fetching Projects...</h4></div>
 			<?php if (!empty($currentCategory)) : ?>
 				<h1><?=$currentCategory['name'];?></h1>
 			<?php else : ?>
@@ -57,8 +58,10 @@
 							<div class="tall">
 								<h3><?=$projects[0]['title']?></h3>
 								<p><?=$projects[0]['description']?></p>
-								<a href="#" data-toggle="modal" data-target="#findOutMore" data-id="0">Find Out More</a> |
-								<a href="#">Visit Project</a>
+								<a href="#" data-toggle="modal" data-target="#findOutMore" data-id="0">Find Out More</a>
+								<?php if(!empty($projects[0]['url'])) : ?>
+									| <a href="<?=$projects[0]['url'];?>" target="_blank">Visit Project</a>
+								<?php endif; ?>
 							</div>
 						</div>
 					</div>
@@ -84,8 +87,10 @@
 							<div class="short">
 								<h3><?=$projects[1]['title']?></h3>
 								<p><?=$projects[1]['description']?></p>
-								<a href="#" data-toggle="modal" data-target="#findOutMore" data-id="1">Find Out More</a> |
-								<a href="#">Visit Project</a>
+								<a href="#" data-toggle="modal" data-target="#findOutMore" data-id="1">Find Out More</a>
+								<?php if(!empty($projects[1]['url'])) : ?>
+									| <a href="<?=$projects[1]['url'];?>" target="_blank">Visit Project</a>
+								<?php endif; ?>
 							</div>
 						</div>
 					</div>
@@ -108,8 +113,10 @@
 							<div class="short">
 								<h3><?=$projects[2]['title']?></h3>
 								<p><?=$projects[2]['description']?></p>
-								<a href="#" data-toggle="modal" data-target="#findOutMore" data-id="2">Find Out More</a> |
-								<a href="#">Visit Project</a>
+								<a href="#" data-toggle="modal" data-target="#findOutMore" data-id="2">Find Out More</a>
+								<?php if(!empty($projects[2]['url'])) : ?>
+									| <a href="<?=$projects[2]['url'];?>" target="_blank">Visit Project</a>
+								<?php endif; ?>
 							</div>
 						</div>
 					</div>
@@ -134,8 +141,10 @@
 							<div class="short">
 								<h3><?=$projects[3]['title']?></h3>
 								<p><?=$projects[3]['description']?></p>
-								<a href="#" data-toggle="modal" data-target="#findOutMore" data-id="3">Find Out More</a> |
-								<a href="#">Visit Project</a>
+								<a href="#" data-toggle="modal" data-target="#findOutMore" data-id="3">Find Out More</a>
+								<?php if(!empty($projects[3]['url'])) : ?>
+									| <a href="<?=$projects[3]['url'];?>" target="_blank">Visit Project</a>
+								<?php endif; ?>
 							</div>
 						</div>
 					</div>
@@ -158,8 +167,10 @@
 							<div class="short">
 								<h3><?=$projects[4]['title']?></h3>
 								<p><?=$projects[4]['description']?></p>
-								<a href="#" data-toggle="modal" data-target="#findOutMore" data-id="4">Find Out More</a> |
-								<a href="#">Visit Project</a>
+								<a href="#" data-toggle="modal" data-target="#findOutMore" data-id="4">Find Out More</a>
+								<?php if(!empty($projects[4]['url'])) : ?>
+									| <a href="<?=$projects[4]['url'];?>" target="_blank">Visit Project</a>
+								<?php endif; ?>
 							</div>
 						</div>
 					</div>
@@ -186,8 +197,10 @@
 							<div class="short">
 								<h3><?=$projects[5]['title']?></h3>
 								<p><?=$projects[5]['description']?></p>
-								<a href="#" data-toggle="modal" data-target="#findOutMore" data-id="5">Find Out More</a> |
-								<a href="#">Visit Project</a>
+								<a href="#" data-toggle="modal" data-target="#findOutMore" data-id="5">Find Out More</a>
+								<?php if(!empty($projects[5]['url'])) : ?>
+									| <a href="<?=$projects[5]['url'];?>" target="_blank">Visit Project</a>
+								<?php endif; ?>
 							</div>
 						</div>
 					</div>
@@ -210,8 +223,10 @@
 							<div class="short">
 								<h3><?=$projects[6]['title']?></h3>
 								<p><?=$projects[6]['description']?></p>
-								<a href="#" data-toggle="modal" data-target="#findOutMore" data-id="6">Find Out More</a> |
-								<a href="#">Visit Project</a>
+								<a href="#" data-toggle="modal" data-target="#findOutMore" data-id="6">Find Out More</a>
+								<?php if(!empty($projects[6]['url'])) : ?>
+									| <a href="<?=$projects[6]['url'];?>" target="_blank">Visit Project</a>
+								<?php endif; ?>
 							</div>
 						</div>
 					</div>
@@ -234,8 +249,10 @@
 							<div class="short">
 								<h3><?=$projects[7]['title']?></h3>
 								<p><?=$projects[7]['description']?></p>
-								<a href="#" data-toggle="modal" data-target="#findOutMore" data-id="7">Find Out More</a> |
-								<a href="#">Visit Project</a>
+								<a href="#" data-toggle="modal" data-target="#findOutMore" data-id="7">Find Out More</a>
+								<?php if(!empty($projects[7]['url'])) : ?>
+									| <a href="<?=$projects[7]['url'];?>" target="_blank">Visit Project</a>
+								<?php endif; ?>
 							</div>
 						</div>
 					</div>
@@ -260,8 +277,10 @@
 							<div class="short">
 								<h3><?=$projects[8]['title']?></h3>
 								<p><?=$projects[8]['description']?></p>
-								<a href="#" data-toggle="modal" data-target="#findOutMore" data-id="8">Find Out More</a> |
-								<a href="#">Visit Project</a>
+								<a href="#" data-toggle="modal" data-target="#findOutMore" data-id="8">Find Out More</a>
+								<?php if(!empty($projects[8]['url'])) : ?>
+									| <a href="<?=$projects[8]['url'];?>" target="_blank">Visit Project</a>
+								<?php endif; ?>
 							</div>
 						</div>
 					</div>
@@ -284,8 +303,10 @@
 							<div class="short">
 								<h3><?=$projects[9]['title']?></h3>
 								<p><?=$projects[9]['description']?></p>
-								<a href="#" data-toggle="modal" data-target="#findOutMore" data-id="9">Find Out More</a> |
-								<a href="#">Visit Project</a>
+								<a href="#" data-toggle="modal" data-target="#findOutMore" data-id="9">Find Out More</a>
+								<?php if(!empty($projects[9]['url'])) : ?>
+									| <a href="<?=$projects[9]['url'];?>" target="_blank">Visit Project</a>
+								<?php endif; ?>
 							</div>
 						</div>
 					</div>
@@ -308,8 +329,10 @@
 							<div class="short">
 								<h3><?=$projects[10]['title']?></h3>
 								<p><?=$projects[10]['description']?></p>
-								<a href="#" data-toggle="modal" data-target="#findOutMore" data-id="10">Find Out More</a> |
-								<a href="#">Visit Project</a>
+								<a href="#" data-toggle="modal" data-target="#findOutMore" data-id="10">Find Out More</a>
+								<?php if(!empty($projects[10]['url'])) : ?>
+									| <a href="<?=$projects[10]['url'];?>" target="_blank">Visit Project</a>
+								<?php endif; ?>
 							</div>
 						</div>
 					</div>
@@ -334,8 +357,10 @@
 							<div class="short">
 								<h3><?=$projects[11]['title']?></h3>
 								<p><?=$projects[11]['description']?></p>
-								<a href="#" data-toggle="modal" data-target="#findOutMore" data-id="11">Find Out More</a> |
-								<a href="#">Visit Project</a>
+								<a href="#" data-toggle="modal" data-target="#findOutMore" data-id="11">Find Out More</a>
+								<?php if(!empty($projects[11]['url'])) : ?>
+									| <a href="<?=$projects[11]['url'];?>" target="_blank">Visit Project</a>
+								<?php endif; ?>
 							</div>
 						</div>
 					</div>
@@ -360,8 +385,10 @@
 							<div class="short">
 								<h3><?=$projects[12]['title']?></h3>
 								<p><?=$projects[12]['description']?></p>
-								<a href="#" data-toggle="modal" data-target="#findOutMore" data-id="12">Find Out More</a> |
-								<a href="#">Visit Project</a>
+								<a href="#" data-toggle="modal" data-target="#findOutMore" data-id="12">Find Out More</a>
+								<?php if(!empty($projects[12]['url'])) : ?>
+									| <a href="<?=$projects[12]['url'];?>" target="_blank">Visit Project</a>
+								<?php endif; ?>
 							</div>
 						</div>
 					</div>
@@ -384,8 +411,10 @@
 							<div class="short">
 								<h3><?=$projects[13]['title']?></h3>
 								<p><?=$projects[13]['description']?></p>
-								<a href="#" data-toggle="modal" data-target="#findOutMore" data-id="13">Find Out More</a> |
-								<a href="#">Visit Project</a>
+								<a href="#" data-toggle="modal" data-target="#findOutMore" data-id="13">Find Out More</a>
+								<?php if(!empty($projects[13]['url'])) : ?>
+									| <a href="<?=$projects[13]['url'];?>" target="_blank">Visit Project</a>
+								<?php endif; ?>
 							</div>
 						</div>
 					</div>
@@ -414,8 +443,10 @@
 							<div class="short">
 								<h3><?=$project['title']?></h3>
 								<p><?=$project['description']?></p>
-								<a href="#" data-toggle="modal" data-target="#findOutMore" data-id="<?=$key;?>">Find Out More</a> |
-								<a href="#">Visit Project</a>
+								<a href="#" data-toggle="modal" data-target="#findOutMore" data-id="<?=$key;?>">Find Out More</a>
+								<?php if(!empty($project['url'])) : ?>
+									| <a href="<?=$project['url'];?>" target="_blank">Visit Project</a>
+								<?php endif; ?>
 							</div>
 						</div>
 					</div>
@@ -446,17 +477,44 @@
 							
 							<div class="project__text">
 								<?php echo $this->Html->image('/img/zigzag-white.png', array('class' => 'project__logo')); ?>
-								<h2>Project Title Here</h2>
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident laborum repudiandae ipsam libero ab qui quia quam velit blanditiis eos, atque voluptate dicta totam similique mollitia aliquam nisi nemo. Iusto.</p>
+								<h2>Loading..</h2>
+								<p>Please enable JavaScript in your browsers settings</p>
 							</div>
+
+							<hr>
 							<div class="text-xs-center">
-								<div class="fieldset"><p><span>Required Skills</span></p>
-									<?php echo $this->Html->image('/img/php.png'); ?>
-									<?php echo $this->Html->image('/img/front-end.png'); ?>
-									<?php echo $this->Html->image('/img/cakephp.png'); ?>
-								</div>
+									<?php
+										echo $this->Form->create('Project', array(
+											'url' => array(
+												'controller' => 'projects',
+												'action' => 'index'
+											)
+										));
+									?>
+
+									<fieldset>
+										<legend>Related Categories</legend>
+
+										<?php
+											echo $this->Form->button('Back-end Web Dev', array(
+												'value' => 1,
+												'name' => 'category'
+											));
+
+											echo $this->Form->button('Front-end Web Dev', array(
+												'value' => 2,
+												'name' => 'category'
+											));
+										?>
+
+									</fieldset>
+
+									<?php
+										echo $this->Form->end();
+									?>
 							</div>
 						</div>
+						<div class="text-xs-center"><button type="button" class="close" data-dismiss="modal">Close Modal</button></div>
 					</div>
 		        </div>
 		      </div>
