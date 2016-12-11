@@ -21,6 +21,12 @@
             echo $this->Form->input('description');
             echo $this->Form->input('full_description');
             echo $this->Form->input('url');
+            echo $this->Form->input('is_active');
+        ?>
+    </fieldset>
+    <fieldset>
+        <legend><?= __('Categories') ?></legend>
+        <?php
             echo $this->Form->select('categories._ids', $categories, array('multiple' => 'checkbox'));
         ?>
     </fieldset>

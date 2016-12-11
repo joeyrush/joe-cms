@@ -18,6 +18,7 @@
         <legend><?= __('Edit Category') ?></legend>
         <?php
             echo $this->Form->input('name');
+            echo $this->Form->input('is_active');
         ?>
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>
