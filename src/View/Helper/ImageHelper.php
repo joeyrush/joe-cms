@@ -44,7 +44,7 @@ class ImageHelper extends Helper {
 			// replace all but last dot (extension) with slash
 			$newPath = preg_replace('/\.(?=.*\.)/', '-', $newPath);
 
-			$newPath = 'img/external/' . $newPath;
+			$newPath = 'img/cache/' . $newPath;
 
 			// if we don't already have an image from this url, download it
 			if (!file_exists($newPath)) {

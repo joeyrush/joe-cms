@@ -463,7 +463,7 @@
 		    <div class="modal-dialog modal-lg" role="document">
 		      <div class="modal-content">
 		        <div class="modal-header">
-			    	<a id="visit" href="#">Visit Project</a>
+			    	<a id="visit" href="#" target="_blank">Visit Project</a>
 		        </div>
 		        <div class="modal-body">
 		        	<div class="row">
