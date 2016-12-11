@@ -19,7 +19,7 @@
         <?php
             echo $this->Form->input('title');
             echo $this->Form->input('description');
-            echo $this->Form->input('full_description');
+            echo $this->Form->input('full_description', ['id' => 'tinymce']);
             echo $this->Form->input('url');
             echo $this->Form->input('is_active');
         ?>

@@ -12,6 +12,6 @@
 		<a class="menu__item menu--even" href="Videos"><i class="fa fa-youtube-play" aria-hidden="true"></i> Edit Videos</a>
 		<a class="menu__item menu--even" href="BlogPosts"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit Blog</a>
 		<a class="menu__item menu--even" href="Projects"><i class="fa fa-briefcase" aria-hidden="true"></i> Edit Portfolio</a>
-		<a class="menu__item menu--even" href="Quotes"><i class="fa fa-briefcase" aria-hidden="true"></i> Edit Quotes</a>
+		<a class="menu__item menu--even" href="Quotes"><i class="fa fa-commenting" aria-hidden="true"></i> Edit Quotes</a>
 	</div>
 </div>
