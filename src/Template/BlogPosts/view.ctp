@@ -1,3 +1,5 @@
+<?php echo $this->element('meta', ['metaTitle' => $blogPost['name']]); ?>
+
 <div class="blog blog__detail">	
 	<div class="container">
 		<div class="blog__wrapper">

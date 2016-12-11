@@ -37,16 +37,27 @@ class ContactFormController extends AppController {
 
 		//Email::deliver('you@example.com', 'Subject', 'Message', ['from' => 'me@example.com']);
 
-		$this->_send($email, $message, $name);
+		$result = $this->_send($email, $message, $name);
 
-		$this->redirect('/');
+		if ($result) {
+			$this->Flash->set('Thank you for your message! I\'ll be in touch as soon as I remember to look at my emails', [
+			    'element' => 'success'
+			]);
+		} else {
+			$this->Flash->set('Something went wrong, please try again.', [
+			    'element' => 'error'
+			]);
+		}
+
+		$this->redirect('/#mailto');
 	}
 
-	protected function _send($email, $message, $name) {
+	protected function _send($from, $message, $name) {
 		$email = new Email('default');
-		$email->from([$email => $name])
+		$email->from($from)
 		    ->to('joe_rushton@hotmail.co.uk')
-		    ->subject('joerushton.com Contact Form')
-		    ->send($message);
+		    ->subject('joerushton.com Contact Form');
+		
+		return $email->send($message);
 	}
 }

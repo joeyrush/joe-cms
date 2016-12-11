@@ -393,7 +393,7 @@
 		border: 3px solid $primary--colour;
 		margin-top: 5px;
 		margin-bottom: 2px;
-		font-family: $secondary--font;
+		font-family: $primary--font;
 		padding: 5px;
 		float:right;
 		transition: all 0.2s;
@@ -428,19 +428,19 @@
 	.quote {
 		margin-top: 50px;
 		margin-bottom: -50px;
-		font-size: 1.2rem;
 		display: none;
 
 		p {
-			color: lighten($secondary--colour, 25%);
+			color: $primary--colour;
 			font-family: $secondary--font;
+			font-size: 25px;
 		}
 
 		@media (max-width: $screen-xs-max) {
 			margin-bottom: 0px;
 
 			p {
-				color: white;
+				color: $primary--colour;
 			}
 		}
 	}
@@ -448,6 +448,15 @@
 	.contact--form {
 		@media (max-width: $screen-xs-max) {
 			margin-top: 100px;
+		}
+
+		> div {
+			width: 	400px;
+			float:right;
+
+			@media (max-width: $screen-sm-max) {
+				width: 100%;
+			}
 		}
 	}
 

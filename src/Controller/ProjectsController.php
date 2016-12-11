@@ -15,11 +15,11 @@ class ProjectsController extends AppController {
 
 	public function index($categoryId = null) {
 		// populate dropdown
-		$projectCategories = $this->Projects->Categories->find('list')->toArray();
+		$projectCategories = $this->Projects->Categories->find('list')->where(['Categories.is_active' => 1])->toArray();
 		$this->set('projectCategories', $projectCategories);
 
 		// fetch all the data
-		$projects = $this->Projects->find('all')->contain([
+		$projects = $this->Projects->find('all')->where(['Projects.is_active' => 1])->contain([
 			'Images',
 			'Categories'
 		]);
@@ -59,7 +59,7 @@ class ProjectsController extends AppController {
 
 	    $categoryId = $this->request->data['categoryId'];
 	    // fetch all the data
-		$projects = $this->Projects->find('all')->contain([
+		$projects = $this->Projects->find('all')->where(['Projects.is_active' => 1])->contain([
 			'Images',
 			'Categories'
 		]);

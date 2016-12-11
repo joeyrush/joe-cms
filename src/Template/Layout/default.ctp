@@ -6,7 +6,19 @@
     <title>
         <?= $this->fetch('title') ?>
     </title>
-    <?= $this->Html->meta('icon') ?>
+    <?php 
+        echo $this->Html->meta('icon', 'favicon2.ico');
+
+        echo $this->Html->meta(
+            'keywords',
+            'PHP; Web Development; HTML; Portfolio; Industry Standard; Composer; Dependencies; SEO; jQuery; JavaScript; CakePHP'
+        );
+
+        echo $this->Html->meta(
+            'description',
+            'A junior PHP web developers personal portfolio showcasing his work and blogging about tools used in the modern web development industry to improve workflow, security, SEO and other aspects of building websites'
+        );
+    ?>
 
     <?= $this->fetch('meta') ?>
     <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">

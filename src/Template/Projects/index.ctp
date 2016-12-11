@@ -1,3 +1,5 @@
+<?php echo $this->element('meta', ['metaTitle' => 'PHP Web Development Projects']); ?>
+
 <div class="portfolio-wrapper">
 	<div class="container-fluid">
 		<div class="portfolio-header">

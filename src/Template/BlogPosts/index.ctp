@@ -1,3 +1,5 @@
+ <?php echo $this->element('meta', ['metaTitle' => 'Web Development Blog | Joe Rushton']); ?>
+
 <div class="blog">	
 	<div class="container">
 		<div class="blog__wrapper">

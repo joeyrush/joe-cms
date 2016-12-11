@@ -1,3 +1,7 @@
+<?php 
+	$this->assign('title', 'Hobbies & Interests | Joe Rushton');
+?>
+
 <a name="top"></a>
 
 <div class="outside-of-work-wrapper">

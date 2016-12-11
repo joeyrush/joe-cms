@@ -1,3 +1,5 @@
+<?php echo $this->element('meta', ['metaTitle' => 'Homepage - Web Development Portfolio | Joe Rushton']); ?>
+
     <div class="jumbotron jumbotron-home">
       <div class="container-fluid">
       	<div class="row">
@@ -176,25 +178,13 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-6 text-md-center contact--text">
-					<h2>Give me a shout..</h2>
-					<h3><small>Ask me how much I bench or tell me how bad my website is, I'm always happy to chat <i class="fa fa-smile-o" aria-hidden="true"></i></small></h3>
-					
-					<div class="quotes">
-						<div class="quote" id="quote1">
-							<blockquote><p>"Random inspiring quote that cycles round automatically forever and ever"</p></blockquote>
-							<p class="text-md-right">~ Author</p>
-						</div>
-						<div class="quote">
-							<blockquote><p>"Another quote that loops round in an infinite loop for eternity"</p></blockquote>
-							<p class="text-md-right">~ Author2</p>
-						</div>
-						<div class="quote">
-							<blockquote><p>"The third and final quote of these series of quotes that cycle round automiatcally"</p></blockquote>
-							<p class="text-md-right">~ Author3</p>
-						</div>
-					</div>
+					<?php echo $this->element('quotes'); ?>
 				</div>
-				<div class="col-md-6 text-md-center contact--form">
+				<div class="col-md-6 contact--form">	
+					<div>
+						<h2>Give me a shout..</h2>
+						<p><small>Ask me how much I bench or tell me how bad my website is, I'm always happy to chat <i class="fa fa-smile-o" aria-hidden="true"></i></small></p>
+					</div>
 					<?php echo $this->Form->create('ContactForm', array(
 						'url' => array(
 							'controller' => 'contact_form',

@@ -61,6 +61,12 @@ class PagesController extends AppController
             $this->set('videos', $videos->toArray());
         }
 
+        if ($page == 'homepage') {
+            $this->loadModel('Quotes');
+            $quotes = $this->Quotes->find('all')->where(['Quotes.is_active' => 1]);
+            $this->set('quotes', $quotes->toArray());
+        }
+
         try {
             $this->render(implode('/', $path));
         } catch (MissingTemplateException $e) {
