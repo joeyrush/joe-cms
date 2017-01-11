@@ -151,7 +151,11 @@ function initModalToggle(data) {
  */
 function switchModalContent(data) {
 	$('.project__modal .modal-body h2').html(data['title']);
-	$('.project__modal .project__text p').html(data['description']);
+	if (data['full_description'] == '') {
+		$('.project__modal .project__text p').html(data['description']);
+	} else {
+		$('.project__modal .project__text p').html(data['full_description']);
+	}
 	$('.project__modal .modal-header a').attr("href", data['url']);
 
 	var newImages = [];

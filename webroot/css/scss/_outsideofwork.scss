@@ -155,8 +155,11 @@
 
 	.section__box {
 		transition: all 1s;
-		height: 450px;
-		opacity: 0.4;
+		height: 0px;
+		opacity: 0.6;
+		border: 15px solid rgba($primary--colour, 0.5);
+		animation: stretch 0.5s forwards;
+		animation-delay: 0.65s;
 	}
 
 	// .section__box::before {
@@ -185,6 +188,9 @@
 	  background: $primary--colour;
 	  z-index: 100;
 	  top: 48px;
+	  opacity: 0;
+	  animation: slide-left-to-right-fade 1s forwards;
+	  animation-delay: 1s;
 	}
 
 	.zoom {

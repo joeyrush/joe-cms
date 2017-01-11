@@ -6,7 +6,7 @@
     <title>
         <?= $this->fetch('title') ?>
     </title>
-    <?php echo $this->Html->meta('icon', 'favicon2.ico'); ?>
+    <?php echo $this->Html->meta('icon', 'favicon.ico'); ?>
 
     <?= $this->fetch('meta') ?>
     <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
@@ -19,6 +19,8 @@
     
     <?= $this->fetch('css') ?>
     <?= $this->fetch('script') ?>
+
+    <?= $this->element('analytics.ctp'); ?>
     
     <?= $this->Html->script('https://code.jquery.com/jquery-2.2.4.min.js', ['integrity' => 'sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=', 'crossorigin' => 'anonymous']) ?>
 </head>

@@ -174,7 +174,7 @@
 
 	<a name="mailto"></a>
 	<div class="jumbotron jumbotron-contact">
-		<?= $this->Flash->render() ?>
+		<?= $this->Flash->render(); ?>
 		<div class="container">
 			<div class="row">
 				<div class="col-md-6 text-md-center contact--text">

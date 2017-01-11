@@ -31,14 +31,11 @@ class ContactFormController extends AppController {
 			$this->Flash->set('Please fill in your name, email address and a message before submitting the form.', [
 			    'element' => 'error'
 			]);
-			$this->redirect('/#mailto');
-			return;
+			return $this->redirect(['controller' => 'pages', 'action' => 'display', '#' => 'mailto']);
 		}
 
-		//Email::deliver('you@example.com', 'Subject', 'Message', ['from' => 'me@example.com']);
-
 		$result = $this->_send($email, $message, $name);
-
+	
 		if ($result) {
 			$this->Flash->set('Thank you for your message! I\'ll be in touch as soon as I remember to look at my emails', [
 			    'element' => 'success'
@@ -49,7 +46,7 @@ class ContactFormController extends AppController {
 			]);
 		}
 
-		$this->redirect('/#mailto');
+		return $this->redirect(['controller' => 'pages', 'action' => 'display', '#' => 'mailto']);
 	}
 
 	protected function _send($from, $message, $name) {

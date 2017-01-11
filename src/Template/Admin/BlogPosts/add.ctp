@@ -12,7 +12,7 @@
         <legend><?= __('Edit Blog Post') ?></legend>
         <?php
             echo $this->Form->input('name');
-            echo $this->Form->input('body');
+            echo $this->Form->input('body', array('id' => 'tinymce'));
             echo $this->Form->input('is_active');
         ?>
     </fieldset>

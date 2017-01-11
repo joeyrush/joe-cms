@@ -117,7 +117,7 @@
 				<div class="col-md-6 offset-md-3">
 					<div class="links">
 						<a href="https://crowdfunding.justgiving.com/ebony-garbutt" target="_blank">JustGiving Page</a>
-						<a href="http://joerushton.com/dl/justgiving.pdf" target="_blank">Documentation</a>
+						<a href="http://joerushton.com/old/dl/justgiving.pdf" target="_blank">Documentation</a>
 					</div>
 					<div class="galleria">
 						<?php

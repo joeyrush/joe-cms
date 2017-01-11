@@ -47,6 +47,16 @@
 	transition: all 2s;
 }
 
+@keyframes stretch {
+	0% {height:0px;}
+	100% {height: 170px;}
+}
+
+@keyframes slide-left-to-right-fade {
+	0% {opacity: 0; left:-10%;}
+	100% {opacity: 1; left: 0;}
+}
+
 @keyframes slide-left-to-right {
 	0% {left:-100%;}
 	100% {left: 0;}

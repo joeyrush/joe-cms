@@ -1,0 +1,126 @@
+/*Responsive CSS*/
+
+@media only screen and (max-width:1485px){
+	/*overview page*/
+	.about-header{
+		font-size:0.8em;
+	}
+	.welcometitle h2{
+		font-size:2em;
+	}4em
+	/*end overview page*/
+	
+	/*our courses page*/
+	.btn-view{
+	  float:right;
+	  font-size:0.7em;
+	  padding:5px;
+	  width:50px;
+	  border:1px solid black;
+	}
+	.course-icon{width:35px; height:auto;}
+	/*end our courses page*/
+
+}
+
+@media only screen and (max-width:1182px){
+	/*overview page*/
+	.welcometitle h2{
+		font-size:1.5em;
+	}
+	.passion{ /*remove 1 question*/
+		display:none;
+	}
+	/*end overview page*/
+	
+
+}
+
+@media only screen and (max-width:950px){
+	/*overview page*/
+	.tech{display:none;}
+	/*end overview page*/
+
+	.jumbotron{
+		background-size:auto;
+		background-position: 50% 10%;
+	}
+	.jumbotron h1{
+		font-size:3.5em;
+	}
+
+}
+ @media only screen and (max-width: 895px){
+ 	/*navbar*/
+	.navbar-form .form-control{ /*search bar*/
+		  width:100px;
+		  height:35px;
+		  font-size:0.7em;
+	}
+	.submit{
+		height:35px;
+		font-size:1.5em;
+	}
+	.navbar-default .navbar-nav > li > a{
+		font-size:1em;
+	}
+	.hallam{left:-415px;}
+	.btn-hallam{
+		font-size:10px;
+	}
+	.btn-computing{
+		font-size:10px;
+	}
+	/*end navbar*/
+ }
+
+ @media only screen and (max-width: 767px){ /*breakpoint for navbar collapse*/
+ 	img[src*="img/shulogo.png"]{ /*hide logo when navbar collapses*/
+ 		position:absolute;
+ 		top:0; left:10px;
+ 		width:70px; height:auto;
+ 	}
+	.site-footer p{font-size:10px; width:200px; line-height:10px; margin-top:20px;} /*resize and position footer copyright*/
+	.hallam{background-color: transparent;}
+	.computing{background-color: transparent;}
+
+	.navbar-brand, .navbar-nav>li>a {
+		line-height: 50px;
+		height:40px;
+	}
+	.form-control {
+		float:left;
+	}
+	.submit:hover{
+		height:35px;
+		font-size:1.5em;
+	}
+
+
+	.course-box-title h1{
+		font-size:22px;
+	}
+	#toprow{ /*set the container width for the UCAS & Openday button*/
+		position:relative;
+		left:17%;
+		width:220px;
+		height:100px;
+	}
+ }
+
+
+ @media only screen and (max-width: 604px){
+ 	.demanded{
+ 		/*overview page*/
+ 		display:none;
+ 		/*end overview page*/
+ 	}
+ }
+
+
+@media only screen and (max-width: 384px){
+	/*SHRINK SOCIAL MEDIA ICONS TO PREVENT FOOTER BREAKING ON SMALL SCREEN*/
+	.social{
+		width:20px; height:20px;
+	}
+}

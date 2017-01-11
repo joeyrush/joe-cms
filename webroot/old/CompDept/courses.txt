@@ -1,0 +1,52 @@
+===== Computing Courses Reference =====
+
+BSc (Honours) Information Technology with Business Studies
+	Train to become a technically literate manager with 
+        the skills and knowledge to manage the technological 
+	solutions that are at the heart of modern business.
+BSc (Honours) Computing
+	Studying BSc Computing will give you the skills which are 
+	needed to design, build, manage and operate the IT systems that generate, 
+	store, process and display all this data.
+
+BSc (Honours) Business and ICT
+	Learn to become a confident manager on a course with outstanding 
+	student satisfaction, a vibrant student community and supportive 
+	environment. 
+
+BSc (Honours) Computer Science
+	Understand the fundamental principles which underpin software 
+	development and gain in-depth knowledge of both the theoretical 
+	advances and practical techniques required of modern programmers.
+
+BEng (Honours) Software Engineering
+	Learn the theory and practical skills required to become a software 
+	engineer equipped to work across industry, commerce, business, the 
+	professions and public service.
+
+BSc (Honours) Games Software Development
+	Learn the skills required to pursue a career as a software 
+	developer in the competitive games industry on this respected course.
+
+
+
+
+MComp Games Software Development
+	Learn the skills required to pursue a career as a software developer in the competitive games industry on this respected course. 
+
+MSc Big Data Analytics
+	Develop the skills to become a talented data scientist able to complete technical roles, such as data mining specialist, predictive modeller, computational linguist and statistical analyst on this course. 
+
+BSc (Honours) Data Science
+	On this course you gain the cutting-edge skills used to store, manage, manipulate and analyse the resulting 'big data'. 
+
+MSc IT Management
+	Update and develop your understanding of how to design, develop and manage IT systems, processes and technologies on this masters course. 
+
+BSc (Honours) IT with Business Technologies (top up)
+	Top up your HND or foundation degree to a BSc (Honours) qualification on this one year course with a very hands-on approach.
+
+MEng Software Engineering
+	Learn the theory and practical skills required to become a software engineer, equipped to work as a software professional across industry, commerce, business, the professions and public service.
+
+

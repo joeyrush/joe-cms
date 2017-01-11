@@ -60,7 +60,7 @@ class ProjectsController extends AppController
                 ]
             ]);
 
-            if ($this->Projects->saveAll($project)) {
+            if ($this->Projects->save($project)) {
                 $this->Flash->success(__('The project has been saved.'));
 
                 return $this->redirect(['action' => 'index']);
