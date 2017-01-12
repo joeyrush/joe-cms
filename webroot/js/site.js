@@ -11,7 +11,7 @@ $(document).scroll(function(){
 		$('.zigzag').css({
 			'opacity':'0'
 		});
-		 
+
 	} else {
 		// reverse the process on scroll up
 		$('.navbar-fixed-top').addClass('hidden');
@@ -43,7 +43,7 @@ $(document).ready(function(){
 	var divs = $('.quote').hide(),
     i = 0;
 
-	(function cycle() { 
+	(function cycle() {
 
 	    divs.eq(i).fadeIn(400)
 	              .delay(7000)
@@ -172,7 +172,7 @@ function switchModalContent(data) {
 		// if the image is the placeholder one, dont add it to the gallery
 		if (value.filename != 'upload-empty.png' && value.filename != '' ) {
 			newImages.push({image : 'files/Images/'+value.filename});
-		} 
+		}
 	});
 
 	// if there aren't any images - hide the gallery - else load the new set of images
@@ -182,7 +182,7 @@ function switchModalContent(data) {
 	} else {
 		Galleria.get(0).load({image : 'img/no-image.png'});
 	}
-	
+
 }
 
 /**
@@ -218,17 +218,17 @@ var $animation_elements = $('.scroll-to-display');
  * @return void
  */
 function check_if_in_view(targetElement, classToAdd, fadeOut) {
-	
+
 	var window_height = $(window).height();
 	var window_top_position = $(window).scrollTop();
 	var window_bottom_position = (window_top_position + window_height);
- 
+
 	$.each($animation_elements, function() {
 		var $element = $(this);
 		var element_height = $element.outerHeight();
 		var element_top_position = $element.offset().top;
 		var element_bottom_position = (element_top_position + element_height);
- 
+
 		// Check to see if this current container is within viewport
 		if ((element_bottom_position >= window_top_position) &&
 		(element_top_position <= window_bottom_position)) {
@@ -242,7 +242,7 @@ function check_if_in_view(targetElement, classToAdd, fadeOut) {
 function initSmoothScroll() {
 	if ($('.smooth-scroll').length > 0) {
 		$('.smooth-scroll').click(function() {
-		    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') 
+		    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
 		        || location.hostname == this.hostname) {
 
 		        var target = $(this.hash);
