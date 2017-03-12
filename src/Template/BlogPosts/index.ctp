@@ -1,10 +1,10 @@
  <?php echo $this->element('meta', ['metaTitle' => 'Web Development Blog | Joe Rushton']); ?>
 
-<div class="blog">	
+<div class="blog">
 	<div class="container">
 		<div class="blog__wrapper">
 			<div class="blog-head">
-				<h1><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Blog Posts</h1>	
+				<h1><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Blog Posts</h1>
 			</div>
 
 			<div class="row">
@@ -12,10 +12,10 @@
 				<?php echo $this->Form->create('BlogPost'); ?>
 					<p>Display blog posts related to:</p>
 					<?=$this->Form->input('Tags.name', array(
-						'options' => $tags, 
-						'multiple' => 'checkbox', 
-						'label' => false, 
-						'templates' => [ 
+						'options' => $tags,
+						'multiple' => 'checkbox',
+						'label' => false,
+						'templates' => [
         						'checkboxWrapper' => '<div class="custom-checkbox checkbox">{{label}}</div>',
     						]
     					)); ?>
@@ -31,7 +31,7 @@
 						<div class="col-md-4">
 							<?php
 								$img = $this->Image->resize('/files/Images/' . $blogPost['images'][0]['filename'], array(
-									'width' => 299, 
+									'width' => 299,
 									'height' => 250,
 									'quality' => 100,
 									'crop' => true,
@@ -50,7 +50,7 @@
 						<div class="col-md-8">
 							<div class="blog__text">
 								<?=$this->Html->link('<h2>' . $blogPost['name'] . '</h2>', $url, array('escape' => false)); ?></a>
-								<p class="date"><i class="fa fa-calendar" aria-hidden="true"></i> <?=$this->Time->format($blogPost['created'], \IntlDateFormatter::MEDIUM);?></p>
+								<p class="date"><i class="fa fa-calendar" aria-hidden="true"></i> <?=date('dS F Y', $blogPost['created']->toUnixString());?></p>
 								<p><?=strip_tags($this->Text->truncate($blogPost['body'], 120));?></p>
 							</div>
 						</div>
