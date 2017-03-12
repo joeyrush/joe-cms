@@ -10,6 +10,8 @@ body {
 	overflow-x: hidden;
 }
 
+@import 'variables';
+
 .row.no-gutters {
   margin-right: 0;
   margin-left: 0;
@@ -50,7 +52,18 @@ body {
 	background: transparentize(#4F8A10, .3);
 }
 
-@import 'variables';
+.btn-primary {
+	background: $primary--colour;
+	color: white;
+	font-family: $secondary--font;
+	border: none;
+	transition: all 0.3s;
+
+	&:hover, &:focus {
+		background: $secondary--colour;
+	}
+}
+
 @import 'animate';
 @import 'typography';
 @import 'nav';
