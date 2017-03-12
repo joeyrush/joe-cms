@@ -66,6 +66,7 @@
 <div class="outside-of-work-content charity__wrapper scroll-to-display">
 		<div class="container-fluid">
 			<div class="row">
+				<p>Every now and then I like to raise a little money to help others.</p>
 				<div class="col-md-6 offset-md-3">
 					<div class="links">
 						<a href="https://crowdfunding.justgiving.com/ebony-garbutt" target="_blank">JustGiving Page</a>
