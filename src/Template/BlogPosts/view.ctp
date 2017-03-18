@@ -23,7 +23,7 @@
 			</div>
 			<div class="blog-foot">
 				<?php
-					echo $this->Html->link('<i class="fa fa-angle-double-left" aria-hidden="true"></i> Back to listing', array(
+					echo $this->Html->link('<i class="fa fa-angle-double-left" aria-hidden="true"></i> Back to blog', array(
 						'controller' => 'BlogPosts',
 						'action' => 'index'
 					), array(

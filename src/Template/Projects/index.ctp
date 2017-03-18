@@ -14,12 +14,12 @@
 						<div>
 							<p class="pull-left">
 							Filter By:&emsp;</p>
-							<?php 
+							<?php
 								echo $this->Form->input('ProjectCategory', array(
 									'label' => false,
 									'empty' => 'All Projects',
 									'default' => !empty($currentCategory)? $currentCategory['id'] : 0
-								)); 
+								));
 							?>
 						</div>
 					</div>
@@ -47,8 +47,8 @@
 					<?php if (!empty($projects[0])) : ?>
 					<div class="item-wrapper">
 						<?php echo $this->Image->resize('/files/Images/' . $projects[0]['images'][0]['filename'], array(
-							'width' => 570, 
-							'height' => 620, 
+							'width' => 570,
+							'height' => 620,
 							'htmlAttributes' => array(
 								'class' => 'portfolio-item'
 							),
@@ -75,8 +75,8 @@
 						<div class="half">
 							<!-- <img class="portfolio-item" id="item2" src="http://placehold.it/540x280"> -->
 							<?php echo $this->Image->resize('/files/Images/' . $projects[1]['images'][0]['filename'], array(
-								'width' => 540, 
-								'height' => 280, 
+								'width' => 540,
+								'height' => 280,
 								'htmlAttributes' => array(
 									'class' => 'portfolio-item'
 								),
@@ -101,8 +101,8 @@
 					<div class="item-wrapper">
 						<div class="half">
 							<?php echo $this->Image->resize('/files/Images/' . $projects[2]['images'][0]['filename'], array(
-								'width' => 540, 
-								'height' => 280, 
+								'width' => 540,
+								'height' => 280,
 								'htmlAttributes' => array(
 									'class' => 'portfolio-item'
 								),
@@ -129,8 +129,8 @@
 					<div class="item-wrapper">
 						<div class="half">
 							<?php echo $this->Image->resize('/files/Images/' . $projects[3]['images'][0]['filename'], array(
-								'width' => 540, 
-								'height' => 280, 
+								'width' => 540,
+								'height' => 280,
 								'htmlAttributes' => array(
 									'class' => 'portfolio-item'
 								),
@@ -155,8 +155,8 @@
 					<div class="item-wrapper">
 						<div class="half">
 							<?php echo $this->Image->resize('/files/Images/' . $projects[4]['images'][0]['filename'], array(
-								'width' => 540, 
-								'height' => 280, 
+								'width' => 540,
+								'height' => 280,
 								'htmlAttributes' => array(
 									'class' => 'portfolio-item'
 								),
@@ -185,8 +185,8 @@
 					<div class="item-wrapper">
 						<div class="half">
 							<?php echo $this->Image->resize('/files/Images/' . $projects[5]['images'][0]['filename'], array(
-								'width' => 540, 
-								'height' => 280, 
+								'width' => 540,
+								'height' => 280,
 								'htmlAttributes' => array(
 									'class' => 'portfolio-item'
 								),
@@ -211,8 +211,8 @@
 					<div class="item-wrapper">
 						<div class="half">
 							<?php echo $this->Image->resize('/files/Images/' . $projects[6]['images'][0]['filename'], array(
-								'width' => 540, 
-								'height' => 280, 
+								'width' => 540,
+								'height' => 280,
 								'htmlAttributes' => array(
 									'class' => 'portfolio-item'
 								),
@@ -238,8 +238,8 @@
 					<?php if (!empty($projects[7])) : ?>
 					<div class="item-wrapper">
 						<?php echo $this->Image->resize('/files/Images/' . $projects[7]['images'][0]['filename'], array(
-								'width' => 1110, 
-								'height' => 580, 
+								'width' => 1110,
+								'height' => 580,
 								'htmlAttributes' => array(
 									'class' => 'portfolio-item'
 								),
@@ -266,8 +266,8 @@
 					<?php if (!empty($projects[8])) : ?>
 					<div class="item-wrapper">
 						<?php echo $this->Image->resize('/files/Images/' . $projects[8]['images'][0]['filename'], array(
-							'width' => 540, 
-							'height' => 280, 
+							'width' => 540,
+							'height' => 280,
 							'htmlAttributes' => array(
 								'class' => 'portfolio-item'
 							),
@@ -292,8 +292,8 @@
 					<?php if (!empty($projects[9])) : ?>
 					<div class="item-wrapper">
 						<?php echo $this->Image->resize('/files/Images/' . $projects[9]['images'][0]['filename'], array(
-							'width' => 540, 
-							'height' => 280, 
+							'width' => 540,
+							'height' => 280,
 							'htmlAttributes' => array(
 								'class' => 'portfolio-item'
 							),
@@ -318,8 +318,8 @@
 					<?php if (!empty($projects[10])) : ?>
 					<div class="item-wrapper">
 						<?php echo $this->Image->resize('/files/Images/' . $projects[10]['images'][0]['filename'], array(
-							'width' => 540, 
-							'height' => 280, 
+							'width' => 540,
+							'height' => 280,
 							'htmlAttributes' => array(
 								'class' => 'portfolio-item'
 							),
@@ -346,8 +346,8 @@
 					<?php if (!empty($projects[11])) : ?>
 					<div class="item-wrapper">
 						<?php echo $this->Image->resize('/files/Images/' . $projects[11]['images'][0]['filename'], array(
-								'width' => 1110, 
-								'height' => 580, 
+								'width' => 1110,
+								'height' => 580,
 								'htmlAttributes' => array(
 									'class' => 'portfolio-item'
 								),
@@ -373,8 +373,8 @@
 					<div class="item-wrapper">
 						<div class="half">
 							<?php echo $this->Image->resize('/files/Images/' . $projects[12]['images'][0]['filename'], array(
-								'width' => 540, 
-								'height' => 280, 
+								'width' => 540,
+								'height' => 280,
 								'htmlAttributes' => array(
 									'class' => 'portfolio-item'
 								),
@@ -399,8 +399,8 @@
 					<div class="item-wrapper">
 						<div class="half">
 							<?php echo $this->Image->resize('/files/Images/' . $projects[13]['images'][0]['filename'], array(
-								'width' => 540, 
-								'height' => 280, 
+								'width' => 540,
+								'height' => 280,
 								'htmlAttributes' => array(
 									'class' => 'portfolio-item'
 								),
@@ -424,16 +424,16 @@
 				</div>
 			</div>
 			<div class="row">
-				<?php foreach ($projects as $key => $project) : 
+				<?php foreach ($projects as $key => $project) :
 					if ($key <= 13) {
 						continue;
-					}	
+					}
 				?>
 				<div class="col-md-4 col-sm-12">
 					<div class="item-wrapper">
 						<?php echo $this->Image->resize('/files/Images/' . $project['images'][0]['filename'], array(
-							'width' => 540, 
-							'height' => 280, 
+							'width' => 540,
+							'height' => 280,
 							'htmlAttributes' => array(
 								'class' => 'portfolio-item'
 							),
@@ -476,7 +476,7 @@
 							</div>
 						</div>
 						<div class="col-md-5">
-							
+
 							<div class="project__text">
 								<?php echo $this->Html->image('/img/zigzag-white.png', array('class' => 'project__logo')); ?>
 								<h2>Loading..</h2>
@@ -516,7 +516,7 @@
 									?>
 							</div>
 						</div>
-						<div class="text-xs-center"><button type="button" class="close" data-dismiss="modal">Close Modal</button></div>
+						<div class="text-xs-center"><button type="button" class="close" data-dismiss="modal">Close Window</button></div>
 					</div>
 		        </div>
 		      </div>
