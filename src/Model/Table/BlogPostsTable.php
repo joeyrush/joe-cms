@@ -1,9 +1,9 @@
 <?php
 namespace App\Model\Table;
 
-use Cake\ORM\Table;
+use App\Model\Table\AppTable;
 
-class BlogPostsTable extends Table {
+class BlogPostsTable extends AppTable {
 
 	public function initialize(array $config)
     {

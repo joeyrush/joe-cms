@@ -159,6 +159,9 @@
 
 // overrides for the details page
 .blog__detail {
+	.container {
+		max-width: 920px;
+	}
 	.blog__wrapper {
 		background: linear-gradient(rgba(255,255,255,0.9), rgba(255,255,255,0.9));
 
@@ -199,6 +202,7 @@
 			}
 
 			p {
+				line-height: 2;
 				font-family: $primary--font;
 			}
 

@@ -41,7 +41,7 @@
 								$url = array(
 									'controller' => 'BlogPosts',
 									'action' => 'view',
-									$blogPost['id']
+									'slug' => strtolower(str_replace(' ', '-', str_replace('-', '%7C', $blogPost['name'])))
 								);
 
 								echo $this->Html->link($img, $url, array('escape' => false, 'class' => 'blog__link'));

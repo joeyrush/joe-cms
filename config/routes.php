@@ -79,6 +79,12 @@ Router::connect('/blog', array(
     'controller' => 'BlogPosts',
     'action' => 'index'
 ));
+Router::connect('/blog/:slug', array(
+    'controller' => 'BlogPosts',
+    'action' => 'view'
+), array(
+    'pass' => ['slug']
+));
 
 Router::scope('/pages', function (RouteBuilder $routes) {
     $routes->connect('/*', ['controller' => 'Pages', 'action' => 'display']);

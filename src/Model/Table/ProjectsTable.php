@@ -1,9 +1,9 @@
 <?php
 namespace App\Model\Table;
 
-use Cake\ORM\Table;
+use App\Model\Table\AppTable;
 
-class ProjectsTable extends Table {
+class ProjectsTable extends AppTable {
 
 	public function initialize(array $config)
     {

@@ -44,16 +44,19 @@ class BlogPostsController extends AppController {
 		$this->set('blogPosts', $blogPosts);
 	}
 
-	public function view($id = null) {
-		if (!$id) {
+	public function view($slug = null) {
+		$Model = $this->modelClass;
+		if (!$slug) {
 			$this->redirect(array(
 				'action' => 'index'
 			));
 		}
 
-		$blogPost = $this->BlogPosts->get($id, array('contain' => 'Tags'));
-		$this->set('blogPost', $blogPost->toArray());
+		$blogPost = $this->BlogPosts->readForView($slug, array(
+			'contain' => 'Tags'
+		));
 
+		$this->set('blogPost', $blogPost->first()->toArray());
 	}
 
 }
