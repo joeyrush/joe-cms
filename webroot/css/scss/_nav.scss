@@ -126,8 +126,8 @@
 .navbar-fixed-top {
 	opacity: 0;
 	animation: nav-fade-in 0.3s ease-in-out forwards;
-	background: rgba($primary--colour, 0.9);
-	border-bottom: 3px solid darken($primary--colour, 10%);
+	background: rgba(white, 0.9);
+	// border-bottom: 3px solid white;
 	box-shadow: none;
 
 	@media (min-width: $screen-md-min) {
@@ -150,7 +150,7 @@
 	}
 
 	ul li a {
-		color: white;
+		color: $primary--colour;
 	}
 
 	ul, .navbar-brand {
@@ -159,7 +159,7 @@
 	}
 
 	.fa-home {
-		color: white;
+		color: $primary--colour;
 
 		&:hover {
 			color: $primary--variation;
@@ -168,10 +168,12 @@
 
 	.home-active {
 		color: white;
+		border-color: $primary--colour;
 	}
 
 	.active {
 		padding-bottom: 0px;
+		border-bottom: 3px solid $primary--colour;
 	}
 }
 

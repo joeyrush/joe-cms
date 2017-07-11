@@ -17,6 +17,9 @@
 	width: 100%;
 	background: white;
 }
+.navbar-fixed-top .sliding-middle-out:hover:after {
+	background: $primary--colour;
+}
 
 // border bottom sliding in from middle
 .sliding-middle-out-2 {

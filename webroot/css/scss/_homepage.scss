@@ -17,7 +17,7 @@
 	.container-fluid {
 		margin-top: 5px;
 	}
-	
+
 
 	#text-wrapper {
 		margin-top: 135px;
@@ -190,9 +190,14 @@
 		@media (max-width: 620px) {
 			height: 380px;
 		}
+
+		.image-wrapper {
+			max-height: 400px;
+			overflow: hidden;
+		}
 	}
-	
-	
+
+
 	.text {
 		position:relative;
 		top: 15px;
@@ -349,7 +354,7 @@
 
 		@media (max-width: $screen-sm-max) {
 			display: none;
-		}	
+		}
 	}
 }
 
@@ -369,7 +374,7 @@
 			margin-bottom: -50px;
 			margin-left:0px;
 		}
-		
+
 		h2, h3 {
 			color:darken($primary--colour, 20%);
 		}
@@ -397,7 +402,7 @@
 			}
 		}
 	}
-	
+
 	#name, #email, #message {
 		font-style: italic;
 		width: 400px;
@@ -471,5 +476,5 @@
 		}
 	}
 
-	
+
 }

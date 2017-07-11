@@ -19,7 +19,7 @@
 			</li>
 			<?php foreach ($pages as $menu): ?>
 			<li class="nav-item">
-				<?php 
+				<?php
 					$class = $menu['active'] ? 'active ' : 'sliding-middle-out ';
 					$class .= 'nav-link';
 					$url = array(
@@ -29,16 +29,13 @@
 					if (!empty($menu['pass'])) {
 						$url[] = $menu['pass'];
 					}
-					echo $this->Html->link($menu['name'], $url, array('class' => $class)); 
+					echo $this->Html->link($menu['name'], $url, array('class' => $class));
 				?>
 			</li>
-			<?php endforeach; ?>	
+			<?php endforeach; ?>
 		</ul>
 		<div class="nav-icons pull-lg-right">
 			<ul class="nav navbar-nav">
-				<li class="nav-item">
-					<?php echo $this->Html->link('<i class="fa fa-envelope" aria-hidden="true"></i>', '/#mailto', array('escape' => false, 'class' => 'nav-link', 'target' => "_blank")); ?>
-				</li>
 				<li class="nav-item">
 					<a class="nav-link" target="_blank" href="https://github.com/joeyrush"><i class="fa fa-github-square" aria-hidden="true"></i></a>
 				</li>
@@ -62,7 +59,7 @@
 				</li>
 				<?php foreach ($pages as $menu): ?>
 				<li class="nav-item">
-					<?php 
+					<?php
 						$class = $menu['active'] ? 'active ' : 'sliding-middle-out ';
 						$class .= 'nav-link';
 						$url = array(
@@ -72,15 +69,12 @@
 						if (!empty($menu['pass'])) {
 							$url[] = $menu['pass'];
 						}
-						echo $this->Html->link($menu['name'], $url, array('class' => $class)); 
+						echo $this->Html->link($menu['name'], $url, array('class' => $class));
 					?>
 				</li>
-				<?php endforeach; ?>	
+				<?php endforeach; ?>
 				<div class="nav-icons pull-lg-right text-sm-center">
 					<ul class="nav navbar-nav">
-						<li class="nav-item">
-							<?php echo $this->Html->link('<i class="fa fa-envelope" aria-hidden="true"></i>', '/#mailto', array('escape' => false, 'class' => 'nav-link', 'target' => "_blank")); ?>
-						</li>
 						<li class="nav-item">
 							<a class="nav-link" target="_blank" href="https://github.com/joeyrush"><i class="fa fa-github-square" aria-hidden="true"></i></a>
 						</li>

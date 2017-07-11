@@ -22,8 +22,8 @@
 			<div class="row">
 				<div class="col-md-2 offset-md-1 text-md-center">
 					<div class="key-skill">
-						<?php 
-							$img = $this->Html->image('/img/front-end.png', array('class' => 'img-responsive')); 
+						<?php
+							$img = $this->Html->image('/img/front-end.png', array('class' => 'img-responsive'));
 							$text = "<h2>Front-end <br>Web Development</h2>";
 
 							// we create a mini form as we need to post the category id to the projects listing
@@ -44,8 +44,8 @@
 				</div>
 				<div class="col-md-2 text-md-center">
 					<div class="key-skill">
-						<?php 
-							$img = $this->Html->image('/img/php.png', array('class' => 'img-responsive')); 
+						<?php
+							$img = $this->Html->image('/img/php.png', array('class' => 'img-responsive'));
 							$text = "<h2>Back-end <br>Web Development</h2>";
 
 							echo $this->Form->create('Project', array(
@@ -62,11 +62,11 @@
 							echo $this->Form->end();
 						?>
 					</div>
-				</div>	
+				</div>
 				<div class="col-md-2 text-md-center">
 					<div class="key-skill">
-						<?php 
-							$img = $this->Html->image('/img/mysql.png', array('class' => 'img-responsive')); 
+						<?php
+							$img = $this->Html->image('/img/mysql.png', array('class' => 'img-responsive'));
 							$text = "<h2>SQL and Database <br>Development</h2>";
 							echo $this->Form->create('Project', array(
 								'url' => array(
@@ -82,11 +82,11 @@
 							echo $this->Form->end();
 						?>
 					</div>
-				</div>	
+				</div>
 				<div class="col-md-2 text-md-center">
 					<div class="key-skill">
-						<?php 
-							$img = $this->Html->image('/img/cakephp.png', array('class' => 'img-responsive')); 
+						<?php
+							$img = $this->Html->image('/img/cakephp.png', array('class' => 'img-responsive'));
 							$text = "<h2>CakePHP <br>MVC Framework</h2>";
 							echo $this->Form->create('Project', array(
 								'url' => array(
@@ -105,8 +105,8 @@
 				</div>
 				<div class="col-md-2 text-md-center">
 					<div class="key-skill">
-						<?php 
-							$img = $this->Html->image('/img/photoshop.png', array('class' => 'img-responsive')); 
+						<?php
+							$img = $this->Html->image('/img/photoshop.png', array('class' => 'img-responsive'));
 							$text = "<h2>Web and Graphic <br>Design</h2>";
 							echo $this->Form->create('Project', array(
 								'url' => array(
@@ -126,12 +126,12 @@
 			</div>
 		</div>
 	</div>
-	
+
 	<div class="jumbotron jumbotron-portfolio">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-6 text-md-center col-portfolio">
-					<div>
+					<div class="image-wrapper">
 						<?php echo $this->Image->resize('img/item01.jpg', array(
 							'width' => 380,
 							'height' => 250,
@@ -167,36 +167,6 @@
 						<h2 class="text-xs-center">Portfolio</h2>
 						<p>I've categorized all of my work to make it nice and easy for you to see the projects I've created or contributed towards. <?php echo $this->Html->link('View Full Portfolio', array('controller' => 'projects', 'action' => 'index'))?></p>
 					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<a name="mailto"></a>
-	<div class="jumbotron jumbotron-contact">
-		<?= $this->Flash->render(); ?>
-		<div class="container">
-			<div class="row">
-				<div class="col-md-6 text-md-center contact--text">
-					<?php echo $this->element('quotes'); ?>
-				</div>
-				<div class="col-md-6 contact--form">	
-					<div>
-						<h2>Give me a shout..</h2>
-						<p><small>Ask me how much I bench or tell me how bad my website is, I'm always happy to chat <i class="fa fa-smile-o" aria-hidden="true"></i></small></p>
-					</div>
-					<?php echo $this->Form->create('ContactForm', array(
-						'url' => array(
-							'controller' => 'contact_form',
-							'action' => 'email'
-						)
-					)); ?>
-						<?php echo $this->Form->input('name', array('placeholder' => 'Name', 'label' => false)) ?>
-						<?php echo $this->Form->input('email', array('placeholder' => 'Email', 'label' => false)) ?>
-						<?php echo $this->Form->input('message', array('type' => 'textarea', 'placeholder' => 'Message', 'label' => false)) ?>
-						<?php echo $this->Form->submit('Send', array('id' => 'send')) ?>
-
-					<?php echo $this->Form->end() ?>
 				</div>
 			</div>
 		</div>

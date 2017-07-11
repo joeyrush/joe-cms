@@ -3,7 +3,7 @@
 		<div class="row">
 			<div class="col-md-6">
 				<div class="text-md-left text-xs-center">
-					<p><i class="fa fa-terminal" aria-hidden="true"></i> Website and content all designed and developed by myself.</p>
+					<p><i class="fa fa-terminal" aria-hidden="true"></i> Website and content made at home.</p>
 				</div>
 			</div>
 			<div class="col-md-6 col-md-offset-5">
