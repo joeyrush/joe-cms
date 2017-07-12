@@ -10,7 +10,7 @@ set('ssh_multiplexing', true);
 set('repository', 'git@github.com:joeyrush/joe-cms.git');
 
 add('shared_files', []);
-add('shared_dirs', ['webroot/files']);
+add('shared_dirs', ['webroot/files', 'webroot/fonts']);
 
 add('writable_dirs', []);
 
