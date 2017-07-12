@@ -19,7 +19,9 @@
 
 					</h5>
 				</div>
-				<?=$blogPost['body'];?>
+				<div class="wysiwyg">
+					<?=$blogPost['body'];?>
+				</div>
 			</div>
 			<div class="blog-foot">
 				<?php
