@@ -224,14 +224,11 @@ if (Configure::read('debug')) {
 
 Plugin::loadAll();
 
-// switch(env('HTTP_HOST')) {
-//     case 'dev:8080':
-    
-//     break;
-//     case 'joerushton.com':
-
-//     break;
-
-//     default:
-//     break;
-// }
+function slug_encode($text)
+{
+  return str_replace("?", ":", str_replace("/", "%2A", strtolower(str_replace(' ', '-', str_replace('-', '%7C', $text)))));
+}
+function slug_decode($text)
+{
+  return str_replace(":", "?", str_replace("*", "/", str_replace('|', '-', str_replace('-', ' ', $text))));
+}

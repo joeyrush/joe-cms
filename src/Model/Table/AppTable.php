@@ -23,7 +23,7 @@ class AppTable extends Table {
 		} else {
 			// Default behaviour: title will be passed in with hyphens instead of spaces.
 			// If there is a hyphen in the title, that is replaced with %7C which equals the | symbol.
-			$params['conditions']['name'] = str_replace('|', '-', str_replace('-', ' ', $slug));
+			$params['conditions']['name'] = slug_decode($slug);
 		}
 
 		return $this->find('all', array_merge_recursive($params, $passedParams));
