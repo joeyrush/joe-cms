@@ -44,6 +44,7 @@ class AppController extends Controller
      */
     public function initialize()
     {
+        $this->forceSSL();
         parent::initialize();
 
         $this->loadComponent('RequestHandler');
@@ -160,5 +161,11 @@ class AppController extends Controller
             }
         }
         unset($item);
+    }
+
+    public function forceSSL() {
+        if (strpos($_SERVER['HTTP_HOST'], 'localhost') === false && (empty($_SERVER['HTTPS']) || $_SERVER['HTTPS'] == "off")) {
+            return $this->redirect('https://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']);
+        }
     }
 }
