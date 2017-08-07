@@ -164,8 +164,12 @@ class AppController extends Controller
     }
 
     public function forceSSL() {
-        if (strpos($_SERVER['HTTP_HOST'], 'localhost') === false && (empty($_SERVER['HTTPS']) || $_SERVER['HTTPS'] == "off")) {
-            return $this->redirect('https://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']);
+        if (strpos($_SERVER['HTTP_HOST'], 'localhost') !== false) {
+            return true;
+        }
+
+        if (empty($_SERVER['HTTPS']) || $_SERVER['HTTPS'] == "off" || substr($_SERVER['SERVER_NAME'], 0, 4) === 'www.') {
+            return $this->redirect('https://' . str_replace("www.", "", $_SERVER['HTTP_HOST']) . $_SERVER['REQUEST_URI']);
         }
     }
 }
