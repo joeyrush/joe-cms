@@ -8,3 +8,4 @@
 node_modules/*
 /webroot/img/cache/*
 /webroot/fonts/*
+/webroot/files/*
