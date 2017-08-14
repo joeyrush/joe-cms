@@ -6,6 +6,7 @@ require 'recipe/cakephp.php';
 
 set('ssh_type', 'ssh2');
 set('ssh_multiplexing', true);
+set('keep_releases', 3);
 
 set('repository', 'git@github.com:joeyrush/joe-cms.git');
 

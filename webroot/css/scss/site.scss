@@ -79,6 +79,9 @@ body {
 
 @import 'loader';
 
+// fix collisions between bootstrap 4 and prism.js (syntax highlighting)
+@import 'prism-bootstrap-fix';
+
 
 #ajaxLoader {
 	display: none;

@@ -36,9 +36,3 @@
 		</div>
 	</div>
 </div>
-
-<script>
-	$(document).ready(function(){
-		hljs.initHighlightingOnLoad();
-	})
-</script>

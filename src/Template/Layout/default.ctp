@@ -17,6 +17,8 @@
     <?= $this->Html->css('https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css') ?>
     <?= $this->Html->css('../flat/purple.css') ?>
 
+    <?= $this->Html->css('prism.css') ?>
+
     <?= $this->fetch('css') ?>
     <?= $this->fetch('script') ?>
 
@@ -48,15 +50,12 @@
     <?= $this->Html->script('minified/jquery.fancybox.pack.js'); ?>
     <?= $this->Html->script('minified/jquery.fancybox-media.js'); ?>
 
-    <!-- Syntax Highlighting -->
-    <?= $this->Html->script('//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/highlight.min.js'); ?>
-    <?= $this->Html->css('//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/styles/codepen-embed.min.css'); ?>
-
     <?php
         // load the site specific js after the external libraries as this is where they will be initialized
         echo $this->Html->script('minified/site.min.js')
     ?>
 
+    <?= $this->Html->script('prism.js') ?>
 
 </body>
 </html>
