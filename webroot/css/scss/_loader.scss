@@ -21,10 +21,24 @@
 	margin-top: -100px;
 	margin-left: -250px;
 
-	h1 {
+	h1, h2 {
 		color: white;
 		font-family: $tertiary--font;
+		margin-bottom: 10px;
 		font-size: 20px;
+		padding: 10px;
+	}
+
+	a {
+		background: white;
+		color: $primary--colour;
+		border-radius: 5px;
+		padding: 0 10px;
+
+		&:hover {
+			color: white;
+			background: $primary--colour;
+		}
 	}
 }
 #object{
@@ -36,6 +50,20 @@
 	margin-right: auto;
 	margin-left: auto;
 	margin-top: 60px;
+}
+#object-404 {
+	width: 80px;
+	height: 80px;
+	line-height: 80px;
+	font-weight: 800;
+	font-size: 35px;
+	background-color: #FFF;
+	-webkit-animation: animate-2 1.25s ease-in-out;
+	animation: animate-2 1.25s ease-in-out;
+	margin-right: auto;
+	margin-left: auto;
+	margin-bottom: 30px;
+	text-align:center;
 }
 @-webkit-keyframes animate {
   0% { -webkit-transform: perspective(160px); }
@@ -53,5 +81,26 @@
   } 100% { 
     transform: perspective(160px) rotateX(-180deg) rotateY(-180deg);
     -webkit-transform: perspective(160px) rotateX(-180deg) rotateY(-180deg);
+  }
+}
+
+@keyframes animate-2 {
+  0% { 
+    transform: perspective(160px) rotateX(0deg) rotateY(0deg);
+    -webkit-transform: perspective(160px) rotateX(0deg) rotateY(0deg); 
+  } 25% { 
+    transform: perspective(160px) rotateX(-180deg) rotateY(0deg);
+    -webkit-transform: perspective(160px) rotateX(-180deg) rotateY(0deg) ;
+  } 50% { 
+    transform: perspective(160px) rotateX(-180deg) rotateY(-180deg);
+    -webkit-transform: perspective(160px) rotateX(-180deg) rotateY(-180deg);
+  }
+  75% { 
+    transform: perspective(160px) rotateX(0deg) rotateY(-180deg);
+    -webkit-transform: perspective(160px) rotateX(0deg) rotateY(-180deg);
+  }
+  100% { 
+    transform: perspective(160px) rotateX(0deg) rotateY(0deg);
+    -webkit-transform: perspective(160px) rotateX(0deg) rotateY(0deg);
   }
 }
