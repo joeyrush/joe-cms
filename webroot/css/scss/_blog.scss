@@ -9,7 +9,7 @@
 		margin-top: 60px;
 		margin-bottom: 60px;
 		border: 3px solid $primary--colour;
-		background: linear-gradient(rgba(200,200,200,0.8), rgba(200,200,200,0.8));
+		background: linear-gradient(rgba(225,225,225,0.8), rgba(200,200,200,0.8));
 		padding-bottom: 50px;
 
 		h1, p {
@@ -30,6 +30,10 @@
 			padding-left: 15px;
 			font-style: italic;
 			font-size: 20px;
+
+			@media (max-width: $screen-xs-max) {
+				font-size: 16px;
+			}
 		}
 
 
@@ -102,6 +106,14 @@
 				.date {
 					font-weight: 600;
 					font-size: 14px;
+
+					@media (max-width: $screen-sm-max) {
+						font-size: 11px;
+					}
+				}
+
+				.separator {
+					padding: 0 3px;
 				}
 			}
 
@@ -119,6 +131,10 @@
 			margin-right: auto;
 			margin-bottom: 15px;
 
+			@media (max-width: $screen-xs-max) {
+				text-align: left;
+			}
+
 			> form > p {
 				margin-bottom: 10px;
 				margin-top: 15px;
@@ -129,6 +145,13 @@
 				display:inline;
 				margin-left: 10px;
 				margin-right: 10px;
+
+				@media (max-width: $screen-xs-max) {
+					float: left;
+					width: 45%;
+					font-size: 12px;
+					margin-left: 0;
+				}
 
 				label {
 					cursor: pointer;
@@ -177,6 +200,10 @@
 
 		.blog-head h1 {
 			font-size: 20px;
+
+			@media (max-width: $screen-xs-max) {
+				font-size: 16px;
+			}
 		}
 
 		.blog__content {
@@ -191,6 +218,16 @@
 				color: #333;
 				i {
 					margin-right: 5px;
+				}
+			}
+
+			.time {
+				padding-left: 20px;
+				font-size: 14px;
+				@media (max-width: $screen-xs-max) {
+					padding-left: 0;
+					margin-top: 5px;
+					display: block;
 				}
 			}
 
@@ -276,7 +313,70 @@
 				padding: 10px;
 				color: $primary--variation;
 				font-family: $secondary--font;
+				transition: all 1s;
+				border-radius: 5px;
+				border: 1px solid transparent;
+
+				&:hover {
+					text-decoration: none;
+					background: $primary--colour;
+					border: 1px solid white;
+					color: white;
+				}
 			}
 		}
 	}
+}
+
+// FILTER button:
+.snip1535 {
+  background-color: $primary--colour;
+  border: none;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 14px;
+  line-height: 1em;
+  margin: 10px 0;
+  outline: none;
+  padding: 10px 15px;
+  position: relative;
+  text-transform: uppercase;
+}
+.snip1535:before,
+.snip1535:after {
+  border-color: transparent;
+  -webkit-transition: all 0.25s;
+  transition: all 0.25s;
+  border-style: solid;
+  border-width: 0;
+  content: "";
+  height: 24px;
+  position: absolute;
+  width: 24px;
+}
+.snip1535:before {
+  border-color: $primary--colour;
+  border-right-width: 2px;
+  border-top-width: 2px;
+  right: -5px;
+  top: -5px;
+}
+.snip1535:after {
+  border-bottom-width: 2px;
+  border-color: $primary--colour;
+  border-left-width: 2px;
+  bottom: -5px;
+  left: -5px;
+}
+.snip1535:hover,
+.snip1535.hover {
+  background-color: $primary--colour;
+}
+.snip1535:hover:before,
+.snip1535.hover:before,
+.snip1535:hover:after,
+.snip1535.hover:after {
+  height: 100%;
+  width: 100%;
 }

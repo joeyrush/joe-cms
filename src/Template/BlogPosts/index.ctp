@@ -4,7 +4,7 @@
 	<div class="container">
 		<div class="blog__wrapper">
 			<div class="blog-head">
-				<h1><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Blog Posts</h1>
+				<h1><i class="fa fa-diamond" aria-hidden="true"></i> Joe's Programming Blog</h1>
 			</div>
 
 			<div class="row">
@@ -19,7 +19,7 @@
         						'checkboxWrapper' => '<div class="custom-checkbox checkbox">{{label}}</div>',
     						]
     					)); ?>
-					<?=$this->Form->submit('Filter'); ?>
+					<?=$this->Form->button('Filter', ['class' => 'snip1535']); ?>
 				<?php echo $this->Form->end(); ?>
 				</div>
 			</div>
@@ -50,7 +50,11 @@
 						<div class="col-md-8">
 							<div class="blog__text">
 								<?=$this->Html->link('<h2>' . $blogPost['name'] . '</h2>', $url, array('escape' => false)); ?></a>
-								<p class="date"><i class="fa fa-calendar" aria-hidden="true"></i> <?=date('dS F Y', $blogPost['created']->toUnixString());?></p>
+								<p class="date"><i class="fa fa-calendar" aria-hidden="true"></i> <?=date('dS F Y', $blogPost['created']->toUnixString());?> 
+									<?php if (!empty($blogPost['reading_time'])) : ?>
+										<span class="separator">|</span> <i class="fa fa-clock-o" aria-hidden="true"></i> <?=$blogPost['reading_time'];?> mins
+									<?php endif; ?>
+								</p>
 								<p><?=strip_tags($this->Text->truncate($blogPost['body'], 120));?></p>
 							</div>
 						</div>

@@ -4,12 +4,15 @@
 	<div class="container">
 		<div class="blog__wrapper">
 			<div class="blog-head">
-				<h1><i class="fa fa-diamond" aria-hidden="true"></i> Joes Programming Blog</h1>
+				<h1><i class="fa fa-diamond" aria-hidden="true"></i> Joe's Programming Blog</h1>
 			</div>
 
 			<div class="blog__content">
 				<h2><?=$blogPost['name'];?></h2>
 				<span class="date"><i class="fa fa-calendar" aria-hidden="true"></i> <?=date('dS F Y', $blogPost['created']->toUnixString());?></span>
+				<?php if (!empty($blogPost['reading_time'])) : ?>
+					<span class="time"><i class="fa fa-clock-o" aria-hidden="true"></i> Reading Time: <strong><?=$blogPost['reading_time'];?> mins</strong></span>
+				<?php endif; ?>
 				<div class="tags__wrapper">
 					<h5>Tags: <?php foreach ($blogPost['tags'] as $tag): ?>
 
@@ -19,6 +22,9 @@
 
 					</h5>
 				</div>
+
+				<hr>
+
 				<div class="wysiwyg">
 					<?=$blogPost['body'];?>
 				</div>
