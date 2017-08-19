@@ -4,6 +4,7 @@ namespace App\Controller;
 
 use App\Controller\AppController;
 use Cake\Event\Event;
+use Cake\Network\Exception\NotFoundException;
 
 class BlogPostsController extends AppController {
 
@@ -18,7 +19,7 @@ class BlogPostsController extends AppController {
 		$blogPosts = $this->BlogPosts->find('all')->where(['BlogPosts.is_active' => 1])->contain([
 			'Images',
 			'Tags'
-		]);
+		])->order('created DESC');
 
 		if (!empty($this->request->data)) {
 			$tags = $this->request->data['Tags']['name'];
@@ -55,6 +56,10 @@ class BlogPostsController extends AppController {
 		$blogPost = $this->BlogPosts->readForView($slug, array(
 			'contain' => 'Tags'
 		));
+
+		if (empty($blogPost->toArray())) {
+			throw new NotFoundException();
+		}
 
 		$this->set('blogPost', $blogPost->first()->toArray());
 	}
