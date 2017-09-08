@@ -41,7 +41,7 @@
 								$url = array(
 									'controller' => 'BlogPosts',
 									'action' => 'view',
-									'slug' => slug_encode($blogPost['name'])
+									'slug' => $blogPost['slug']
 								);
 
 								echo $this->Html->link($img, $url, array('escape' => false, 'class' => 'blog__link'));
