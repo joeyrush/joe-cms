@@ -22,7 +22,7 @@ class ProjectsController extends AppController {
 		$projects = $this->Projects->find('all')->where(['Projects.is_active' => 1])->contain([
 			'Images',
 			'Categories'
-		]);
+		])->order(['sequence' => 'ASC']);
 
 		/*
 		Even though we have $categoryId as a param - we aren't really using that for the time being
@@ -62,7 +62,7 @@ class ProjectsController extends AppController {
 		$projects = $this->Projects->find('all')->where(['Projects.is_active' => 1])->contain([
 			'Images',
 			'Categories'
-		]);
+		])->order(['sequence' => 'ASC']);
 
 	    if (!empty($categoryId)) {
 	    	$projects = $projects->matching('Categories', function ($q) use ($categoryId) {
