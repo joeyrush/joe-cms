@@ -197,8 +197,8 @@
 			letter-spacing: -1px;
 		}
 
-		a {
-			word-break: break-all;
+		p, a {
+			word-break: break-word;
 		}
 	}
 	.container {
