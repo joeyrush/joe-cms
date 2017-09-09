@@ -196,6 +196,10 @@
 			color: #444;
 			letter-spacing: -1px;
 		}
+
+		a {
+			word-break: break-all;
+		}
 	}
 	.container {
 		max-width: 920px;
