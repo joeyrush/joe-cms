@@ -9,7 +9,7 @@
 </div>
 
 <nav class="navbar navbar-static-top">
-  <button class="navbar-toggler hidden-lg-up" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><i class="fa fa-bars" aria-hidden="true"></i> View Menu</button>
+  <button class="navbar-toggler hidden-lg-up" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><i class="fa fa-caret-down" aria-hidden="true"></i> Explore</button>
 	<div class="zigzag hidden-md-down"></div>
 	<div class="collapse navbar-toggleable-md" id="navbarResponsive">
 		<a class="navbar-brand hidden-md-down" href="<?=$home;?>"><i class="fa fa-home <?=($home == $this->request->here) ? 'home-active' : ''?>" aria-hidden="true"></i></a>
@@ -48,7 +48,7 @@
 </nav>
 
 <nav class="navbar navbar-fixed-top hidden">
-	<button class="navbar-toggler hidden-lg-up" type="button" data-toggle="collapse" data-target="#navbarResponsive2" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><i class="fa fa-bars" aria-hidden="true"></i> View Menu</button>
+	<button class="navbar-toggler hidden-lg-up" type="button" data-toggle="collapse" data-target="#navbarResponsive2" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><i class="fa fa-caret-down" aria-hidden="true"></i> Explore</button>
 	<div class="zigzag"></div>
 	<div class="collapse navbar-toggleable-md" id="navbarResponsive2">
 		<div class="nav-contents">

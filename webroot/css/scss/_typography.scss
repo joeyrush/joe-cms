@@ -11,10 +11,6 @@ body {
 		font-size: 55px;
 		text-align: left;
 
-		&:after {
-			content: '...';
-		}
-
 		@media (max-width: 1300px) {
 			font-size: 35px;
 		}

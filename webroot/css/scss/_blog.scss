@@ -351,6 +351,10 @@
   padding: 10px 15px;
   position: relative;
   text-transform: uppercase;
+
+  &:focus {
+  	outline: none !important;
+  }
 }
 .snip1535:before,
 .snip1535:after {

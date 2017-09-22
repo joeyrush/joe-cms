@@ -33,6 +33,10 @@ $(document).scroll(function(){
 
 $(document).ready(function(){
 
+	if ($('.scroll-to-display').length > 0) {
+		check_if_in_view('.scroll-to-display', 'visible', true);
+	}
+
 	initCustomCheckbox();
 	initSmoothScroll();
 	initRandomPortfolioAnimation();
@@ -209,7 +213,6 @@ function root() {
     return location.origin + pathname.slice( 0, same ).join( '/' );
 }
 
-var $animation_elements = $('.scroll-to-display');
 /**
  * call this on scroll & resize to hide/display page elements based on whether they are within view or not
  * @param  {String} targetElement - the element to hide and show e.g. '.wrapper'
@@ -223,7 +226,7 @@ function check_if_in_view(targetElement, classToAdd, fadeOut) {
 	var window_top_position = $(window).scrollTop();
 	var window_bottom_position = (window_top_position + window_height);
 
-	$.each($animation_elements, function() {
+	$.each($(targetElement), function() {
 		var $element = $(this);
 		var element_height = $element.outerHeight();
 		var element_top_position = $element.offset().top;

@@ -19,7 +19,7 @@ class BlogPostsController extends AppController {
 		$blogPosts = $this->BlogPosts->find('all')->where(['BlogPosts.is_active' => 1])->contain([
 			'Images',
 			'Tags'
-		])->order('created DESC');
+		])->order('BlogPosts.created DESC');
 
 		if (!empty($this->request->data)) {
 			$tags = $this->request->data['Tags']['name'];

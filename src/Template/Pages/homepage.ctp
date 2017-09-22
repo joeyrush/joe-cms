@@ -7,8 +7,8 @@
 	      		<div class="col-md-3 offset-md-1">
 	      			<div class="home-profile"></div>
 	      		</div>
-	      		<div class="col-md-7" id="text-wrapper">
-			        <h1 class="display-3">Joseph Rushton</h1>
+	      		<div class="col-md-7 scroll-to-display" id="text-wrapper">
+			        <h1 class="display-3">Joseph Rushton 💪</h1>
 			        <p>Just incase you didn't quite get it from the web address and size 55 font above, my name is Joe and I make pretty websites. I like writing robust code, lifting heavy weights and playing clean guitar riffs. <?php echo $this->Html->link('Read my blog', array('controller' => 'BlogPosts', 'action' => 'index')); ?></p>
 			    </div>
 			</div>
@@ -161,7 +161,7 @@
 						)); ?>
 					</div>
 				</div>
-				<div class="col-md-6 text-md-center">
+				<div class="col-md-6 text-md-center scroll-to-display">
 					<div class="scribble-bg"></div>
 					<div class="text">
 						<h2 class="text-xs-center">Portfolio</h2>
