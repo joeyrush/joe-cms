@@ -191,7 +191,6 @@
 
 .jumbotron-portfolio {
 	.col-portfolio {
-		height: 475px;
 		@media (max-width: $screen-xs-max) {
 			height: 600px;
 		}
@@ -233,8 +232,11 @@
 		background-size:cover;
 	}
 
+	@media (max-width: $screen-sm-max) {
+		padding-bottom: 0;
+	}
+
 	h2 {
-		text-shadow: 2px 2px white;
 		margin-top: 30px;
 		font-family: $secondary--font;
 		font-size: 60px;
