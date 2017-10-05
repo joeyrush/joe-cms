@@ -33,6 +33,13 @@ $(document).scroll(function(){
 
 $(document).ready(function(){
 
+	if ( $('#particles-js').length > 0 ) {
+		/* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
+		particlesJS.load('particles-js', 'js/particles.json', function() {
+		  $('#particles-js canvas').insertBefore($('#particles-js canvas').prev());
+		});
+	}
+
 	if ($('.scroll-to-display').length > 0) {
 		check_if_in_view('.scroll-to-display', 'visible', true);
 	}

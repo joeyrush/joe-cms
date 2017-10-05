@@ -1,3 +1,11 @@
+#particles-js {
+	canvas {
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+}
+
 .jumbotron {
 	border-radius: 0px;
 	margin-bottom: 0px;
@@ -150,11 +158,11 @@
 	}
 
 	img {
-		height: 155px;
+		height: 115px;
 		width: auto;
 
 		@media (max-width: 1250px) {
-			height: 95px;
+			height: 75px;
 		}
 	}
 
@@ -190,6 +198,8 @@
 }
 
 .jumbotron-portfolio {
+	position: relative;
+
 	.col-portfolio {
 		@media (max-width: $screen-xs-max) {
 			height: 600px;
@@ -261,7 +271,6 @@
 			color: white;
 			background: $primary--colour;
 			font-family: $primary--font;
-			font-weight: 800;
 			padding: 1px 7px;
 			border-radius: 4px;
 			margin: 4px;

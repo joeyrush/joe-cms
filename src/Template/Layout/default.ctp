@@ -49,6 +49,7 @@
     <?= $this->Html->script('https://cdnjs.cloudflare.com/ajax/libs/galleria/1.4.5/galleria.min.js'); ?>
     <?= $this->Html->script('minified/jquery.fancybox.pack.js'); ?>
     <?= $this->Html->script('minified/jquery.fancybox-media.js'); ?>
+    <?= $this->Html->script('minified/particles.min.js'); ?>
 
     <?php
         // load the site specific js after the external libraries as this is where they will be initialized

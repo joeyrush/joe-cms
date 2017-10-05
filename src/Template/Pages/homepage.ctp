@@ -66,8 +66,28 @@
 				<div class="col-md-2 text-md-center">
 					<div class="key-skill">
 						<?php
+							$img = $this->Html->image('/img/LaravelLogo.png', array('class' => 'img-responsive'));
+							$text = "<h2>Laravel Framework</h2>";
+							echo $this->Form->create('Project', array(
+								'url' => array(
+									'controller' => 'projects',
+									'action' => 'index'
+								)
+							));
+							echo $this->Form->button($img . ' ' . $text, array(
+								'value' => 8,
+								'name' => 'category'
+							));
+
+							echo $this->Form->end();
+						?>
+					</div>
+				</div>
+				<div class="col-md-2 text-md-center">
+					<div class="key-skill">
+						<?php
 							$img = $this->Html->image('/img/mysql.png', array('class' => 'img-responsive'));
-							$text = "<h2>SQL and Database <br>Development</h2>";
+							$text = "<h2>SQL and Data <br>Management</h2>";
 							echo $this->Form->create('Project', array(
 								'url' => array(
 									'controller' => 'projects',
@@ -103,31 +123,11 @@
 						?>
 					</div>
 				</div>
-				<div class="col-md-2 text-md-center">
-					<div class="key-skill">
-						<?php
-							$img = $this->Html->image('/img/photoshop.png', array('class' => 'img-responsive'));
-							$text = "<h2>Web and Graphic <br>Design</h2>";
-							echo $this->Form->create('Project', array(
-								'url' => array(
-									'controller' => 'projects',
-									'action' => 'index'
-								)
-							));
-							echo $this->Form->button($img . ' ' . $text, array(
-								'value' => 5,
-								'name' => 'category'
-							));
-
-							echo $this->Form->end();
-						?>
-					</div>
-				</div>
 			</div>
 		</div>
 	</div>
 
-	<div class="jumbotron jumbotron-portfolio">
+	<div class="jumbotron jumbotron-portfolio" id="particles-js">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-6 text-md-center col-portfolio">
@@ -171,3 +171,4 @@
 			</div>
 		</div>
 	</div>
+
