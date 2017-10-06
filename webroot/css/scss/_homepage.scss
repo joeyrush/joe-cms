@@ -397,9 +397,12 @@
 .jumbotron-contact {
 	border-top: 3px solid darken($primary--colour, 20%);
 	border-bottom: 3px solid darken($primary--colour, 20%);
-	background: linear-gradient(to bottom, rgba(255,255,255, 1), rgba(darken($primary--colour, 5%),1));
+	// background: linear-gradient(to bottom, rgba(255,255,255, 1), rgba(darken($primary--colour, 5%),1));
+	background: transparent url('../../img/codebg.jpg') no-repeat;
+	background-size: cover;
 	padding-top: 150px;
 	padding-bottom: 150px;
+	position: relative;
 
 	.contact--text {
 		@media (max-width: $screen-sm-max) {
@@ -440,15 +443,14 @@
 	}
 
 	#name, #email, #message {
-		font-style: italic;
-		width: 400px;
-		border: 3px solid $primary--colour;
+		width: 100%;
+		border: 2px solid #efefef;
 		margin-top: 5px;
 		margin-bottom: 2px;
 		font-family: $primary--font;
 		padding: 5px;
-		float:right;
 		transition: all 0.2s;
+		font-size: 14px;
 
 		@media (max-width: $screen-sm-max) {
 			width: 100%;
@@ -464,12 +466,15 @@
 	#send {
 		color: $primary--colour;
 		font-style: italic;
-		width: 100px;
+		width: 50px;
 		font-family: $secondary--font;
-		border: 3px solid $primary--colour;
 		float:right;
 		clear:both;
+		letter-spacing: -0.5px;
+		text-align: center;
 		margin-top: 10px;
+		background: none;
+		border: none;
 
 		&:hover {
 			background-color: $primary--colour;
@@ -481,15 +486,19 @@
 		margin-top: 50px;
 		margin-bottom: -50px;
 		display: none;
+		min-height: 275px;
+
 
 		p {
 			color: $primary--colour;
 			font-family: $secondary--font;
 			font-size: 25px;
+			background: white;
 		}
 
 		@media (max-width: $screen-xs-max) {
 			margin-bottom: 0px;
+			visibility: hidden;
 
 			p {
 				color: $primary--colour;
@@ -498,17 +507,24 @@
 	}
 
 	.contact--form {
-		@media (max-width: $screen-xs-max) {
-			margin-top: 100px;
-		}
+		width: 300px;
+		position: absolute;
+		top: 20px;
+		right: 30px;
+		background: rgba(white, 0.9);
+		border-radius: 4px;
+		padding: 20px;
+		box-shadow: 3px 3px 7px #666;
 
-		> div {
-			width: 	400px;
-			float:right;
+		font-style: none;
+		text-align: center;
 
-			@media (max-width: $screen-sm-max) {
-				width: 100%;
-			}
+		h2 {
+			font-size: 22px;
+			padding: 4px;
+			background: $primary--colour;
+			color: white;
+			// display:inline-lo
 		}
 	}
 

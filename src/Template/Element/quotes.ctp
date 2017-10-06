@@ -2,7 +2,9 @@
 	<?php foreach ($quotes as $quote): ?>
 		<div class="quote">
 			<blockquote><p>"<?=$quote['quote'];?>"</p></blockquote>
-			<p class="text-md-right">~ <?=$quote['author'];?></p>
+			<?php if (!empty($quote['author'])): ?>
+				<p class="text-md-right">~ <?=$quote['author'];?></p>
+			<?php endif; ?>
 		</div>
 	<?php endforeach; ?>
 </div>

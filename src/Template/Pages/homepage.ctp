@@ -172,3 +172,31 @@
 		</div>
 	</div>
 
+	<a name="mailto"></a>
+	<div class="jumbotron jumbotron-contact">
+		<div class="contact--form scroll-to-display">	
+			<?= $this->Flash->render(); ?>
+			<h2>Get In Touch</h2>
+			<p>👋 Don't hesistate to ask me anything, work related or otherwise.</p>
+			<?php echo $this->Form->create('ContactForm', array(
+				'url' => array(
+					'controller' => 'contact_form',
+					'action' => 'email'
+				)
+			)); ?>
+				<?php echo $this->Form->input('name', array('placeholder' => 'Name', 'label' => false)) ?>
+				<?php echo $this->Form->input('email', array('placeholder' => 'Email', 'label' => false)) ?>
+				<?php echo $this->Form->input('message', array('type' => 'textarea', 'placeholder' => 'Message', 'label' => false)) ?>
+				<?php echo $this->Form->submit('Send', array('id' => 'send')) ?>
+
+			<?php echo $this->Form->end() ?>
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6 text-md-center contact--text">
+					<?php echo $this->element('quotes'); ?>
+				</div>
+			</div>
+		</div>
+	</div>
+
