@@ -395,138 +395,112 @@
 }
 
 .jumbotron-contact {
-	border-top: 3px solid darken($primary--colour, 20%);
-	border-bottom: 3px solid darken($primary--colour, 20%);
-	// background: linear-gradient(to bottom, rgba(255,255,255, 1), rgba(darken($primary--colour, 5%),1));
-	background: transparent url('../../img/codebg.jpg') no-repeat;
-	background-size: cover;
-	padding-top: 150px;
-	padding-bottom: 150px;
-	position: relative;
+	background: $primary--colour;
+	border-top: 2px solid #3c3c46;
 
-	.contact--text {
-		@media (max-width: $screen-sm-max) {
-			margin-left:-30px;
-		}
-		@media (max-width: $screen-xs-max) {
-			margin-top: -50px;
-			margin-bottom: -50px;
-			margin-left:0px;
-		}
-
-		h2, h3 {
-			color:darken($primary--colour, 20%);
-		}
-
-		h3 > small {
-			@media (max-width: $screen-sm-max) {
-				font-size: 18px;
-			}
-		}
-
-		h2 {
-			font-family: $secondary--font;
-			font-size: 3rem;
-
-			@media (max-width: $screen-sm-max) {
-				font-size: 25px;
-			}
-		}
-
-		p {
-			color: $primary--colour;
-
-			@media (max-width: $screen-sm-max) {
-				font-size: 14px;
-			}
-		}
+	h2 {
+		font-family: $secondary--font;
+		margin-bottom: 35px;
+		color: white;
 	}
 
-	#name, #email, #message {
+	input, textarea {
 		width: 100%;
-		border: 2px solid #efefef;
-		margin-top: 5px;
-		margin-bottom: 2px;
-		font-family: $primary--font;
-		padding: 5px;
-		transition: all 0.2s;
-		font-size: 14px;
+		background: white;
+		border: none;
+		color: darken($primary--colour, 10%);
+		padding: 10px 12px;
+		font-size: 12px;
 
-		@media (max-width: $screen-sm-max) {
-			width: 100%;
+		&::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+		  color: darken($primary--colour, 10%);
+		}
+		&::-moz-placeholder { /* Firefox 19+ */
+		  color: darken($primary--colour, 10%);
+		}
+		&:-ms-input-placeholder { /* IE 10+ */
+		  color: darken($primary--colour, 10%);
+		}
+		&:-moz-placeholder { /* Firefox 18- */
+		  color: darken($primary--colour, 10%);
 		}
 
 		&:focus {
-			background-color: $primary--colour;
-			color: white;
-			outline: none;
+			outline: 2px solid black;
 		}
 	}
 
-	#send {
-		color: $primary--colour;
-		font-style: italic;
-		width: 50px;
-		font-family: $secondary--font;
+	textarea {
+		min-height: 200px;
+	}
+
+	.input {
+		width: 44%;
+		margin-bottom: 25px;
+	}
+
+	.textarea {
+		width: 100%;
+		margin-bottom: 15px;
+	}
+
+	.text {
+		float: left;
+	}
+
+	.email {
+		float: right;
+	}
+
+	.submit {
 		float:right;
-		clear:both;
-		letter-spacing: -0.5px;
-		text-align: center;
-		margin-top: 10px;
-		background: none;
-		border: none;
 
-		&:hover {
-			background-color: $primary--colour;
-			color: white;
+		input {
+			padding: 5px 28px;
 		}
 	}
 
-	.quote {
-		margin-top: 50px;
-		margin-bottom: -50px;
-		display: none;
-		min-height: 275px;
+	.social {
+		clear: both;
 
+		hr {
+			border-top: 2px solid white;
+			margin-top: 6rem;
+			margin-left: auto;
+			margin-right: auto;
+			width: 70%;
+		}
 
 		p {
-			color: $primary--colour;
 			font-family: $secondary--font;
-			font-size: 25px;
-			background: white;
-		}
-
-		@media (max-width: $screen-xs-max) {
-			margin-bottom: 0px;
-			visibility: hidden;
-
-			p {
-				color: $primary--colour;
-			}
-		}
-	}
-
-	.contact--form {
-		width: 300px;
-		position: absolute;
-		top: 20px;
-		right: 30px;
-		background: rgba(white, 0.9);
-		border-radius: 4px;
-		padding: 20px;
-		box-shadow: 3px 3px 7px #666;
-
-		font-style: none;
-		text-align: center;
-
-		h2 {
-			font-size: 22px;
-			padding: 4px;
-			background: $primary--colour;
 			color: white;
-			// display:inline-lo
 		}
 	}
+}
 
+#twitter, #instagram, #facebook {
+	display:inline-block;
+	width: 50px;
+	height: 50px;
+	margin: 5px;
+	background: transparent;
+	background-size: contain;
+	background-repeat: no-repeat;
+	transition: 0.25s all;
 
+	&:hover {
+		opacity: 0.5;
+	}
+}
+
+#facebook {
+	background-image: url('../../img/facebook_circle-512.png');
+}
+
+#twitter {
+	background-image: url('../../img/twitter_circle_color-256.png');
+}
+
+#instagram {
+	background-image: url('../../img/instagram-flat-icon-circle-image.png');
 }

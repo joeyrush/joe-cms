@@ -174,28 +174,40 @@
 
 	<a name="mailto"></a>
 	<div class="jumbotron jumbotron-contact">
-		<div class="contact--form scroll-to-display">	
-			<?= $this->Flash->render(); ?>
-			<h2>Get In Touch</h2>
-			<p>👋 Don't hesistate to ask me anything, work related or otherwise.</p>
-			<?php echo $this->Form->create('ContactForm', array(
-				'url' => array(
-					'controller' => 'contact_form',
-					'action' => 'email'
-				)
-			)); ?>
-				<?php echo $this->Form->input('name', array('placeholder' => 'Name', 'label' => false)) ?>
-				<?php echo $this->Form->input('email', array('placeholder' => 'Email', 'label' => false)) ?>
-				<?php echo $this->Form->input('message', array('type' => 'textarea', 'placeholder' => 'Message', 'label' => false)) ?>
-				<?php echo $this->Form->submit('Send', array('id' => 'send')) ?>
-
-			<?php echo $this->Form->end() ?>
-		</div>
 		<div class="container">
 			<div class="row">
-				<div class="col-md-6 text-md-center contact--text">
-					<?php echo $this->element('quotes'); ?>
+
+				<div class="col-md-8 offset-md-2">
+					<?= $this->Flash->render(); ?>
+					<h2>Contact Me</h2>
+					<?php echo $this->Form->create('ContactForm', array(
+						'url' => array(
+							'controller' => 'contact_form',
+							'action' => 'email'
+						)
+					)); ?>
+						<?php echo $this->Form->input('name', array('placeholder' => 'name', 'label' => false)) ?>
+						<?php echo $this->Form->input('email', array('placeholder' => 'email', 'label' => false)) ?>
+						<?php echo $this->Form->input('message', array('type' => 'textarea', 'placeholder' => 'message', 'label' => false)) ?>
+						<?php echo $this->Form->submit('send', array('id' => 'send')) ?>
+
+					<?php echo $this->Form->end() ?>
+
+					<div class="social">
+						<hr>
+
+						<p class="text-xs-center">
+							or you're more than welcome to contact me through social media
+						</p>
+
+						<div class="text-xs-center">
+							<a id="facebook" href="https://www.facebook.com/joe.rushton.9" target="_blank"></a>
+							<a id="twitter" href="https://twitter.com/JoeRushton1" target="_blank"></a>
+							<a id="instagram" href="https://www.instagram.com/joerusho/" target="_blank"></a>
+						</div>
+					</div>
 				</div>
+
 			</div>
 		</div>
 	</div>
