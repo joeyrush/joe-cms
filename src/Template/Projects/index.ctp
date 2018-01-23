@@ -22,6 +22,19 @@
 								));
 							?>
 						</div>
+						<div class="checkboxes">
+							<p class="pull-left">
+							Hide:&emsp;</p>
+							<label>
+								<input type="radio" name="commercial" value="1"> Commercial
+							</label>
+							<label>
+								<input type="radio" name="commercial" value="0"> Freelance
+							</label>
+							<label>
+								<input type="radio" name="commercial" value="none" checked="checked"> None
+							</label>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -32,7 +45,7 @@
 			<?php if (!empty($currentCategory)) : ?>
 				<h1><?=$currentCategory['name'];?></h1>
 			<?php else : ?>
-				<p class="text-xs-center">You are currently viewing all of my projects. If you'd like to view a particular category of work, use the dropdown above. Cheers! <i class="fa fa-beer" aria-hidden="true"></i></p>
+				<p class="text-xs-center">You are currently viewing all of my projects. If you'd like to view a particular category or type of work, use the filters above 🧐.</p>
 			<?php endif; ?>
 
 			<?php if(empty($projects)) : ?>
@@ -45,7 +58,7 @@
 			<div class="row">
 				<div class="col-md-4 col-sm-12">
 					<?php if (!empty($projects[0])) : ?>
-					<div class="item-wrapper">
+					<div class="item-wrapper" data-commercial="<?=$projects[0]['is_commercial']?>">
 						<?php echo $this->Image->resize('/files/Images/' . $projects[0]['images'][0]['filename'], array(
 							'width' => 570,
 							'height' => 620,
@@ -71,7 +84,7 @@
 				</div>
 				<div class="col-md-4 col-sm-12">
 					<?php if (!empty($projects[1])) : ?>
-					<div class="item-wrapper">
+					<div class="item-wrapper" data-commercial="<?=$projects[1]['is_commercial']?>">
 						<div class="half">
 							<!-- <img class="portfolio-item" id="item2" src="http://placehold.it/540x280"> -->
 							<?php echo $this->Image->resize('/files/Images/' . $projects[1]['images'][0]['filename'], array(
@@ -98,7 +111,7 @@
 					</div>
 					<?php endif; ?>
 					<?php if (!empty($projects[2])) : ?>
-					<div class="item-wrapper">
+					<div class="item-wrapper" data-commercial="<?=$projects[2]['is_commercial']?>">
 						<div class="half">
 							<?php echo $this->Image->resize('/files/Images/' . $projects[2]['images'][0]['filename'], array(
 								'width' => 540,
@@ -126,7 +139,7 @@
 				</div>
 				<div class="col-md-4 col-sm-12">
 					<?php if (!empty($projects[3])) : ?>
-					<div class="item-wrapper">
+					<div class="item-wrapper" data-commercial="<?=$projects[3]['is_commercial']?>">
 						<div class="half">
 							<?php echo $this->Image->resize('/files/Images/' . $projects[3]['images'][0]['filename'], array(
 								'width' => 540,
@@ -152,7 +165,7 @@
 					</div>
 					<?php endif; ?>
 					<?php if (!empty($projects[4])) : ?>
-					<div class="item-wrapper">
+					<div class="item-wrapper" data-commercial="<?=$projects[4]['is_commercial']?>">
 						<div class="half">
 							<?php echo $this->Image->resize('/files/Images/' . $projects[4]['images'][0]['filename'], array(
 								'width' => 540,
@@ -182,7 +195,7 @@
 			<div class="row">
 				<div class="col-md-4 col-sm-12">
 					<?php if (!empty($projects[5])) : ?>
-					<div class="item-wrapper">
+					<div class="item-wrapper" data-commercial="<?=$projects[5]['is_commercial']?>">
 						<div class="half">
 							<?php echo $this->Image->resize('/files/Images/' . $projects[5]['images'][0]['filename'], array(
 								'width' => 540,
@@ -208,7 +221,7 @@
 					</div>
 					<?php endif; ?>
 					<?php if (!empty($projects[6])) : ?>
-					<div class="item-wrapper">
+					<div class="item-wrapper" data-commercial="<?=$projects[6]['is_commercial']?>">
 						<div class="half">
 							<?php echo $this->Image->resize('/files/Images/' . $projects[6]['images'][0]['filename'], array(
 								'width' => 540,
@@ -236,7 +249,7 @@
 				</div>
 				<div class="col-md-8 col-sm-12">
 					<?php if (!empty($projects[7])) : ?>
-					<div class="item-wrapper">
+					<div class="item-wrapper" data-commercial="<?=$projects[7]['is_commercial']?>">
 						<?php echo $this->Image->resize('/files/Images/' . $projects[7]['images'][0]['filename'], array(
 								'width' => 1110,
 								'height' => 580,
@@ -264,7 +277,7 @@
 			<div class="row">
 				<div class="col-md-4 col-sm-12">
 					<?php if (!empty($projects[8])) : ?>
-					<div class="item-wrapper">
+					<div class="item-wrapper" data-commercial="<?=$projects[8]['is_commercial']?>">
 						<?php echo $this->Image->resize('/files/Images/' . $projects[8]['images'][0]['filename'], array(
 							'width' => 540,
 							'height' => 280,
@@ -290,7 +303,7 @@
 				</div>
 				<div class="col-md-4 col-sm-12">
 					<?php if (!empty($projects[9])) : ?>
-					<div class="item-wrapper">
+					<div class="item-wrapper" data-commercial="<?=$projects[9]['is_commercial']?>">
 						<?php echo $this->Image->resize('/files/Images/' . $projects[9]['images'][0]['filename'], array(
 							'width' => 540,
 							'height' => 280,
@@ -316,7 +329,7 @@
 				</div>
 				<div class="col-md-4 col-sm-12">
 					<?php if (!empty($projects[10])) : ?>
-					<div class="item-wrapper">
+					<div class="item-wrapper" data-commercial="<?=$projects[10]['is_commercial']?>">
 						<?php echo $this->Image->resize('/files/Images/' . $projects[10]['images'][0]['filename'], array(
 							'width' => 540,
 							'height' => 280,
@@ -344,7 +357,7 @@
 			<div class="row">
 				<div class="col-md-8 col-sm-12">
 					<?php if (!empty($projects[11])) : ?>
-					<div class="item-wrapper">
+					<div class="item-wrapper" data-commercial="<?=$projects[11]['is_commercial']?>">
 						<?php echo $this->Image->resize('/files/Images/' . $projects[11]['images'][0]['filename'], array(
 								'width' => 1110,
 								'height' => 580,
@@ -370,7 +383,7 @@
 				</div>
 				<div class="col-md-4 col-sm-12">
 					<?php if (!empty($projects[12])) : ?>
-					<div class="item-wrapper">
+					<div class="item-wrapper" data-commercial="<?=$projects[12]['is_commercial']?>">
 						<div class="half">
 							<?php echo $this->Image->resize('/files/Images/' . $projects[12]['images'][0]['filename'], array(
 								'width' => 540,
@@ -396,7 +409,7 @@
 					</div>
 					<?php endif; ?>
 					<?php if (!empty($projects[13])) : ?>
-					<div class="item-wrapper">
+					<div class="item-wrapper" data-commercial="<?=$projects[13]['is_commercial']?>">
 						<div class="half">
 							<?php echo $this->Image->resize('/files/Images/' . $projects[13]['images'][0]['filename'], array(
 								'width' => 540,
@@ -430,7 +443,7 @@
 					}
 				?>
 				<div class="col-md-4 col-sm-12">
-					<div class="item-wrapper">
+					<div class="item-wrapper" data-commercial="<?=$project['is_commercial']?>">
 						<?php echo $this->Image->resize('/files/Images/' . $project['images'][0]['filename'], array(
 							'width' => 540,
 							'height' => 280,
@@ -514,9 +527,11 @@
 									<?php
 										echo $this->Form->end();
 									?>
+
+									<button type="button" class="close" data-dismiss="modal">Close Window</button>
 							</div>
 						</div>
-						<div class="text-xs-center"><button type="button" class="close" data-dismiss="modal">Close Window</button></div>
+						
 					</div>
 		        </div>
 		      </div>

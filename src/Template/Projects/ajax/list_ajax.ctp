@@ -2,7 +2,7 @@
 <?php if (!empty($currentAjaxCategory)) : ?>
 	<h1><?=$currentAjaxCategory['name'];?></h1>
 <?php else : ?>
-	<p class="text-xs-center">You are currently viewing all of my projects. If you'd like to view a particular category of work, use the dropdown above. Cheers! <i class="fa fa-beer" aria-hidden="true"></i></p>
+	<p class="text-xs-center">You are currently viewing all of my projects. If you'd like to view a particular category or type of work, use the filters above 🧐.</p>
 <?php endif; ?>
 
 <?php if(empty($ajaxProjects)) : ?>
@@ -14,7 +14,7 @@
 <div class="row">
 	<div class="col-md-4 col-sm-12">
 		<?php if (!empty($ajaxProjects[0])) : ?>
-		<div class="item-wrapper">
+		<div class="item-wrapper" data-commercial="<?=$ajaxProjects[0]['is_commercial']?>">
 			<?php echo $this->Image->resize('/files/Images/' . $ajaxProjects[0]['images'][0]['filename'], array(
 				'width' => 570, 
 				'height' => 610, 
@@ -40,7 +40,7 @@
 	</div>
 	<div class="col-md-4 col-sm-12">
 		<?php if (!empty($ajaxProjects[1])) : ?>
-		<div class="item-wrapper">
+		<div class="item-wrapper" data-commercial="<?=$ajaxProjects[1]['is_commercial']?>">
 			<div class="half">
 				<!-- <img class="portfolio-item" id="item2" src="http://placehold.it/540x280"> -->
 				<?php echo $this->Image->resize('/files/Images/' . $ajaxProjects[1]['images'][0]['filename'], array(
@@ -67,7 +67,7 @@
 		</div>
 		<?php endif; ?>
 		<?php if (!empty($ajaxProjects[2])) : ?>
-		<div class="item-wrapper">
+		<div class="item-wrapper" data-commercial="<?=$ajaxProjects[2]['is_commercial']?>">
 			<div class="half">
 				<?php echo $this->Image->resize('/files/Images/' . $ajaxProjects[2]['images'][0]['filename'], array(
 					'width' => 540, 
@@ -95,7 +95,7 @@
 	</div>
 	<div class="col-md-4 col-sm-12">
 		<?php if (!empty($ajaxProjects[3])) : ?>
-		<div class="item-wrapper">
+		<div class="item-wrapper" data-commercial="<?=$ajaxProjects[3]['is_commercial']?>">
 			<div class="half">
 				<?php echo $this->Image->resize('/files/Images/' . $ajaxProjects[3]['images'][0]['filename'], array(
 					'width' => 540, 
@@ -121,7 +121,7 @@
 		</div>
 		<?php endif; ?>
 		<?php if (!empty($ajaxProjects[4])) : ?>
-		<div class="item-wrapper">
+		<div class="item-wrapper" data-commercial="<?=$ajaxProjects[4]['is_commercial']?>">
 			<div class="half">
 				<?php echo $this->Image->resize('/files/Images/' . $ajaxProjects[4]['images'][0]['filename'], array(
 					'width' => 540, 
@@ -150,7 +150,7 @@
 	<div class="row">
 		<div class="col-md-4 col-sm-12">
 			<?php if (!empty($ajaxProjects[5])) : ?>
-			<div class="item-wrapper">
+			<div class="item-wrapper" data-commercial="<?=$ajaxProjects[5]['is_commercial']?>">
 				<div class="half">
 					<?php echo $this->Image->resize('/files/Images/' . $ajaxProjects[5]['images'][0]['filename'], array(
 						'width' => 540, 
@@ -176,7 +176,7 @@
 			</div>
 			<?php endif; ?>
 			<?php if (!empty($ajaxProjects[6])) : ?>
-			<div class="item-wrapper">
+			<div class="item-wrapper" data-commercial="<?=$ajaxProjects[6]['is_commercial']?>">
 				<div class="half">
 					<?php echo $this->Image->resize('/files/Images/' . $ajaxProjects[6]['images'][0]['filename'], array(
 						'width' => 540, 
@@ -204,7 +204,7 @@
 		</div>
 		<div class="col-md-8 col-sm-12">
 			<?php if (!empty($ajaxProjects[7])) : ?>
-			<div class="item-wrapper">
+			<div class="item-wrapper" data-commercial="<?=$ajaxProjects[7]['is_commercial']?>">
 				<?php echo $this->Image->resize('/files/Images/' . $ajaxProjects[7]['images'][0]['filename'], array(
 						'width' => 1110, 
 						'height' => 580, 
@@ -237,7 +237,7 @@
 			}
 		?>
 		<div class="col-md-4 col-sm-12">
-			<div class="item-wrapper">
+			<div class="item-wrapper" data-commercial="<?=$project['is_commercial']?>">
 				<?php echo $this->Image->resize('/files/Images/' . $project['images'][0]['filename'], array(
 					'width' => 540, 
 					'height' => 280, 

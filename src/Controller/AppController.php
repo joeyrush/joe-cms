@@ -44,7 +44,7 @@ class AppController extends Controller
      */
     public function initialize()
     {
-        $this->forceSSL();
+        // $this->forceSSL();
         parent::initialize();
 
         $this->loadComponent('RequestHandler');

@@ -18,6 +18,10 @@
 		padding-top: 20px;
 		font-family: $secondary--font;
 
+		.checkboxes {
+			margin-top: 10px;
+		}
+
 
 		.profile-image {
 			background: transparent url('../../img/profile.jpg') no-repeat;
@@ -144,6 +148,15 @@
 
 			
 		}
+
+		&.disabled {
+			opacity: 0.2;
+			transition: all ease-in-out 0.4s;
+
+			.portfolio__overlay {
+				display: none !important;
+			}
+		}
 	}
 
 	.portfolio-item {
@@ -263,9 +276,8 @@
 // MODAL BELOW HERE ----------------------
 .project__modal {
 	.modal-content {
-		background: $primary--colour;
+		background: rgba($primary--colour, 0.85);
 		border: 3px solid white;
-		border-radius: 0 15px 0 0;
 		color: white;
 
 		h2 {
@@ -283,6 +295,7 @@
 				display: block;
 				margin-left: auto;
 				margin-right: auto;
+				width: 17px;
 			}
 
 			p {
@@ -292,6 +305,11 @@
 			h2 {
 				font-family: $tertiary--font;
 			}
+
+			a {
+				padding: 2px 5px;
+				border-radius: 2px;
+			}
 		}
 
 		form button {
@@ -300,7 +318,7 @@
 			border: none;
 			outline: none;
 			margin: 5px;
-			padding: 2px;
+			padding: 2px 5px;
 			font-size: 10px;
 
 			&:hover {
@@ -312,6 +330,14 @@
 
 	.modal-lg {
 		max-width: 1400px;
+
+		@media (max-width: $screen-xs-max) {
+			margin: 0;
+
+			.modal-content {
+				border-radius: 0;
+			}
+		}
 	}
 
 	.modal-header {
@@ -325,7 +351,6 @@
 			text-align: center;
 			background: white;
 			color: $primary--colour;
-			border-radius: 0 10px 0 0;
 			transition: all 0.25s;
 
 
@@ -337,12 +362,23 @@
 		}
 	}
 
-	 .galleria{ height: 650px; background: white; border-radius: 20px;}
+	 .galleria{ 
+	 	height: 650px; background: white; border-radius: 20px;
+
+	 	@media (max-width: $screen-xs-max) {
+	 		height: 375px;
+	 	}
+	 }
 	 .galleria-theme-classic { background: white; border-radius: 6px; }
 
 	 .close {
 	 	float:none;
 	 	margin-top: 20px;
+	 	margin-bottom: 20px;
+	 	color: white;
+	 	text-shadow:none;
+	 	opacity: 1;
+	 	font-weight: normal;
 	 }
 }
 	

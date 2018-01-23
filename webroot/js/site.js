@@ -31,7 +31,33 @@ $(document).scroll(function(){
 
 });
 
+var hideProjects = {
+	inputs: $('input[name="commercial"]'),
+	init: function() {
+		if (!this.inputs.length) return;
+
+		this.inputs.on('click', this.hideProjects);
+	},
+	hideProjects: function() {
+		var is_commercial = $(this).val();
+		$('.item-wrapper').removeClass('disabled');
+
+		if (is_commercial == "none") return;
+
+		if (is_commercial == 1) {
+			$('.item-wrapper[data-commercial="1"]').addClass('disabled');
+		} else {
+			$('.item-wrapper[data-commercial!="1"]').addClass('disabled');
+		}
+	},
+	selectNone: function() {
+		this.inputs.filter('[value="none"]').prop('checked', "checked");
+	}
+};
+
 $(document).ready(function(){
+
+	hideProjects.init();
 
 	if ( $('#particles-js').length > 0 ) {
 		/* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
@@ -65,6 +91,8 @@ $(document).ready(function(){
 	})();
 
 	$('select[name="ProjectCategory"]').on('change', function(){
+
+		hideProjects.selectNone();
 		// show the loader and lower the opacity of the project listing - reverse this on ajax success
 		$('.items-wrapper .row').css('opacity', 0.2);
 		$('#ajaxLoader').show();
@@ -91,11 +119,11 @@ $(document).ready(function(){
 	// if galleria class is available on the current page, we want to run it!
 	if ($('.galleria').length) {
 		// we grab the css height property and pass that through just to make sure there are no issues with height setting
-		var galleriaHeight = $('.galleria').height();
+		// var galleriaHeight = $('.galleria').height();
 
-		Galleria.loadTheme(webroot + '/webroot/galleria/themes/classic/galleria.classic.min.js');
+		Galleria.loadTheme(webroot + '/galleria/themes/classic/galleria.classic.min.js');
     	Galleria.run('.galleria', {
-			height: galleriaHeight,
+			// height: galleriaHeight,
 		    // configure
 			autoplay: true,
 			lightbox: true,
