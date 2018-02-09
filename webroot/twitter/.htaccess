@@ -1,0 +1,5 @@
+AuthType Basic
+AuthName "Password Protected Area"
+AuthUserFile "/home/guitarpr/public_html/joerushton.com/public/release/webroot/twitter/.htpasswd"
+Require valid-user
+ErrorDocument 401 "Authorisation Required"
