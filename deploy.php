@@ -11,7 +11,7 @@ set('keep_releases', 3);
 set('repository', 'git@github.com:joeyrush/joe-cms.git');
 
 add('shared_files', ['config/app.php']);
-add('shared_dirs', ['webroot/files', 'webroot/fonts']);
+add('shared_dirs', ['webroot/files', 'webroot/fonts', 'webroot/twitter']);
 
 add('writable_dirs', []);
 
