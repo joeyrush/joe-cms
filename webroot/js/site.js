@@ -57,6 +57,8 @@ var hideProjects = {
 
 $(document).ready(function(){
 
+	$('.match-height').matchHeight();
+
 	hideProjects.init();
 
 	if ( $('#particles-js').length > 0 ) {

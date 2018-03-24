@@ -2,6 +2,27 @@
 
 <div class="blog">
 	<div class="container">
+		<div class="tweets__wrapper">
+			<div class="twitter__listing">
+				<div class="row">
+					<?php foreach ($tweets as $tweet) : ?>
+							<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+								<div class="tweet match-height">
+									<i class="fa fa-twitter"></i>
+									<blockquote class="blockquote">
+										<a href="<?= $tweet['url']; ?>" target="_blank"><?= $tweet['message']; ?> <small>(click to view full tweet)</small></a>
+									</blockquote>
+									<span class="meta"><strong><?= $tweet['retweets']; ?></strong> Retweets</span>
+									<span class="meta"><strong><?= $tweet['likes']; ?></strong> Likes</span>
+									<div class="pull-right">
+										<span class="meta date"><?= $tweet['date']; ?></span>
+									</div>
+								</div>
+							</div>
+					<?php endforeach; ?>
+				</div>
+			</div>
+		</div>
 		<div class="blog__wrapper">
 			<div class="blog-head">
 				<h1><i class="fa fa-diamond" aria-hidden="true"></i> Joe's Programming Blog</h1>

@@ -50,6 +50,7 @@
     <?= $this->Html->script('minified/jquery.fancybox.pack.js'); ?>
     <?= $this->Html->script('minified/jquery.fancybox-media.js'); ?>
     <?= $this->Html->script('minified/particles.min.js'); ?>
+    <?= $this->Html->script('minified/jquery.matchHeight.js'); ?>
 
     <?php
         // load the site specific js after the external libraries as this is where they will be initialized

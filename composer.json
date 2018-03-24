@@ -12,7 +12,8 @@
         "cakephp/plugin-installer": "*",
         "twbs/bootstrap": "4.0.0-alpha.4",
         "dereuromark/cakephp-ajax": "dev-master",
-        "josegonzalez/cakephp-upload": "^3.6"
+        "josegonzalez/cakephp-upload": "^3.6",
+        "j7mbo/twitter-api-php": "^1.0"
     },
     "require-dev": {
         "psy/psysh": "@stable",

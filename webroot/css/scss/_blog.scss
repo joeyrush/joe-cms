@@ -10,12 +10,14 @@
 	padding-top: 50px;
 	min-height: 1080px;
 
+
+
 	.blog__wrapper {
 		margin-top: 60px;
 		margin-bottom: 60px;
-		border: 3px solid $primary--colour;
 		background: linear-gradient(rgba(225,225,225,0.8), rgba(200,200,200,0.8));
 		padding-bottom: 50px;
+   		box-shadow: 5px 5px 39px #7b7b7b;
 
 		h1, p {
 			font-family: $secondary--font;
@@ -41,8 +43,71 @@
 			}
 		}
 
+		.form__wrapper {
+			text-align: center;
+			width: 70%;
+			margin-left: auto;
+			margin-right: auto;
+			margin-bottom: 15px;
 
-		.blog__listing {
+			@media (max-width: $screen-xs-max) {
+				text-align: left;
+			}
+
+			> form > p {
+				margin-bottom: 10px;
+				margin-top: 15px;
+				font-weight: 800;
+			}
+
+			.checkbox {
+				display:inline;
+				margin-left: 10px;
+				margin-right: 10px;
+
+				@media (max-width: $screen-xs-max) {
+					float: left;
+					width: 45%;
+					font-size: 12px;
+					margin-left: 0;
+				}
+
+				label {
+					cursor: pointer;
+				}
+
+				label > div {
+					margin-right: 10px;
+				}
+
+				input {
+					margin-right: 5px;
+				}
+			}
+			.submit {
+				display:inline-block;
+				margin-top: 20px;
+
+				input {
+					padding-right: 25px;
+					padding-left: 25px;
+				}
+			}
+		}
+	}
+
+	.twitter__listing {
+		.row {
+			margin-bottom: 25px;
+			margin-left: 25px;
+		}
+
+		a, a > h2 {
+			color: black;
+		}
+	}
+
+	.blog__listing {
 			width: 80%;
 			margin-left:auto;
 			margin-right: auto;
@@ -129,59 +194,53 @@
 			}
 		}
 
-		.form__wrapper {
-			text-align: center;
-			width: 70%;
-			margin-left: auto;
-			margin-right: auto;
-			margin-bottom: 15px;
+	.tweets__wrapper {
+		margin-top: 60px;
+		margin-bottom: 60px;
 
-			@media (max-width: $screen-xs-max) {
-				text-align: left;
-			}
+		.tweet {
+			padding: 30px 30px 24px 30px;
+			margin-top: 10px;
+			margin-bottom: 10px;
+		    box-shadow: 2px 2px 17px #aaa;
+		    border-radius: 5px;
+		    border: none;
+		    background: white;
+		    position: relative;
 
-			> form > p {
-				margin-bottom: 10px;
-				margin-top: 15px;
-				font-weight: 800;
-			}
+		    i {
+		    	position: absolute;
+			    top: -19px;
+			    left: -17px;
+			    font-size: 49px;
+			    color: #00aced;
+		    }
 
-			.checkbox {
-				display:inline;
-				margin-left: 10px;
-				margin-right: 10px;
-
+		    blockquote {
+				position:relative;
+				font-size: 18px;
 				@media (max-width: $screen-xs-max) {
-					float: left;
-					width: 45%;
-					font-size: 12px;
-					margin-left: 0;
+					font-size: 14px;
 				}
+		    }
+		    blockquote small {
+		    	color: #888;
+		    	font-size: 10px;
+		    	position: absolute;
+			    left: 20px;
+			    top: -8px;
+			    text-transform: uppercase;
+		    }
 
-				label {
-					cursor: pointer;
-				}
-
-				label > div {
-					margin-right: 10px;
-				}
-
-				input {
-					margin-right: 5px;
-				}
-			}
-			.submit {
-				display:inline-block;
-				margin-top: 20px;
-
-				input {
-					padding-right: 25px;
-					padding-left: 25px;
-				}
-			}
+		    .meta {
+		    	padding-right: 15px;
+		    	font-size: 14px;
+		    }
+		    .date {
+		    	color: #666;
+		    	font-size: 10px;
+		    }
 		}
-
-
 	}
 }
 

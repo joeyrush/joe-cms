@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use App\Controller\AppController;
+use App\Lib\TwitterWrapper;
 use Cake\Event\Event;
 use Cake\Network\Exception\NotFoundException;
 
@@ -43,6 +44,17 @@ class BlogPostsController extends AppController {
 
 		$this->set('tags', $tagsList->toArray());
 		$this->set('blogPosts', $blogPosts);
+
+		$tweets = TwitterWrapper::getInstance()->getTweets([
+			967502012794507269, // JSON datatype column with Eloquent
+			966682093446156288, // A tiny "Gotcha"
+			965695498991566848, // High order functions
+			964885049991712773, // SEO bookmark
+			963176068998946821, // withCount
+			959057835639394305, // Controller refactor
+		]);
+
+		$this->set('tweets', $tweets);
 	}
 
 	public function view($slug = null) {
