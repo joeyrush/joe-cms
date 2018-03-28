@@ -310,6 +310,12 @@
 				padding: 2px 5px;
 				border-radius: 2px;
 			}
+
+			ul {
+				list-style-position: outside;
+				padding-left: 40px;
+				line-height: 1.85;
+			}
 		}
 
 		form button {

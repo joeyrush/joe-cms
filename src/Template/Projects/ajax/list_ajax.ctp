@@ -17,7 +17,7 @@
 		<div class="item-wrapper" data-commercial="<?=$ajaxProjects[0]['is_commercial']?>">
 			<?php echo $this->Image->resize('/files/Images/' . $ajaxProjects[0]['images'][0]['filename'], array(
 				'width' => 570, 
-				'height' => 610, 
+				'height' => 620, 
 				'htmlAttributes' => array(
 					'class' => 'portfolio-item'
 				),

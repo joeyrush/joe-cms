@@ -52,6 +52,8 @@ class BlogPostsController extends AppController {
 			964885049991712773, // SEO bookmark
 			963176068998946821, // withCount
 			959057835639394305, // Controller refactor
+			979047292509523968, // google calendar
+			977967440893235201, // dropcolumns array syntax
 		]);
 
 		$this->set('tweets', $tweets);
