@@ -1,16 +1,3 @@
-* {
-	margin: 0;
-	padding: 0;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
-}
-
-body {
-	overflow-x: hidden;
-}
-
-@import 'variables';
 
 .row.no-gutters {
   margin-right: 0;
@@ -64,41 +51,14 @@ body {
 	}
 }
 
-@import 'animate';
-@import 'typography';
-@import 'nav';
+* {
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
 
-// pages
-@import 'homepage';
-@import 'portfolio';
-@import 'outsideofwork';
-@import 'blog';
-@import 'gallery';
-
-@import 'footer';
-
-@import 'loader';
-
-// fix collisions between bootstrap 4 and prism.js (syntax highlighting)
-@import 'prism-bootstrap-fix';
-
-
-#ajaxLoader {
-	display: none;
-	width: 100%;
-	height: 100%;
-	background: transparent url('../../img/ajax-loader.gif') no-repeat;
-	background-position: 50% 100px;
-	z-index: 100;
-	position:absolute;
-	top: 0;
-	left: 0;
-	text-align: center;
-	color: $primary--colour;
-	font-family: $secondary--font;
-
-	> h4 {
-		margin-top: 170px;
-	}
-
+body {
+	overflow-x: hidden;
 }

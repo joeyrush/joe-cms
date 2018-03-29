@@ -9,15 +9,12 @@
     <?php echo $this->Html->meta('icon', 'favicon.ico'); ?>
 
     <?= $this->fetch('meta') ?>
-    <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Monda" rel="stylesheet">
-    <?= $this->Html->css('minified/bootstrap.min.css') ?>
-    <?= $this->Html->css('minified/site.min.css') ?>
-    <?= $this->Html->css('minified/jquery.fancybox.css') ?>
+    
+    <?= $this->Html->css('https://fonts.googleapis.com/css?family=Indie+Flower') ?>
+    <?= $this->Html->css('https://fonts.googleapis.com/css?family=Monda') ?>
     <?= $this->Html->css('https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css') ?>
-    <?= $this->Html->css('../flat/purple.css') ?>
+    <?= $this->Html->css('site.min.css') ?>
 
-    <?= $this->Html->css('prism.css') ?>
 
     <?= $this->fetch('css') ?>
     <?= $this->fetch('script') ?>
@@ -44,20 +41,8 @@
             )
         );
     ?>
-    <?= $this->Html->script('minified/bootstrap.min.js') ?>
-    <?= $this->Html->script('minified/icheck.min.js') ?>
     <?= $this->Html->script('https://cdnjs.cloudflare.com/ajax/libs/galleria/1.4.5/galleria.min.js'); ?>
-    <?= $this->Html->script('minified/jquery.fancybox.pack.js'); ?>
-    <?= $this->Html->script('minified/jquery.fancybox-media.js'); ?>
-    <?= $this->Html->script('minified/particles.min.js'); ?>
-    <?= $this->Html->script('minified/jquery.matchHeight.js'); ?>
 
-    <?php
-        // load the site specific js after the external libraries as this is where they will be initialized
-        echo $this->Html->script('minified/site.min.js')
-    ?>
-
-    <?= $this->Html->script('prism.js') ?>
-
+    <?php echo $this->Html->script('site.min.js') ?>
 </body>
 </html>

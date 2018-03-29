@@ -4,29 +4,43 @@ var gulp = require('gulp');
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
 var rename = require('gulp-rename');
+
+var importCss = require('gulp-import-css');
+
  // Concatenate & Minify JS Files
 gulp.task('scripts', function() {
-    return gulp.src('webroot/js/*.js')
-      .pipe(concat('site.js'))
+    return gulp.src([
+    		'resources/js/vendor/bootstrap.min.js',
+    		'resources/js/vendor/icheck.min.js',
+    		'resources/js/vendor/jquery.fancybox.pack.js',
+    		'resources/js/vendor/jquery.fancybox-media.js',
+    		'resources/js/vendor/particles.min.js',
+    		'resources/js/vendor/jquery.matchHeight.js',
+    		'resources/js/vendor/prism.js',
+    		'resources/js/load.js',
+    		'resources/js/site.js'
+    	])
+	    .pipe(concat('site.js'))
       	.pipe(rename({suffix: '.min'}))
       	.pipe(uglify())
-      	.pipe(gulp.dest('webroot/js/minified'));
+      	.pipe(gulp.dest('webroot/js'));
 });
  // Default Task
 gulp.task('default', ['scripts', 'sass', 'watch']);
 
 var sass = require('gulp-ruby-sass');
 gulp.task('sass', function() {
-	return sass('webroot/css/scss/site.scss', {style: 'compressed'})
+	return sass('resources/sass/site.scss', {style: 'compressed'})
 		.pipe(rename({suffix: '.min'}))
-		.pipe(gulp.dest('webroot/css/minified'));
+		.pipe(importCss())
+		.pipe(gulp.dest('webroot/css'));
 });
 
 gulp.task('watch', function() {
    // Watch .js files
-  gulp.watch('webroot/js/*.js', ['scripts']);
+  gulp.watch('resources/js/*.js', ['scripts']);
    // Watch .scss files
-  gulp.watch('webroot/css/scss/*.scss', ['sass']);
+  gulp.watch('resources/sass/*.scss', ['sass']);
    // Watch image files
   // gulp.watch('src/images/**/*', ['images']);
  });
