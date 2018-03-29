@@ -11,142 +11,143 @@
 		</h3>
 	</div>
 <?php else : ?>
-<div class="row">
-	<div class="col-md-4 col-sm-12">
-		<?php if (!empty($ajaxProjects[0])) : ?>
-		<div class="item-wrapper" data-commercial="<?=$ajaxProjects[0]['is_commercial']?>">
-			<?php echo $this->Image->resize('/files/Images/' . $ajaxProjects[0]['images'][0]['filename'], array(
-				'width' => 570, 
-				'height' => 620, 
-				'htmlAttributes' => array(
-					'class' => 'portfolio-item'
-				),
-				'quality' => 100,
-				'crop' => true,
-				'autocrop' => true
-			)); ?>
-			<div class="portfolio__overlay text-xs-center">
-				<div class="tall">
-					<h3><?=$ajaxProjects[0]['title']?></h3>
-					<p><?=$ajaxProjects[0]['description']?></p>
-					<a href="#" data-toggle="modal" data-target="#findOutMore" data-id="0">Find Out More</a>
-					<?php if(!empty($ajaxProjects[0]['url'])) : ?>
-						| <a href="<?=$ajaxProjects[0]['url'];?>" target="_blank">Visit Project</a>
-					<?php endif; ?>
+	<div class="row">
+		<div class="col-md-4 col-sm-12">
+			<?php if (!empty($ajaxProjects[0])) : ?>
+			<div class="item-wrapper" data-commercial="<?=$ajaxProjects[0]['is_commercial']?>">
+				<?php echo $this->Image->resize('/files/Images/' . $ajaxProjects[0]['images'][0]['filename'], array(
+					'width' => 570, 
+					'height' => 620, 
+					'htmlAttributes' => array(
+						'class' => 'portfolio-item'
+					),
+					'quality' => 100,
+					'crop' => true,
+					'autocrop' => true
+				)); ?>
+				<div class="portfolio__overlay text-xs-center">
+					<div class="tall">
+						<h3><?=$ajaxProjects[0]['title']?></h3>
+						<p><?=$ajaxProjects[0]['description']?></p>
+						<a href="#" data-toggle="modal" data-target="#findOutMore" data-id="0">Find Out More</a>
+						<?php if(!empty($ajaxProjects[0]['url'])) : ?>
+							| <a href="<?=$ajaxProjects[0]['url'];?>" target="_blank">Visit Project</a>
+						<?php endif; ?>
+					</div>
+				</div>
+			</div>
+			<?php endif; ?>
+		</div>
+		<div class="col-md-4 col-sm-12">
+			<?php if (!empty($ajaxProjects[1])) : ?>
+			<div class="item-wrapper" data-commercial="<?=$ajaxProjects[1]['is_commercial']?>">
+				<div class="half">
+					<!-- <img class="portfolio-item" id="item2" src="http://placehold.it/540x280"> -->
+					<?php echo $this->Image->resize('/files/Images/' . $ajaxProjects[1]['images'][0]['filename'], array(
+						'width' => 540, 
+						'height' => 280, 
+						'htmlAttributes' => array(
+							'class' => 'portfolio-item'
+						),
+						'quality' => 100,
+						'crop' => true,
+						'autocrop' => true
+					)); ?>
+				</div>
+				<div class="portfolio__overlay text-xs-center">
+					<div class="short">
+						<h3><?=$ajaxProjects[1]['title']?></h3>
+						<p><?=$ajaxProjects[1]['description']?></p>
+						<a href="#" data-toggle="modal" data-target="#findOutMore" data-id="1">Find Out More</a>
+						<?php if(!empty($ajaxProjects[1]['url'])) : ?>
+							| <a href="<?=$ajaxProjects[1]['url'];?>" target="_blank">Visit Project</a>
+						<?php endif; ?>
+					</div>
+				</div>
+			</div>
+			<?php endif; ?>
+			<?php if (!empty($ajaxProjects[2])) : ?>
+			<div class="item-wrapper" data-commercial="<?=$ajaxProjects[2]['is_commercial']?>">
+				<div class="half">
+					<?php echo $this->Image->resize('/files/Images/' . $ajaxProjects[2]['images'][0]['filename'], array(
+						'width' => 540, 
+						'height' => 280, 
+						'htmlAttributes' => array(
+							'class' => 'portfolio-item'
+						),
+						'quality' => 100,
+						'crop' => true,
+						'autocrop' => true
+					)); ?>
+				</div>
+				<div class="portfolio__overlay text-xs-center">
+					<div class="short">
+						<h3><?=$ajaxProjects[2]['title']?></h3>
+						<p><?=$ajaxProjects[2]['description']?></p>
+						<a href="#" data-toggle="modal" data-target="#findOutMore" data-id="2">Find Out More</a>
+						<?php if(!empty($ajaxProjects[2]['url'])) : ?>
+							| <a href="<?=$ajaxProjects[2]['url'];?>" target="_blank">Visit Project</a>
+						<?php endif; ?>
+					</div>
+				</div>
+			</div>
+			<?php endif; ?>
+		</div>
+		<div class="col-md-4 col-sm-12">
+			<?php if (!empty($ajaxProjects[3])) : ?>
+			<div class="item-wrapper" data-commercial="<?=$ajaxProjects[3]['is_commercial']?>">
+				<div class="half">
+					<?php echo $this->Image->resize('/files/Images/' . $ajaxProjects[3]['images'][0]['filename'], array(
+						'width' => 540, 
+						'height' => 280, 
+						'htmlAttributes' => array(
+							'class' => 'portfolio-item'
+						),
+						'quality' => 100,
+						'crop' => true,
+						'autocrop' => true
+					)); ?>
+				</div>
+				<div class="portfolio__overlay text-xs-center">
+					<div class="short">
+						<h3><?=$ajaxProjects[3]['title']?></h3>
+						<p><?=$ajaxProjects[3]['description']?></p>
+						<a href="#" data-toggle="modal" data-target="#findOutMore" data-id="3">Find Out More</a>
+						<?php if(!empty($ajaxProjects[3]['url'])) : ?>
+							| <a href="<?=$ajaxProjects[3]['url'];?>" target="_blank">Visit Project</a>
+						<?php endif; ?>
+					</div>
+				</div>
+			</div>
+			<?php endif; ?>
+			<?php if (!empty($ajaxProjects[4])) : ?>
+			<div class="item-wrapper" data-commercial="<?=$ajaxProjects[4]['is_commercial']?>">
+				<div class="half">
+					<?php echo $this->Image->resize('/files/Images/' . $ajaxProjects[4]['images'][0]['filename'], array(
+						'width' => 540, 
+						'height' => 280, 
+						'htmlAttributes' => array(
+							'class' => 'portfolio-item'
+						),
+						'quality' => 100,
+						'crop' => true,
+						'autocrop' => true
+					)); ?>
+				</div>
+				<div class="portfolio__overlay text-xs-center">
+					<div class="short">
+						<h3><?=$ajaxProjects[4]['title']?></h3>
+						<p><?=$ajaxProjects[4]['description']?></p>
+						<a href="#" data-toggle="modal" data-target="#findOutMore" data-id="4">Find Out More</a>
+						<?php if(!empty($ajaxProjects[4]['url'])) : ?>
+							| <a href="<?=$ajaxProjects[4]['url'];?>" target="_blank">Visit Project</a>
+						<?php endif; ?>
+					</div>
 				</div>
 			</div>
 		</div>
 		<?php endif; ?>
 	</div>
-	<div class="col-md-4 col-sm-12">
-		<?php if (!empty($ajaxProjects[1])) : ?>
-		<div class="item-wrapper" data-commercial="<?=$ajaxProjects[1]['is_commercial']?>">
-			<div class="half">
-				<!-- <img class="portfolio-item" id="item2" src="http://placehold.it/540x280"> -->
-				<?php echo $this->Image->resize('/files/Images/' . $ajaxProjects[1]['images'][0]['filename'], array(
-					'width' => 540, 
-					'height' => 280, 
-					'htmlAttributes' => array(
-						'class' => 'portfolio-item'
-					),
-					'quality' => 100,
-					'crop' => true,
-					'autocrop' => true
-				)); ?>
-			</div>
-			<div class="portfolio__overlay text-xs-center">
-				<div class="short">
-					<h3><?=$ajaxProjects[1]['title']?></h3>
-					<p><?=$ajaxProjects[1]['description']?></p>
-					<a href="#" data-toggle="modal" data-target="#findOutMore" data-id="1">Find Out More</a>
-					<?php if(!empty($ajaxProjects[1]['url'])) : ?>
-						| <a href="<?=$ajaxProjects[1]['url'];?>" target="_blank">Visit Project</a>
-					<?php endif; ?>
-				</div>
-			</div>
-		</div>
-		<?php endif; ?>
-		<?php if (!empty($ajaxProjects[2])) : ?>
-		<div class="item-wrapper" data-commercial="<?=$ajaxProjects[2]['is_commercial']?>">
-			<div class="half">
-				<?php echo $this->Image->resize('/files/Images/' . $ajaxProjects[2]['images'][0]['filename'], array(
-					'width' => 540, 
-					'height' => 280, 
-					'htmlAttributes' => array(
-						'class' => 'portfolio-item'
-					),
-					'quality' => 100,
-					'crop' => true,
-					'autocrop' => true
-				)); ?>
-			</div>
-			<div class="portfolio__overlay text-xs-center">
-				<div class="short">
-					<h3><?=$ajaxProjects[2]['title']?></h3>
-					<p><?=$ajaxProjects[2]['description']?></p>
-					<a href="#" data-toggle="modal" data-target="#findOutMore" data-id="2">Find Out More</a>
-					<?php if(!empty($ajaxProjects[2]['url'])) : ?>
-						| <a href="<?=$ajaxProjects[2]['url'];?>" target="_blank">Visit Project</a>
-					<?php endif; ?>
-				</div>
-			</div>
-		</div>
-		<?php endif; ?>
-	</div>
-	<div class="col-md-4 col-sm-12">
-		<?php if (!empty($ajaxProjects[3])) : ?>
-		<div class="item-wrapper" data-commercial="<?=$ajaxProjects[3]['is_commercial']?>">
-			<div class="half">
-				<?php echo $this->Image->resize('/files/Images/' . $ajaxProjects[3]['images'][0]['filename'], array(
-					'width' => 540, 
-					'height' => 280, 
-					'htmlAttributes' => array(
-						'class' => 'portfolio-item'
-					),
-					'quality' => 100,
-					'crop' => true,
-					'autocrop' => true
-				)); ?>
-			</div>
-			<div class="portfolio__overlay text-xs-center">
-				<div class="short">
-					<h3><?=$ajaxProjects[3]['title']?></h3>
-					<p><?=$ajaxProjects[3]['description']?></p>
-					<a href="#" data-toggle="modal" data-target="#findOutMore" data-id="3">Find Out More</a>
-					<?php if(!empty($ajaxProjects[3]['url'])) : ?>
-						| <a href="<?=$ajaxProjects[3]['url'];?>" target="_blank">Visit Project</a>
-					<?php endif; ?>
-				</div>
-			</div>
-		</div>
-		<?php endif; ?>
-		<?php if (!empty($ajaxProjects[4])) : ?>
-		<div class="item-wrapper" data-commercial="<?=$ajaxProjects[4]['is_commercial']?>">
-			<div class="half">
-				<?php echo $this->Image->resize('/files/Images/' . $ajaxProjects[4]['images'][0]['filename'], array(
-					'width' => 540, 
-					'height' => 280, 
-					'htmlAttributes' => array(
-						'class' => 'portfolio-item'
-					),
-					'quality' => 100,
-					'crop' => true,
-					'autocrop' => true
-				)); ?>
-			</div>
-			<div class="portfolio__overlay text-xs-center">
-				<div class="short">
-					<h3><?=$ajaxProjects[4]['title']?></h3>
-					<p><?=$ajaxProjects[4]['description']?></p>
-					<a href="#" data-toggle="modal" data-target="#findOutMore" data-id="4">Find Out More</a>
-					<?php if(!empty($ajaxProjects[4]['url'])) : ?>
-						| <a href="<?=$ajaxProjects[4]['url'];?>" target="_blank">Visit Project</a>
-					<?php endif; ?>
-				</div>
-			</div>
-		</div>
-	</div>
-	<?php endif; ?>
 	<div class="row">
 		<div class="col-md-4 col-sm-12">
 			<?php if (!empty($ajaxProjects[5])) : ?>
@@ -262,7 +263,6 @@
 		</div>
 		<?php endforeach; ?>
 	</div>
-</div>
 <?php endif; ?>
 
 <script>
