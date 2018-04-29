@@ -6,6 +6,7 @@ use App\Controller\AppController;
 use App\Lib\TwitterWrapper;
 use Cake\Event\Event;
 use Cake\Network\Exception\NotFoundException;
+use Cake\Utility\Hash;
 
 class BlogPostsController extends AppController {
 
@@ -40,7 +41,7 @@ class BlogPostsController extends AppController {
 
 		// find all tags for populating the checkboxes
 		$this->loadModel('Tags');
-		$tagsList = $this->Tags->find('list');
+		$tagsList = $this->Tags->find()->select(['id', 'name'])->combine('id', 'name'); // could do find('list') instead
 
 		$this->set('tags', $tagsList->toArray());
 		$this->set('blogPosts', $blogPosts);

@@ -13,6 +13,7 @@
  * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
 
+
 /*
  * You can remove this if you are confident that your PHP version is sufficient.
  */
