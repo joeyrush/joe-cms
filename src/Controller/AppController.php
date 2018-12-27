@@ -164,7 +164,7 @@ class AppController extends Controller
     }
 
     public function forceSSL() {
-        if (strpos($_SERVER['HTTP_HOST'], 'localhost') !== false || strpos($_SERVER['HTTP_HOST'], '.app') !== false) {
+        if (strpos($_SERVER['HTTP_HOST'], 'localhost') !== false || strpos($_SERVER['HTTP_HOST'], '.app') !== false || strpos($_SERVER['HTTP_HOST'], '.test') !== false) {
             return true;
         }
 

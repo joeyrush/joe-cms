@@ -1,3 +1,5 @@
+$primary--colour: #232323;
+
 #ajaxLoader {
 	display: none;
 	width: 100%;
@@ -10,7 +12,6 @@
 	left: 0;
 	text-align: center;
 	color: $primary--colour;
-	font-family: $secondary--font;
 
 	> h4 {
 		margin-top: 170px;
@@ -41,7 +42,6 @@
 
 	h1, h2 {
 		color: white;
-		font-family: $tertiary--font;
 		margin-bottom: 10px;
 		font-size: 20px;
 		padding: 10px;

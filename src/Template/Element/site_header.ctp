@@ -8,7 +8,7 @@
 	</div>
 </div>
 
-<nav class="navbar navbar-static-top">
+<!-- <nav class="navbar navbar-static-top">
   <button class="navbar-toggler hidden-lg-up" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><i class="fa fa-caret-down" aria-hidden="true"></i> Explore</button>
 	<div class="zigzag hidden-md-down"></div>
 	<div class="collapse navbar-toggleable-md" id="navbarResponsive">
@@ -87,3 +87,4 @@
 		</div>
 	</div>
 </nav>
+ -->
