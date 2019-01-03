@@ -10,14 +10,8 @@ var importCss = require('gulp-import-css');
  // Concatenate & Minify JS Files
 gulp.task('scripts', function() {
     return gulp.src([
-    		'resources/js/vendor/bootstrap.min.js',
-    		'resources/js/vendor/icheck.min.js',
-    		'resources/js/vendor/jquery.fancybox.pack.js',
-    		'resources/js/vendor/jquery.fancybox-media.js',
-    		'resources/js/vendor/particles.min.js',
-    		'resources/js/vendor/jquery.matchHeight.js',
-    		'resources/js/vendor/prism.js',
-    		'resources/js/load.js',
+        'node_modules/chart.js/dist/chart.min.js',
+        'resources/js/load.js',
     		'resources/js/site.js'
     	])
 	    .pipe(concat('site.js'))
@@ -30,10 +24,16 @@ gulp.task('default', ['scripts', 'sass', 'watch']);
 
 var sass = require('gulp-ruby-sass');
 gulp.task('sass', function() {
+  var tailwindcss = require('tailwindcss');
+  var postcss = require('gulp-postcss');
+
 	return sass('resources/sass/site.scss', {style: 'compressed'})
 		.pipe(rename({suffix: '.min'}))
-		.pipe(importCss())
-		.pipe(gulp.dest('webroot/css'));
+    .pipe(postcss([
+      tailwindcss('./tailwind.js'),
+    ]))
+    .pipe(importCss())
+		.pipe(gulp.dest('webroot/css'))
 });
 
 gulp.task('watch', function() {

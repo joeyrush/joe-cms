@@ -6,15 +6,13 @@
     <title>
         <?= $this->fetch('title') ?>
     </title>
-    <?php echo $this->Html->meta('icon', 'favicon.ico'); ?>
+    <?php echo $this->element('favicon'); ?>
 
     <?= $this->fetch('meta') ?>
-    
-    <?= $this->Html->css('https://fonts.googleapis.com/css?family=Indie+Flower') ?>
-    <?= $this->Html->css('https://fonts.googleapis.com/css?family=Monda') ?>
-    <?= $this->Html->css('https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css') ?>
+
     <?= $this->Html->css('site.min.css') ?>
 
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
 
     <?= $this->fetch('css') ?>
     <?= $this->fetch('script') ?>
@@ -23,7 +21,7 @@
 
     <?= $this->Html->script('https://code.jquery.com/jquery-2.2.4.min.js', ['integrity' => 'sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=', 'crossorigin' => 'anonymous']) ?>
 </head>
-<body>
+<body class="font-sans">
     <a name="top"></a>
     <?php echo $this->element('site_header'); ?>
     <?= $this->Flash->render() ?>

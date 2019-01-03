@@ -1,0 +1,58 @@
+.profile-picture {
+	img {
+		box-shadow: 0 13px 27px -5px rgba(50,50,93,.25), 0 8px 16px -8px rgba(0,0,0,.3);
+		width: 250px;
+	}
+}
+
+.card {
+	@apply mx-0 bg-grey-lighter;
+	box-shadow: 0 13px 27px -5px rgba(50,50,93,.25);
+	width: 100%;
+
+	@screen md {
+		@apply mx-4 flex flex-col rounded-lg mb-6;
+	}
+
+	@screen lg {
+		width: 45%;
+	}
+}
+
+.heading {
+	@apply bg-purple-extra-light
+		border-purple-darker
+		border-t-8
+		flex
+		justify-center
+		p-10;
+
+	background: url('/img/header.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background: repeating-linear-gradient(45deg, #f7ecff, #f5e9ff 10px, #fff 10px, #d8d5de 11px);
+
+	@screen md {
+		@apply border-purple-darker;
+	}
+	// background: u;
+}
+
+.card-header {
+	@apply bg-purple-darker
+		p-5
+		text-xl
+		text-purple-lightest
+		uppercase
+		tracking-wide
+		border-purple-dark
+		border-l-8;
+
+	@screen md {
+		@apply rounded-t-lg
+			border-0
+			bg-purple-lightest
+			text-purple-darker;
+
+	}
+}
