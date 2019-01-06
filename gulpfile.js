@@ -11,6 +11,7 @@ var importCss = require('gulp-import-css');
 gulp.task('scripts', function() {
     return gulp.src([
         'node_modules/chart.js/dist/chart.min.js',
+        'resources/js/vendor/prism.js',
         'resources/js/load.js',
     		'resources/js/site.js'
     	])

@@ -1,3 +1,5 @@
+@import url("../../vendor/prism.css");
+
 /**
  * This injects Tailwind's base styles, which is a combination of
  * Normalize.css and some additional base styles.
@@ -38,6 +40,8 @@
 @import 'loader';
 @import 'animate';
 @import 'homepage';
+@import 'header';
+@import 'blog';
 
 /**
  * This injects all of Tailwind's utility classes, generated based on your

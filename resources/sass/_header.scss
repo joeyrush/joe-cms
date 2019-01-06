@@ -1,0 +1,37 @@
+.header {
+	@apply bg-pink-lightest
+		border-pink-darker
+		border-t-8
+		flex
+		flex-col
+		justify-center
+		p-10;
+
+	background: repeating-linear-gradient(
+	  45deg,
+	  #ffebef,
+	  #ffebef 10px,
+	  lighten(#ffebef, .5%) 10px,
+	  lighten(#ffebef, .5%) 20px
+	);
+
+	@screen sm {
+		@apply flex-row;
+	}
+
+	@screen md {
+		@apply border-pink-darker;
+	}
+}
+
+.header-condensed {
+	@apply p-8
+		py-4;
+
+	justify-content: left;
+
+	img {
+		width: 75px;
+		height: 75px;
+	}
+}

@@ -14,12 +14,10 @@
 
 .card {
 	@apply mx-0 bg-grey-lighter bg-white;
-	// width: 100%;
 
 	@screen md {
 		@apply mx-4 flex flex-col rounded-lg mb-6;
 		box-shadow: 0 13px 27px -5px rgba(50,50,93,.25);
-		// width: 50%;
 	}
 }
 
@@ -34,24 +32,6 @@
 
 	@screen lg {
 		@apply flex-no-wrap;
-	}
-}
-
-.heading {
-	@apply bg-pink-lightest
-		border-pink-darker
-		border-t-8
-		flex
-		flex-col
-		justify-center
-		p-10;
-
-	@screen sm {
-		@apply flex-row;
-	}
-
-	@screen md {
-		@apply border-pink-darker;
 	}
 }
 

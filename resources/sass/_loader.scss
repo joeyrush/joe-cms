@@ -18,7 +18,7 @@ $primary--colour: #232323;
 	}
 }
 #loading{
-	background-color: $primary--colour;
+	@apply bg-black;
 	height: 100%;
 	width: 100%;
 	position: fixed;

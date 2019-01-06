@@ -1,6 +1,6 @@
 <?php echo $this->element('meta', ['metaTitle' => 'Home - Joe Rushton']); ?>
 
-<div class="heading">
+<div class="header animated slideInDown">
 	<div class="profile-picture text-center mb-4 sm:mb-0 sm:mr-10">
 		<img src="/img/me.png" alt="picture of me" class="rounded-full">
 	</div>
@@ -11,13 +11,14 @@
 			A <a href="https://www.quora.com/What-does-the-term-full-stack-programmer-mean-What-are-the-defining-traits-of-a-full-stack-programmer" target="_blank" rel="noopener noreferrer">fullstack web developer</a>, fitness addict and guitar player. My main objective for any project is to find the <em>simplest</em> and most <em>cost-effective</em> solution to achieve the desired results. My strongest skills lie within <strong>PHP-based applications</strong> but I'm constantly learning new ways to write better code and utilize new tools - ultimately, to become <strong class="text-pink-dark">more productive</strong>.
 			<br><br>
 			<div class="leading-normal sm:hidden md:block bg-white p-4 px-6 rounded-lg">
-				🤙<strong>My preferred stack</strong>: A <a href="https://medium.com/@benjburkholder/javascript-seo-server-side-rendering-vs-client-side-rendering-bc06b8ca2383" target="_blank" rel="noopener noreferrer">server-rendered</a> Laravel app where Vue would handle any interactive elements. On a day-to-day basis I also use Webpack, Git, jQuery, ES6, Gulp, Vuex, Vue-Router and CakePHP depending on the project. I've experience in writing well-documented REST APIs, a little TDD and a lot of in-house tool/plugin development.</p>
+				🤙<strong>My preferred stack</strong>: A <a href="https://medium.com/@benjburkholder/javascript-seo-server-side-rendering-vs-client-side-rendering-bc06b8ca2383" target="_blank" rel="noopener noreferrer">server-rendered</a> Laravel app where Vue would handle any interactive elements. On a day-to-day basis I also use Webpack, Git, jQuery, ES6, Gulp, Vuex, Vue-Router and CakePHP depending on the project. I've experience in writing well-documented REST APIs, a little TDD and a lot of in-house tool/plugin development.
 			</div>
+		</p>
 	</div>
 </div>
 
-<div class="block md:flex md:mt-10 mx-auto md:w-5/6">
-	<div class="card md:w-3/5">
+<div class="block md:flex md:mt-10 mx-auto md:w-full lg:w-5/6">
+	<div class="card md:w-3/5 animated slideInLeft">
 		<div class="card-header"><i class="fas fa-key pr-2"></i> Key Skills</div>
 
 		<p class="leading-normal p-6 px-12">Rather than listing out all of the various languages, frameworks and tools that I've ever used, I think it makes more sense to just show you this <em>one simple graph</em> which should just about cover it:</p>
@@ -26,17 +27,17 @@
 			<canvas id="myChart" width="400" height="400"></canvas>
 		</div>
 
-		<h4 class="p-12 pb-0">Anything else to add, Joe?</h4>
-		<p class="leading-normal p-12 pt-2 pb-2">
-			Other notable skills: Having a decent understanding of <span class="text-blue">OOP</span> and <span class="text-blue">SOLID principles</span> as well as knowledge of a wide range of <span class="text-pink-dark">refactoring techniques</span>, a keen eye for <span class="text-pink-dark">UI design</span> and a desire to <span class="text-pink-dark">automate everything</span> - be it via bash scripting, cronjobs, git hooks, CI/CD and anything else I can get my hands on.
+		<h4 class="p-12 pt-8 pb-0 text-lg">Additional Information</h4>
+		<p class="leading-normal p-12 pt-2 pb-8 sm:pb-2">
+			Other notable skills: Having a decent understanding of <span class="text-pink-darker font-bold">OOP</span> and <span class="text-pink-darker font-bold">SOLID principles</span> as well as knowledge of a wide range of <span class="text-pink-dark">refactoring techniques</span>, a keen eye for <span class="text-pink-dark">UI design</span> and a desire to <span class="text-pink-dark">automate everything</span> - be it via bash scripting, cronjobs, git hooks, CI/CD and anything else I can get my hands on.
 		</p>
 
-		<p class="leading-normal p-12 pt-4 pb-10 md:pb-0 text-grey-dark text-sm">
-			NB: most of my work has been done as part of an agency and due to Non-Discloure Agreements (NDA) and other variables, it's simpler to not publish them on my portfolio.
+		<p class="leading-normal text-center px-4 py-2 md:pb-3 bg-pink-lightest mt-auto text-pink-darker text-sm">
+			NB: Most commercial work isn't published here due to <a href="https://www.gov.uk/government/publications/non-disclosure-agreements" target="_blank" rel="noopener noreferrer">NDA</a> & other factors.
 		</p>
 	</div>
 
-	<div class="card flex-no-shrink md:w-2/5">
+	<div class="card lg:flex-no-shrink md:w-2/5 animated slideInRight">
 		<div class="card-header"><i class="fas fa-briefcase pr-2"></i> Main Projects</div>
 		<a href="https://dailywebdev.co.uk" target="_blank" rel="noopener noreferrer" class="project bg-grey-lightest">
 			<img src="https://dailywebdev.co.uk/img/program.svg" class="block w-1/2 mx-auto self-center" alt="key skills logo">
@@ -110,7 +111,7 @@
 	</div>
 
 	<div class="flex-1 mt-10 mx-4">
-		<h2 class="text-pink-darker mb-4 text-2xl">Courses I've Completed</h2>
+		<h2 class="text-pink-darker mb-4 text-2xl"><i class="fas fa-chalkboard-teacher pr-3"></i>Courses I've Completed</h2>
 		
 		<div class="p-2 pl-0">
 			<a href="https://laracasts.com/series/laravel-from-scratch-2017" target="_blank" class="text-pink pr-3" rel="noopener noreferrer">Laravel 5.4 From Scratch</a>
@@ -118,12 +119,12 @@
 		</div>
 
 		<div class="p-2 pl-0">
-			<a href="#" target="_blank" class="text-pink pr-3" rel="noopener noreferrer">Refactoring To Collections</a>
+			<a href="https://adamwathan.me/refactoring-to-collections/" target="_blank" class="text-pink pr-3" rel="noopener noreferrer">Refactoring To Collections</a>
 			<span class="text-sm text-grey-dark whitespace-no-wrap">Adam Wathan</span>
 		</div>
 
 		<div class="p-2 pl-0">
-			<a href="#" target="_blank" class="text-pink pr-3" rel="noopener noreferrer">Advanced Vue Component Design</a>
+			<a href="https://adamwathan.me/advanced-vue-component-design/" target="_blank" class="text-pink pr-3" rel="noopener noreferrer">Advanced Vue Component Design</a>
 			<span class="text-sm text-grey-dark whitespace-no-wrap">Adam Wathan</span>
 		</div>
 
@@ -133,7 +134,7 @@
 		</div>
 
 		<div class="p-2 pl-0">
-			<a href="#" target="_blank" class="text-pink pr-3" rel="noopener noreferrer">Refactoring UI</a>
+			<a href="https://refactoringui.com/" target="_blank" class="text-pink pr-3" rel="noopener noreferrer">Refactoring UI</a>
 			<span class="text-sm text-grey-dark whitespace-no-wrap">Steve Schoger & Adam Wathan</span>
 		</div>
 
@@ -142,21 +143,10 @@
 			<span class="text-sm text-grey-dark whitespace-no-wrap">Jeffrey Way (tutsplus)</span>
 		</div>
 
-		<h2 class="text-pink-darker mb-4 mt-10 text-2xl">Books I Recommend</h2>
-		
-		<div>
-			<span class="text-sm text-grey-dark whitespace-no-wrap">To be populated</span>
+		<h2 class="text-pink-darker mb-4 mt-10 text-2xl"><i class="fas fa-bookmark pr-3"></i>Books I Recommend</h2>
+		<div class="p-2 pl-0">
+			<a href="https://en.wikipedia.org/wiki/Don%27t_Make_Me_Think" target="_blank" class="text-pink pr-3" rel="noopener noreferrer">Don't Make Me Think, Revisited</a>
+			<span class="text-sm text-grey-dark whitespace-no-wrap">Steve Krug</span>
 		</div>
-	</div>
-
-	<div class="w-full mt-10 text-center">
-		<hr class="border-t-2 border-grey-lightest mb-4 w-1/3">
-		<h4 class="mb-4 text-pink-darker">Find me on social media</h4>
-		<a href="https://twitter.com/JoeRushton1" target="_blank" rel="noopener noreferrer" class="p-4 text-3xl no-underline text-pink-dark hover:text-pink">
-			<i class="fab fa-twitter"></i>
-		</a>
-		<a href="https://www.linkedin.com/in/joseph-rushton-530aba111/" target="_blank" rel="noopener noreferrer" class="p-4 text-3xl no-underline text-pink-dark hover:text-pink">
-			<i class="fab fa-linkedin-in"></i>
-		</a>
 	</div>
 </div>

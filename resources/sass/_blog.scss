@@ -1,0 +1,25 @@
+.wysiwyg {
+	img {
+		@apply rounded-lg
+			my-4;
+
+		box-shadow: 0 13px 27px -5px rgba(50,50,93,.25);
+	}
+
+	p > code {
+		@apply bg-pink-lighter
+			text-white
+			p-1;
+
+		white-space: nowrap;
+	}
+
+	iframe {
+		max-width: 100%;
+		height: auto;
+	}
+
+	pre code {
+		white-space: pre;
+	}
+}
