@@ -773,7 +773,7 @@ table {
   background: white;
   color: #232323;
   border-radius: 5px;
-  padding: 0 10px;
+  padding: 4px 10px;
 }
 
 #loading-center-absolute a:hover {
@@ -1055,6 +1055,10 @@ table {
   .project {
     flex-wrap: nowrap;
   }
+}
+
+.project:hover {
+  background-color: #ffebef;
 }
 
 .card-header {

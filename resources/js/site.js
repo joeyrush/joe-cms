@@ -1,4 +1,6 @@
 $(document).ready(function() {
+	initAnimations();
+
 	var ctx = document.getElementById("myChart");
 	var myChart = new Chart(ctx, {
 		type: 'horizontalBar',
@@ -66,3 +68,11 @@ $(document).ready(function() {
 		}
 	});
 });
+
+function initAnimations() {
+	$(".project").hover(function(){
+	    $(this).addClass('animated pulse faster');
+	}, function () {
+	    $(this).removeClass('animated pulse faster');
+	});
+}

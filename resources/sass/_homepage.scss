@@ -33,6 +33,10 @@
 	@screen lg {
 		@apply flex-no-wrap;
 	}
+
+	&:hover {
+		@apply bg-pink-lightest;
+	}
 }
 
 .card-header {
