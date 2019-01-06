@@ -1,7 +1,9 @@
 .wysiwyg {
 	img {
 		@apply rounded-lg
-			my-4;
+			my-8
+			mx-auto
+			block;
 
 		box-shadow: 0 13px 27px -5px rgba(50,50,93,.25);
 	}
