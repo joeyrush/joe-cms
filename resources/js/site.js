@@ -3,20 +3,20 @@ $(document).ready(function() {
 	var myChart = new Chart(ctx, {
 		type: 'horizontalBar',
 		data: {
-			labels: ["PHP", "JS", "Laravel", "CakePHP", "Linux", "HTML/CSS", "Vue", "Git", "MySQL" ],
+			labels: ["Modern CSS", "PHP", "JS", "Laravel", "CakePHP", "Vue", "Git", "MySQL", "Utility-First CSS", "Linux" ],
 			datasets: [{
 				label: 'Self-appointed Skill Level ',
-				data: [85, 35, 73, 65, 25, 68, 60, 40, 55],
+				data: [68, 85, 49, 73, 65, 60, 40, 55, 50, 25],
 				backgroundColor: [
-				'rgba(56,43,95, 0.85)',
-				'rgba(56,43,95, 0.8)',
-				'rgba(56,43,95, 0.75)',
-				'rgba(56,43,95, 0.7)',
-				'rgba(56,43,95, 0.7)',
-				'rgba(56,43,95, 0.65)',
-				'rgba(56,43,95, 0.45)',
-				'rgba(56,43,95, 0.45)',
-				'rgba(56,43,95, 0.4)'
+				'rgba(191, 53, 100, 0.85)',
+				'rgba(191, 53, 100, 0.8)',
+				'rgba(191, 53, 100, 0.75)',
+				'rgba(191, 53, 100, 0.7)',
+				'rgba(191, 53, 100, 0.7)',
+				'rgba(191, 53, 100, 0.65)',
+				'rgba(191, 53, 100, 0.45)',
+				'rgba(191, 53, 100, 0.45)',
+				'rgba(191, 53, 100, 0.4)'
 				],
 				borderColor: [
 				'rgba(255,99,132,1)',

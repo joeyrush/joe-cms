@@ -55,6 +55,15 @@ class PagesController extends AppController
         }
         $this->set(compact('page', 'subpage'));
 
+        // call loadPagename() to do page-specific stuff
+        if (!empty($this->request->params['pass'][0])) {
+            $methodName = 'load' . ucfirst($this->request->params['pass'][0]);
+
+            if (method_exists($this, $methodName)) {
+                $this->{$methodName}();
+            }
+        }
+
         try {
             $this->render(implode('/', $path));
         } catch (MissingTemplateException $e) {
@@ -63,6 +72,20 @@ class PagesController extends AppController
             }
             throw new NotFoundException();
         }
+    }
+
+    public function loadHomepage()
+    {
+        $this->loadModel('BlogPosts');
+        $blogPosts = $this->BlogPosts->find('all')->where(['BlogPosts.is_active' => 1])->contain([
+            'Images',
+            'Tags'
+        ])->order('BlogPosts.created DESC');
+        $blogPosts = $blogPosts->group('BlogPosts.id');
+        $blogPosts = $blogPosts->toArray();
+
+        $this->_addPlaceholderImageIfEmpty($blogPosts);
+        $this->set('blogPosts', $blogPosts);
     }
 
 }

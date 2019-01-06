@@ -1,0 +1,15 @@
+.order-1 {
+	order: 1;
+}
+
+.md\:order-1 {
+	@screen md {
+		order: 1;
+	}
+}
+
+.lg\:order-0 {
+	@screen lg {
+		order: 0;
+	}
+}

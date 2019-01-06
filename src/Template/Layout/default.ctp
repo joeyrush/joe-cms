@@ -21,7 +21,7 @@
 
     <?= $this->Html->script('https://code.jquery.com/jquery-2.2.4.min.js', ['integrity' => 'sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=', 'crossorigin' => 'anonymous']) ?>
 </head>
-<body class="font-sans">
+<body class="font-sans bg-white">
     <a name="top"></a>
     <?php echo $this->element('site_header'); ?>
     <?= $this->Flash->render() ?>
