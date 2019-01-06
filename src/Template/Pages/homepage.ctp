@@ -17,7 +17,7 @@
 	</div>
 </div>
 
-<div class="block md:flex md:mt-10 mx-auto md:w-full lg:w-5/6">
+<div class="block md:flex md:mt-10 mx-auto md:w-full lg:w-5/6 xxl:w-1/2">
 	<div class="card md:w-3/5 animated slideInLeft">
 		<div class="card-header"><i class="fas fa-key pr-2"></i> Key Skills</div>
 
@@ -32,7 +32,7 @@
 			Other notable skills: Having a decent understanding of <span class="text-pink-darker font-bold">OOP</span> and <span class="text-pink-darker font-bold">SOLID principles</span> as well as knowledge of a wide range of <span class="text-pink-dark">refactoring techniques</span>, a keen eye for <span class="text-pink-dark">UI design</span> and a desire to <span class="text-pink-dark">automate everything</span> - be it via bash scripting, cronjobs, git hooks, CI/CD and anything else I can get my hands on.
 		</p>
 
-		<p class="leading-normal text-center px-4 py-2 md:pb-3 bg-pink-lightest mt-auto text-pink-darker text-sm">
+		<p class="leading-normal text-center px-4 py-2 md:pb-3 bg-pink-lightest mt-6 md:mt-auto text-pink-darker text-sm">
 			NB: Most commercial work isn't published here due to <a href="https://www.gov.uk/government/publications/non-disclosure-agreements" target="_blank" rel="noopener noreferrer">NDA</a> & other factors.
 		</p>
 	</div>
@@ -76,7 +76,7 @@
 		</a>
 	</div>
 </div>
-<div class="flex flex-wrap w-full md:w-3/4 mx-auto mb-10">
+<div class="flex flex-wrap w-full md:w-3/4 mx-auto mb-10 xxl:w-1/2">
 	<div class="md:flex-1 mt-10 mx-4">
 		<h2 class="text-pink-darker mb-4 text-2xl">Blog Posts</h2>
 

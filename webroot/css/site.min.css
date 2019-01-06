@@ -735,7 +735,7 @@ table {
 }
 
 #loading {
-  background-color: #22292f;
+  background-color: #451225;
   height: 100%;
   width: 100%;
   position: fixed;
@@ -6777,6 +6777,12 @@ table {
 @media (min-width: 992px) {
   .lg\:order-0 {
     order: 0;
+  }
+}
+
+@media (min-width: 1920px) {
+  .xxl\:w-1\/2 {
+    width: 50% !important;
   }
 }
 

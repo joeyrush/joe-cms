@@ -13,3 +13,9 @@
 		order: 0;
 	}
 }
+
+@media (min-width: 1920px) {
+	.xxl\:w-1\/2 {
+		width: 50% !important;
+	}
+}
