@@ -8,7 +8,7 @@ $(document).ready(function() {
 			labels: ["PHP", "Laravel", "CakePHP", "MySQL", "SQL Tuning", "Modern CSS", "JS", "Vue", "Git", "AWS/EC2/S3", "DevOps/Ansible", "Linux" ],
 			datasets: [{
 				label: 'Self-appointed Skill Level ',
-				data: [80, 75, 70, 65, 60, 70, 49, 60, 45, 50, 19, 15, 22],
+				data: [80, 75, 70, 65, 60, 70, 49, 60, 45, 19, 15, 22],
 				backgroundColor: [
 				'rgba(235,82,134, 0.7)',
 				'rgba(235,82,134, 0.7)',
