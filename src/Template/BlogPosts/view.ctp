@@ -12,7 +12,7 @@
 </div>
 
 <div class="sm:w-2/3 md:w-1/2 px-8 sm:px-0 mx-auto mt-12 text-pink-darkest">
-	<h1 class="text-pink-darker leading-normal mb-2"><?=$blogPost['name'];?></h1>
+	<h1 class="text-pink-darker leading-normal mb-4 sm:mb-2 text-2xl sm:text-3xl"><?=$blogPost['name'];?></h1>
 	<div class="mb-6 flex justify-between flex-col sm:flex-row">
 		<span class="mb-2 sm:mb-0">
 			<i class="fa fa-calendar pr-1 text-pink-dark" aria-hidden="true"></i> <?=date('dS F Y', $blogPost['created']->toUnixString());?>
@@ -50,4 +50,8 @@
 	})();
 	</script>
 	<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+	<div class="sm:hidden mt-2">
+		<a href="/" class="uppercase font-bold no-underline"><i class="fas fa-arrow-left pr-2"></i> Back to Homepage</a>
+	</div>
 </div>
