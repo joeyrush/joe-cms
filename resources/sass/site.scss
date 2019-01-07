@@ -43,6 +43,10 @@
 @import 'header';
 @import 'blog';
 
+a {
+	@apply text-pink-dark;
+}
+
 /**
  * This injects all of Tailwind's utility classes, generated based on your
  * config file.

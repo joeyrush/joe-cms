@@ -1160,6 +1160,10 @@ table {
   white-space: pre;
 }
 
+a {
+  color: #eb5286;
+}
+
 .list-reset {
   list-style: none;
   padding: 0;
