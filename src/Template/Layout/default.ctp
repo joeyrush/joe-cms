@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="overflow-x-hidden">
+<html class="overflow-x-hidden sm:overflow-x-auto">
 <head>
     <?= $this->Html->charset() ?>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
