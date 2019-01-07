@@ -42,13 +42,13 @@
 		<a href="https://dailywebdev.co.uk" target="_blank" rel="noopener noreferrer" class="project bg-grey-lightest">
 			<img src="https://dailywebdev.co.uk/img/program.svg" class="block w-1/2 mx-auto self-center pb-2" alt="key skills logo">
 			<div class="flex flex-col pl-4 order-1 md:text-center lg:text-left">
-				<h3 class="py-2 pt-4 lg:pt-0 md:text-md text-lg md:text-sm md:text-base active:text-purple-darker hover:text-purple-dark focus:text-purple-darker">dailywebdev.co.uk</h3>
+				<h3 class="py-2 pt-4 lg:pt-0 md:text-md text-lg md:text-sm md:text-base text-pink-darker active:text-purple-darker hover:text-purple-dark focus:text-purple-darker">dailywebdev.co.uk</h3>
 				<p class="leading-normal text-sm text-grey-darker order-1">An infinite collection of miniature dev tips, populated automatically via a nifty twitter API integration. <em>Powered by Vue/Laravel</em></p>
 			</div>
 		</a>
 		<a href="https://carmats-uk.com" target="_blank" rel="noopener noreferrer" class="project">
 			<div class="flex flex-col pl-4 order-1 sm:order-0 md:order-1 lg:order-0 md:text-center lg:text-left">
-				<h3 class="py-2 pt-4 lg:pt-0 md:text-md text-lg md:text-sm md:text-base active:text-purple-darker hover:text-purple-dark focus:text-purple-darker">carmats-uk.com</h3>
+				<h3 class="py-2 pt-4 lg:pt-0 md:text-md text-lg md:text-sm md:text-base text-pink-darker active:text-purple-darker hover:text-purple-dark focus:text-purple-darker">carmats-uk.com</h3>
 				<p class="leading-normal text-sm text-grey-darker pr-2">A complex CakePHP fuelled e-commerce multi-site & CMS - developed as part of a team for a SEO-specialising web agency.</p>
 			</div>
 			<img src="/img/ecommerce.svg" class="block w-1/2 mx-auto self-center pb-2" alt="key skills logo">
@@ -56,13 +56,13 @@
 		<a href="https://wrestling.ly" target="_blank" rel="noopener noreferrer" class="project bg-grey-lightest">
 			<img src="/img/exercise.svg" class="block w-1/2 mx-auto self-center pb-2" alt="key skills logo">
 			<div class="flex flex-col pl-4 md:order-1 lg:order-0 md:text-center lg:text-left">
-				<h3 class="py-2 pt-4 lg:pt-0 md:text-md text-lg md:text-sm md:text-base active:text-purple-darker hover:text-purple-dark focus:text-purple-darker">wrestling.ly</h3>
+				<h3 class="py-2 pt-4 lg:pt-0 md:text-md text-lg md:text-sm md:text-base text-pink-darker active:text-purple-darker hover:text-purple-dark focus:text-purple-darker">wrestling.ly</h3>
 				<p class="leading-normal text-sm text-grey-darker">A gamified facebook-like social media platform built for the online wrestling community. Built in vanilla PHP & jQuery (not yet launched).</p>
 			</div>
 		</a>
 		<a href="https://uninotes.naturalornot.co.uk" target="_blank" rel="noopener noreferrer" class="project">
 			<div class="flex flex-col pl-4 order-1 sm:order-0 md:order-1 lg:order-0 md:text-center lg:text-left">
-				<h3 class="py-2 pt-4 lg:pt-0 md:text-md text-lg md:text-sm md:text-base active:text-purple-darker hover:text-purple-dark focus:text-purple-darker">uninotes.io</h3>
+				<h3 class="py-2 pt-4 lg:pt-0 md:text-md text-lg md:text-sm md:text-base text-pink-darker active:text-purple-darker hover:text-purple-dark focus:text-purple-darker">uninotes.io</h3>
 				<p class="leading-normal text-sm text-grey-darker pr-4">A feature-rich studying and note-taking web app featuring vast 3rd-party API integrations including Google Calendar, Dropbox and more.</p>
 			</div>
 			<img src="/img/notebook.svg" class="block w-1/2 mx-auto self-center pb-2" alt="key skills logo">
@@ -70,7 +70,7 @@
 		<a href="https://oxenmouth-news.com" target="_blank" rel="noopener noreferrer" class="project bg-grey-lightest">
 			<img src="/img/news.svg" class="block w-1/2 mx-auto self-center pb-2" alt="key skills logo">
 			<div class="flex flex-col pl-4 md:order-1 lg:order-0 md:text-center lg:text-left">
-				<h3 class="py-2 pt-4 lg:pt-0 md:text-md text-lg md:text-sm md:text-base active:text-purple-darker hover:text-purple-dark focus:text-purple-darker">oxenmouth-news.com</h3>
+				<h3 class="py-2 pt-4 lg:pt-0 md:text-md text-lg md:text-sm md:text-base text-pink-darker active:text-purple-darker hover:text-purple-dark focus:text-purple-darker">oxenmouth-news.com</h3>
 				<p class="leading-normal text-sm text-grey-darker">A satirical news <i class="fab fa-wordpress" aria-label="wordpress"></i> site used as an opportunity to develop our content, SEO & social media management skills.</p>
 			</div>
 		</a>
