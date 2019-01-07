@@ -1,11 +1,11 @@
 <?php echo $this->element('meta', ['metaTitle' => $blogPost['name']]); ?>
 <div class="header header-condensed animated slideInLeft">
-	<div class="profile-picture text-center mb-4 sm:mb-0 sm:mr-10">
+	<div class="profile-picture text-center mb-2 sm:mb-0 sm:mr-10">
 		<a href="/" aria-label="homepage">
 			<img src="/img/me.png" alt="picture of me" class="rounded-full">
 		</a>
 	</div>
-	<a class="flex flex-col justify-center sm:w-1/2 no-underline text-pink-darker" href="/" aria-label="homepage">
+	<a class="flex flex-col justify-center sm:w-1/2 no-underline text-pink-darker pb-2" href="/" aria-label="homepage">
 		<span class="text-center sm:text-left text-2xl">Joe Rushton</span>
 		<span class="text-pink-dark text-grey-darker text-xs uppercase tracking-wide mt-1 text-center sm:text-left">Fullstack Web Developer</span>
 	</a>

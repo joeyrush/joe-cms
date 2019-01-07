@@ -24,7 +24,12 @@
 .project {
 	@apply flex
 		p-6
-		no-underline;
+		no-underline
+		flex-wrap;
+
+	@screen sm {
+		@apply flex-no-wrap;
+	}
 
 	@screen md {
 		@apply flex-wrap;

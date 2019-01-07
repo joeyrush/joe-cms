@@ -11,7 +11,7 @@
 			A <a href="https://www.quora.com/What-does-the-term-full-stack-programmer-mean-What-are-the-defining-traits-of-a-full-stack-programmer" target="_blank" rel="noopener noreferrer">fullstack web developer</a>, fitness addict and guitar player. My main objective for any project is to find the <em>simplest</em> and most <em>cost-effective</em> solution to achieve the desired results. My strongest skills lie within <strong>PHP-based applications</strong> but I'm constantly learning new ways to write better code and utilize new tools - ultimately, to become <strong class="text-pink-dark">more productive</strong>.
 			<br><br>
 			<div class="leading-normal sm:hidden md:block bg-white p-4 px-6 rounded-lg">
-				🤙<strong>My preferred stack</strong>: A <a href="https://medium.com/@benjburkholder/javascript-seo-server-side-rendering-vs-client-side-rendering-bc06b8ca2383" target="_blank" rel="noopener noreferrer">server-rendered</a> Laravel app where Vue would handle any interactive elements. On a day-to-day basis I also use Webpack, Git, jQuery, ES6, Gulp, Vuex, Vue-Router and CakePHP depending on the project. I've experience in writing well-documented REST APIs, a little TDD and a lot of in-house tool/plugin development.
+				🤙<strong class="pl-1">My preferred stack</strong>: A <a href="https://medium.com/@benjburkholder/javascript-seo-server-side-rendering-vs-client-side-rendering-bc06b8ca2383" target="_blank" rel="noopener noreferrer">server-rendered</a> Laravel app where Vue would handle any interactive elements. On a day-to-day basis I also use Webpack, Git, jQuery, ES6, Gulp, Vuex, Vue-Router and CakePHP depending on the project. I've experience in writing well-documented REST APIs, a little TDD and a lot of in-house tool/plugin development.
 			</div>
 		</p>
 	</div>
@@ -40,35 +40,35 @@
 	<div class="card lg:flex-no-shrink md:w-2/5 animated slideInRight">
 		<div class="card-header"><i class="fas fa-briefcase pr-2"></i> Main Projects</div>
 		<a href="https://dailywebdev.co.uk" target="_blank" rel="noopener noreferrer" class="project bg-grey-lightest">
-			<img src="https://dailywebdev.co.uk/img/program.svg" class="block w-1/2 mx-auto self-center" alt="key skills logo">
+			<img src="https://dailywebdev.co.uk/img/program.svg" class="block w-1/2 mx-auto self-center pb-2" alt="key skills logo">
 			<div class="flex flex-col pl-4 order-1 md:text-center lg:text-left">
 				<h3 class="py-2 pt-4 lg:pt-0 md:text-md text-lg md:text-sm md:text-base active:text-purple-darker hover:text-purple-dark focus:text-purple-darker">dailywebdev.co.uk</h3>
 				<p class="leading-normal text-sm text-grey-darker order-1">An infinite collection of miniature dev tips, populated automatically via a nifty twitter API integration. <em>Powered by Vue/Laravel</em></p>
 			</div>
 		</a>
 		<a href="https://carmats-uk.com" target="_blank" rel="noopener noreferrer" class="project">
-			<div class="flex flex-col pl-4 md:order-1 lg:order-0 md:text-center lg:text-left">
+			<div class="flex flex-col pl-4 order-1 sm:order-0 md:order-1 lg:order-0 md:text-center lg:text-left">
 				<h3 class="py-2 pt-4 lg:pt-0 md:text-md text-lg md:text-sm md:text-base active:text-purple-darker hover:text-purple-dark focus:text-purple-darker">carmats-uk.com</h3>
 				<p class="leading-normal text-sm text-grey-darker pr-2">A complex CakePHP fuelled e-commerce multi-site & CMS - developed as part of a team for a SEO-specialising web agency.</p>
 			</div>
-			<img src="/img/ecommerce.svg" class="block w-1/2 mx-auto self-center" alt="key skills logo">
+			<img src="/img/ecommerce.svg" class="block w-1/2 mx-auto self-center pb-2" alt="key skills logo">
 		</a>
 		<a href="https://wrestling.ly" target="_blank" rel="noopener noreferrer" class="project bg-grey-lightest">
-			<img src="/img/exercise.svg" class="block w-1/2 mx-auto self-center" alt="key skills logo">
+			<img src="/img/exercise.svg" class="block w-1/2 mx-auto self-center pb-2" alt="key skills logo">
 			<div class="flex flex-col pl-4 md:order-1 lg:order-0 md:text-center lg:text-left">
 				<h3 class="py-2 pt-4 lg:pt-0 md:text-md text-lg md:text-sm md:text-base active:text-purple-darker hover:text-purple-dark focus:text-purple-darker">wrestling.ly</h3>
 				<p class="leading-normal text-sm text-grey-darker">A gamified facebook-like social media platform built for the online wrestling community. Built in vanilla PHP & jQuery (not yet launched).</p>
 			</div>
 		</a>
 		<a href="https://uninotes.naturalornot.co.uk" target="_blank" rel="noopener noreferrer" class="project">
-			<div class="flex flex-col pl-4 md:order-1 lg:order-0 md:text-center lg:text-left">
+			<div class="flex flex-col pl-4 order-1 sm:order-0 md:order-1 lg:order-0 md:text-center lg:text-left">
 				<h3 class="py-2 pt-4 lg:pt-0 md:text-md text-lg md:text-sm md:text-base active:text-purple-darker hover:text-purple-dark focus:text-purple-darker">uninotes.io</h3>
 				<p class="leading-normal text-sm text-grey-darker pr-4">A feature-rich studying and note-taking web app featuring vast 3rd-party API integrations including Google Calendar, Dropbox and more.</p>
 			</div>
-			<img src="/img/notebook.svg" class="block w-1/2 mx-auto self-center" alt="key skills logo">
+			<img src="/img/notebook.svg" class="block w-1/2 mx-auto self-center pb-2" alt="key skills logo">
 		</a>
 		<a href="https://oxenmouth-news.com" target="_blank" rel="noopener noreferrer" class="project bg-grey-lightest">
-			<img src="/img/news.svg" class="block w-1/2 mx-auto self-center" alt="key skills logo">
+			<img src="/img/news.svg" class="block w-1/2 mx-auto self-center pb-2" alt="key skills logo">
 			<div class="flex flex-col pl-4 md:order-1 lg:order-0 md:text-center lg:text-left">
 				<h3 class="py-2 pt-4 lg:pt-0 md:text-md text-lg md:text-sm md:text-base active:text-purple-darker hover:text-purple-dark focus:text-purple-darker">oxenmouth-news.com</h3>
 				<p class="leading-normal text-sm text-grey-darker">A satirical news <i class="fab fa-wordpress" aria-label="wordpress"></i> site used as an opportunity to develop our content, SEO & social media management skills.</p>

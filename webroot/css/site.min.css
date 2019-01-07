@@ -1043,6 +1043,13 @@ table {
   display: flex;
   padding: 1.5rem;
   text-decoration: none;
+  flex-wrap: wrap;
+}
+
+@media (min-width: 576px) {
+  .project {
+    flex-wrap: nowrap;
+  }
 }
 
 @media (min-width: 768px) {
