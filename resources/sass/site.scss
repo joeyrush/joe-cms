@@ -47,14 +47,6 @@ a {
 	@apply text-pink-dark;
 }
 
-html, body {
-	overflow-x: hidden;
-
-	@screen sm {
-		overflow-x: initial;
-	}
-}
-
 /**
  * This injects all of Tailwind's utility classes, generated based on your
  * config file.

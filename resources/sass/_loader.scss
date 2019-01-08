@@ -25,10 +25,12 @@ $primary--colour: #232323;
 	z-index: 1031; // stick that in your pipe and smoke it boostrap-fixed-header
 	margin-top: 0px;
 	top: 0px;
+	max-width: 100vw;
 }
 #loading-center{
 	width: 100%;
 	height: 100%;
+	max-width: 100vw;
 	position: relative;
 }
 #loading-center-absolute {

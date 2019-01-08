@@ -742,11 +742,13 @@ table {
   z-index: 1031;
   margin-top: 0px;
   top: 0px;
+  max-width: 100vw;
 }
 
 #loading-center {
   width: 100%;
   height: 100%;
+  max-width: 100vw;
   position: relative;
 }
 
@@ -1162,18 +1164,6 @@ table {
 
 a {
   color: #eb5286;
-}
-
-html,
-body {
-  overflow-x: hidden;
-}
-
-@media (min-width: 576px) {
-  html,
-  body {
-    overflow-x: initial;
-  }
 }
 
 .list-reset {
