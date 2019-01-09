@@ -1,9 +1,6 @@
 $(document).ready(function(){
 	setTimeout(function(){	
-		$('#loading').fadeOut();
+		$('#loading').fadeOut().remove();
+		$(window).trigger('resize');
 	}, 350);
-
-	setTimeout(function() {
-		$('body').css('overflow-x', 'hidden');
-	}, 1000);
 });

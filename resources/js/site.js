@@ -81,9 +81,5 @@ $(document).ready(function() {
 });
 
 function initAnimations() {
-	// $(".project").hover(function(){
-	//     $(this).addClass('animated pulse faster');
-	// }, function () {
-	//     $(this).removeClass('animated pulse faster');
-	// });
+	// 
 }

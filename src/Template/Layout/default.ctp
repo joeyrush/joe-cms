@@ -2,7 +2,7 @@
 <html>
 <head>
     <?= $this->Html->charset() ?>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <title>
         <?= $this->fetch('title') ?>
     </title>
@@ -31,6 +31,6 @@
 
     <?php echo $this->element('site_footer'); ?>
 
-    <?php echo $this->Html->script('site.min.js?v=1') ?>
+    <?php echo $this->Html->script('site.min.js?v=6') ?>
 </body>
 </html>
