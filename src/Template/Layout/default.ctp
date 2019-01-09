@@ -31,6 +31,6 @@
 
     <?php echo $this->element('site_footer'); ?>
 
-    <?php echo $this->Html->script('site.min.js') ?>
+    <?php echo $this->Html->script('site.min.js?v=1') ?>
 </body>
 </html>

@@ -134,11 +134,6 @@
 		</div>
 
 		<div class="p-2 pl-0">
-			<a href="https://refactoringui.com/" target="_blank" class="text-pink pr-3" rel="noopener noreferrer">Refactoring UI</a>
-			<span class="text-sm text-grey-dark whitespace-no-wrap">Steve Schoger & Adam Wathan</span>
-		</div>
-
-		<div class="p-2 pl-0">
 			<a href="https://code.tutsplus.com/courses/30-days-to-learn-jquery" target="_blank" class="text-pink pr-3" rel="noopener noreferrer">30 Days to Learn jQuery</a>
 			<span class="text-sm text-grey-dark whitespace-no-wrap">Jeffrey Way (tutsplus)</span>
 		</div>
@@ -147,6 +142,11 @@
 		<div class="p-2 pl-0">
 			<a href="https://en.wikipedia.org/wiki/Don%27t_Make_Me_Think" target="_blank" class="text-pink pr-3" rel="noopener noreferrer">Don't Make Me Think, Revisited</a>
 			<span class="text-sm text-grey-dark whitespace-no-wrap">Steve Krug</span>
+		</div>
+
+		<div class="p-2 pl-0">
+			<a href="https://refactoringui.com/book/" target="_blank" class="text-pink pr-3" rel="noopener noreferrer">Refactoring UI</a>
+			<span class="text-sm text-grey-dark whitespace-no-wrap">Steve Schoger & Adam Wathan</span>
 		</div>
 	</div>
 </div>
