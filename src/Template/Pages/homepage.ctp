@@ -43,7 +43,7 @@
 			<img src="https://dailywebdev.co.uk/img/program.svg" class="block w-1/2 mx-auto self-center pb-2" alt="key skills logo">
 			<div class="flex flex-col pl-4 order-1 md:text-center lg:text-left">
 				<h3 class="py-2 pt-4 lg:pt-0 md:text-md text-lg md:text-sm md:text-base text-pink-darker active:text-purple-darker hover:text-purple-dark focus:text-purple-darker">dailywebdev.co.uk</h3>
-				<p class="leading-normal text-sm text-grey-darker order-1">An infinite collection of miniature dev tips, populated automatically via a nifty twitter API integration. <em>Powered by Vue/Laravel</em></p>
+				<p class="leading-normal text-sm text-grey-darker order-1">An infinite collection of hand-crafted filterable dev tips, populated automatically via a nifty twitter API integration. <em>Powered by Vue/Laravel</em></p>
 			</div>
 		</a>
 		<a href="https://carmats-uk.com" target="_blank" rel="noopener noreferrer" class="project">
