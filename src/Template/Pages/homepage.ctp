@@ -17,7 +17,7 @@
 	</div>
 </div>
 
-<div class="block md:flex md:mt-10 mx-auto md:w-full lg:w-5/6 xxl:w-1/2">
+<div class="block md:flex md:mt-10 mx-auto md:w-full lg:w-5/6 xxl:w-1/2 overflow-hidden">
 	<div class="card md:w-3/5 animated slideInLeft">
 		<div class="card-header">
 			<div class="icon"><i class="fas fa-key"></i></div>
