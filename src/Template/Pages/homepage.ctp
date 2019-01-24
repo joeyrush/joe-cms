@@ -19,9 +19,12 @@
 
 <div class="block md:flex md:mt-10 mx-auto md:w-full lg:w-5/6 xxl:w-1/2">
 	<div class="card md:w-3/5 animated slideInLeft">
-		<div class="card-header"><i class="fas fa-key pr-2"></i> Key Skills</div>
+		<div class="card-header">
+			<div class="icon"><i class="fas fa-key"></i></div>
+			<div class="text">Key Skills</div>
+		</div>
 
-		<p class="leading-normal p-6 px-12">Rather than listing out all of the various languages, frameworks and tools that I've ever used, I think it makes more sense to just show you this <em>one simple graph</em> which should just about cover it:</p>
+		<p class="leading-normal p-6">Instead of <i>boring you</i> with a list of <strong class="text-pink-darker">everything I've ever touched</strong>, here's a graph which hopefully gives you a nice little overview of where I'm at in my career in terms of the relevant skills.</p>
 
 		<div class="p-4">
 			<canvas id="myChart" width="400" height="400"></canvas>
@@ -38,7 +41,10 @@
 	</div>
 
 	<div class="card lg:flex-no-shrink md:w-2/5 animated slideInRight">
-		<div class="card-header"><i class="fas fa-briefcase pr-2"></i> Main Projects</div>
+		<div class="card-header">
+			<div class="icon"><i class="fas fa-briefcase"></i></div>
+			<div class="text">Main Projects</div>
+		</div>
 		<a href="https://dailywebdev.co.uk" target="_blank" rel="noopener noreferrer" class="project bg-grey-lightest">
 			<img src="https://dailywebdev.co.uk/img/program.svg" class="block w-1/2 mx-auto self-center pb-2" alt="key skills logo">
 			<div class="flex flex-col pl-4 order-1 md:text-center lg:text-left">

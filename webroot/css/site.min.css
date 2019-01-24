@@ -1072,21 +1072,43 @@ table {
 
 .card-header {
   background-color: #6f213f;
-  padding: 1.25rem;
+  display: flex;
   font-size: 1.25rem;
   color: #fff;
-  text-transform: uppercase;
   letter-spacing: .05em;
-  border-color: #eb5286;
-  border-left-width: 8px;
+  border-width: 4px;
+  text-transform: uppercase;
+  border-color: #6f213f;
 }
 
 @media (min-width: 768px) {
   .card-header {
     border-top-left-radius: .5rem;
     border-top-right-radius: .5rem;
-    border-width: 0;
   }
+}
+
+.card-header .icon {
+  padding: .5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  color: #6f213f;
+  border-radius: 0;
+  background-color: #fff;
+}
+
+@media (min-width: 768px) {
+  .card-header .icon {
+    border-top-left-radius: .5rem;
+    border-top-right-radius: .5rem;
+    border-bottom-right-radius: .5rem;
+  }
+}
+
+.card-header .text {
+  margin-left: .75rem;
+  padding: .5rem;
+  padding-left: 0;
 }
 
 .blog-list-item img {

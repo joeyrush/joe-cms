@@ -5,16 +5,17 @@ $(document).ready(function() {
 	var myChart = new Chart(ctx, {
 		type: 'horizontalBar',
 		data: {
-			labels: ["PHP", "Laravel", "CakePHP", "MySQL", "SQL Tuning", "Modern CSS", "JS", "Vue", "Git", "AWS/EC2/S3", "DevOps/Ansible", "Linux" ],
+			labels: ["PHP", "Laravel", "CakePHP", "MySQL", "Webpack", "Modern CSS", "JS", "Vue", "Git", "AWS/EC2/S3", "Docker", "DevOps/Ansible", "Nginx/Apache" ],
 			datasets: [{
 				label: 'Self-appointed Skill Level ',
-				data: [80, 75, 70, 65, 60, 70, 49, 60, 45, 19, 15, 22],
+				data: [80, 75, 70, 65, 55, 70, 49, 60, 45, 19, 23, 15, 25],
 				backgroundColor: [
 				'rgba(235,82,134, 0.7)',
 				'rgba(235,82,134, 0.7)',
 				'rgba(235,82,134, 0.7)',
 				'rgba(235,82,134, 0.7)',
-				'rgba(235,82,134, 0.7)',
+				'rgba(111,33,63, 0.7)',
+				'rgba(94,7,144, 0.7)',
 				'rgba(94,7,144, 0.7)',
 				'rgba(94,7,144, 0.7)',
 				'rgba(94,7,144, 0.7)',

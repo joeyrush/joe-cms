@@ -46,17 +46,33 @@
 
 .card-header {
 	@apply bg-pink-darker
-		p-5
+		flex
 		text-xl
 		text-white
-		uppercase
 		tracking-wide
-		border-pink-dark
-		border-l-8;
+		border-4
+		uppercase
+		border-pink-darker;
 
 	@screen md {
-		@apply rounded-t-lg
-			border-0;
+		@apply rounded-t-lg;
+	}
+
+	.icon {
+		@apply p-2 px-4
+			text-pink-darker
+			rounded-none
+			bg-white;
+
+		@screen md {
+			@apply rounded-tl-lg
+				rounded-tr-lg
+				rounded-br-lg;
+		}
+	}
+
+	.text {
+		@apply ml-3 p-2 pl-0;
 	}
 }
 
