@@ -1,0 +1,5 @@
+- Minify CSS
+- Version CSS/JS
+- ES6 / babel
+- Minify HTML on server
+- Setup migrations to run on deploy
