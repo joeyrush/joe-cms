@@ -482,7 +482,7 @@
 		        	<div class="row">
 						<div class="col-md-7">
 							<div class="galleria">
-								<?php echo $this->Html->image('/img/upload-empty.png', array(
+								<?php echo $this->Html->image('/img/no-image.png', array(
 									'data-title' => 'test',
 									'data-description' => 'test'
 								)); ?>

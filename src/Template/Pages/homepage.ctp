@@ -11,7 +11,7 @@
 			A <a href="https://www.quora.com/What-does-the-term-full-stack-programmer-mean-What-are-the-defining-traits-of-a-full-stack-programmer" target="_blank" rel="noopener noreferrer" class="text-pink-darker">fullstack web developer</a>, fitness addict and guitar player. My main objective for any project is to find the <em>simplest</em> and most <em>cost-effective</em> solution to achieve the desired results. My strongest skills lie within <strong>PHP-based applications</strong> but I'm constantly learning new ways to write better code and utilize new tools - ultimately, to become <strong class="text-pink-dark">more productive</strong>.
 			<br><br>
 			<div class="leading-normal sm:hidden md:block bg-white p-4 px-6 rounded-lg">
-				<i class="fas fa-stream pr-1"></i> <strong>My preferred stack</strong>: A <a href="https://medium.com/@benjburkholder/javascript-seo-server-side-rendering-vs-client-side-rendering-bc06b8ca2383" target="_blank" rel="noopener noreferrer">server-rendered</a> Laravel app where Vue would handle any interactive elements. On a day-to-day basis I also use Webpack, Git, jQuery, ES6, Gulp, Vuex, Vue-Router and CakePHP depending on the project. I've experience in writing well-documented REST APIs, a little TDD and a lot of in-house tool/plugin development.
+				<i class="fas fa-stream pr-1"></i> <strong>My preferred stack</strong>: A <a href="https://medium.com/@benjburkholder/javascript-seo-server-side-rendering-vs-client-side-rendering-bc06b8ca2383" target="_blank" rel="noopener noreferrer">server-rendered</a> Laravel app with sprinkles of Vue. On a day-to-day basis I also use Webpack, Git, jQuery, ES6, Gulp, Vuex, Vue-Router and CakePHP depending on the project. I've experience in writing well-documented REST APIs, a little TDD and a lot of in-house tool & plugin development.
 			</div>
 		</p>
 	</div>
@@ -89,11 +89,12 @@
 		<?php foreach ($blogPosts as $blogPost): ?>
 			<?php
 				$img = $this->Image->resize('/files/Images/' . $blogPost['images'][0]['filename'], array(
-					'width' => 40,
-					'height' => 40,
+					'width' => 80,
+					'height' => 80,
 					'quality' => 100,
 					'crop' => true,
-					'autocrop' => true
+					'autocrop' => true,
+					'htmlAttributes' => ['width' => 40, 'height' => 40]
 				));
 
 				$url = array(
@@ -120,6 +121,11 @@
 		<h2 class="text-pink-darker mb-4 text-2xl"><i class="fas fa-chalkboard-teacher pr-3"></i>Courses I've Completed</h2>
 		
 		<div class="p-2 pl-0">
+			<a href="https://course.testdrivenlaravel.com/" target="_blank" class="text-pink pr-3" rel="noopener noreferrer">Test-Driven Laravel</a>
+			<span class="text-sm text-grey-dark whitespace-no-wrap">Adam Wathan</span>
+		</div>
+
+		<div class="p-2 pl-0">
 			<a href="https://laracasts.com/series/laravel-from-scratch-2017" target="_blank" class="text-pink pr-3" rel="noopener noreferrer">Laravel 5.4 From Scratch</a>
 			<span class="text-sm text-grey-dark whitespace-no-wrap">Jeffrey Way (laracasts)</span>
 		</div>
@@ -144,6 +150,11 @@
 			<span class="text-sm text-grey-dark whitespace-no-wrap">Jeffrey Way (tutsplus)</span>
 		</div>
 
+		<div class="p-2 pl-0">
+			<a href="https://javascript30.com/" target="_blank" class="text-pink pr-3" rel="noopener noreferrer">Javascript 30</a>
+			<span class="text-sm text-grey-dark whitespace-no-wrap">Wes Bos</span>
+		</div>
+
 		<h2 class="text-pink-darker mb-4 mt-10 text-2xl"><i class="fas fa-bookmark pr-3"></i>Books I Recommend</h2>
 		<div class="p-2 pl-0">
 			<a href="https://en.wikipedia.org/wiki/Don%27t_Make_Me_Think" target="_blank" class="text-pink pr-3" rel="noopener noreferrer">Don't Make Me Think, Revisited</a>
@@ -153,6 +164,16 @@
 		<div class="p-2 pl-0">
 			<a href="https://refactoringui.com/book/" target="_blank" class="text-pink pr-3" rel="noopener noreferrer">Refactoring UI</a>
 			<span class="text-sm text-grey-dark whitespace-no-wrap">Steve Schoger & Adam Wathan</span>
+		</div>
+
+		<div class="p-2 pl-0">
+			<a href="https://www.amazon.co.uk/Take-My-Money-Accepting-Payments/dp/1680501992" target="_blank" class="text-pink pr-3" rel="noopener noreferrer">Take My Money (accepting payments)</a>
+			<span class="text-sm text-grey-dark whitespace-no-wrap">Noel Rappin</span>
+		</div>
+
+		<div class="p-2 pl-0">
+			<a href="https://www.amazon.co.uk/Doesnt-Have-Be-Crazy-Work/dp/0008323445/ref=sr_1_1?ie=UTF8&qid=1549192790&sr=8-1&keywords=it+doesnt+have+to+be+crazy+at+work" target="_blank" class="text-pink pr-3" rel="noopener noreferrer">It Doesn't Have to Be Crazy at Work</a>
+			<span class="text-sm text-grey-dark whitespace-no-wrap">DHH & Jason Fried</span>
 		</div>
 	</div>
 </div>

@@ -25,7 +25,7 @@ class Image {
 		$fullpath = WWW_ROOT . $path;
 
 		if (!file_exists($fullpath) || !is_file($fullpath)) {
-			$path = 'img/upload-empty.png';
+			$path = 'img/no-image.png';
 			$fullpath = WWW_ROOT . $path;
 		}
 

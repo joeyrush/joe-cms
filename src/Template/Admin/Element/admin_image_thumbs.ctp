@@ -4,7 +4,7 @@
             if (!empty($image['filepath']) && !empty($image['filename'])) {
                 $imagePath = '/files/Images/' . $image['filename'];
             } else {
-                $imagePath = '/img/upload-empty.png';
+                $imagePath = '/img/no-image.png';
             }
         ?>
 

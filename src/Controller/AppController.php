@@ -157,7 +157,7 @@ class AppController extends Controller
     protected function _addPlaceholderImageIfEmpty(&$data) {
         foreach ($data as &$item) {
             if (empty($item['images'])) {
-                $item['images'][0]['filename'] = 'upload-empty.png';
+                $item['images'][0]['filename'] = 'no-image.png';
             }
         }
         unset($item);

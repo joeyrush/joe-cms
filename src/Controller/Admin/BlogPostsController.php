@@ -18,7 +18,7 @@ class BlogPostsController extends AppController
      */
     public function index()
     {
-        $blogPosts = $this->paginate($this->BlogPosts);
+        $blogPosts = $this->paginate($this->BlogPosts, ['order' => 'created DESC']);
 
         $this->set(compact('blogPosts'));
         $this->set('_serialize', ['blogPosts']);
