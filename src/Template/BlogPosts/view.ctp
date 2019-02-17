@@ -11,7 +11,7 @@
 	</a>
 </div>
 
-<div class="sm:w-2/3 md:w-1/2 px-8 sm:px-0 mx-auto mt-12 text-pink-darkest">
+<div class="sm:w-2/3 md:w-1/2 xxl:w-1/3 px-8 sm:px-0 mx-auto mt-12 text-pink-darkest">
 	<h1 class="text-pink-darker leading-normal mb-4 sm:mb-2 text-2xl sm:text-3xl"><?=$blogPost['name'];?></h1>
 	<div class="mb-6 flex justify-between flex-col sm:flex-row">
 		<span class="mb-2 sm:mb-0">
@@ -32,7 +32,7 @@
 		</div>
 	</div>
 
-	<div class="wysiwyg text-grey-darkest leading-loose my-8">
+	<div class="wysiwyg text-grey-darkest leading-loosest my-8">
 		<?=$blogPost['body'];?>
 	</div>
 

@@ -25,6 +25,12 @@
 		height: auto;
 	}
 
+	pre {
+		max-width: 100%;
+		overflow-x: auto;
+		margin: 2rem 0;
+	}
+
 	pre code {
 		white-space: pre;
 	}

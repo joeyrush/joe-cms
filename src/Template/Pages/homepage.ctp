@@ -11,7 +11,7 @@
 			A <a href="https://www.quora.com/What-does-the-term-full-stack-programmer-mean-What-are-the-defining-traits-of-a-full-stack-programmer" target="_blank" rel="noopener noreferrer" class="text-pink-darker">fullstack web developer</a>, fitness addict and guitar player. My main objective for any project is to find the <em>simplest</em> and most <em>cost-effective</em> solution to achieve the desired results. My strongest skills lie within <strong>PHP-based applications</strong> but I'm constantly learning new ways to write better code and utilize new tools - ultimately, to become <strong class="text-pink-dark">more productive</strong>.
 			<br><br>
 			<div class="leading-normal sm:hidden md:block bg-white p-4 px-6 rounded-lg">
-				<i class="fas fa-stream pr-1"></i> <strong>My preferred stack</strong>: A <a href="https://medium.com/@benjburkholder/javascript-seo-server-side-rendering-vs-client-side-rendering-bc06b8ca2383" target="_blank" rel="noopener noreferrer">server-rendered</a> Laravel app with sprinkles of Vue. On a day-to-day basis I also use Webpack, Git, jQuery, ES6, Gulp, Vuex, Vue-Router and CakePHP depending on the project. I've experience in writing well-documented REST APIs, a little TDD and a lot of in-house tool & plugin development.
+				<i class="fas fa-stream pr-1"></i> <strong>My preferred stack</strong>: A <a href="https://medium.com/@benjburkholder/javascript-seo-server-side-rendering-vs-client-side-rendering-bc06b8ca2383" target="_blank" rel="noopener noreferrer">server-rendered</a> Laravel app with sprinkles of Vue. Webpack, Babel, SASS and all that good stuff are a given.
 			</div>
 		</p>
 	</div>
@@ -32,7 +32,11 @@
 
 		<h4 class="p-12 pt-8 pb-0 text-lg">Additional Information</h4>
 		<p class="leading-normal p-12 pt-2 pb-8 sm:pb-2">
-			Other notable skills: Having a decent understanding of <span class="text-pink-darker font-bold">OOP</span> and <span class="text-pink-darker font-bold">SOLID principles</span> as well as knowledge of a wide range of <span class="text-pink-dark">refactoring techniques</span>, a keen eye for <span class="text-pink-dark">UI design</span> and a desire to <span class="text-pink-dark">automate everything</span> - be it via bash scripting, cronjobs, git hooks, CI/CD and anything else I can get my hands on.
+			I've experience in writing <a rel="noopener noreferrer" target="_blank" href="https://swagger.io/tools/swagger-ui/">well-documented</a> REST APIs, a little TDD and a lot of in-house tool & plugin development.
+		</p>
+		<br>
+		<p class="leading-normal p-12 pt-2 pb-8 sm:pb-2">
+			Honourable Mentions: Having a decent understanding of <span class="text-pink-darker font-bold">OOP</span> and <span class="text-pink-darker font-bold">SOLID principles</span> as well as knowledge of a wide range of <span class="text-pink-dark">refactoring techniques</span>, a keen eye for <span class="text-pink-dark">UI design</span> and a desire to <span class="text-pink-dark">automate everything</span> - be it via bash scripting, cronjobs, git hooks, CI/CD and anything else I can get my hands on.
 		</p>
 
 		<p class="leading-normal text-center px-4 py-2 md:pb-3 bg-pink-lightest mt-6 md:mt-auto text-pink-darker text-sm">

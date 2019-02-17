@@ -172,6 +172,7 @@ module.exports = {
     'md': '768px',
     'lg': '992px',
     'xl': '1200px',
+    'xxl': '1500px'
   },
 
 
@@ -312,6 +313,7 @@ module.exports = {
     'tight': 1.25,
     'normal': 1.5,
     'loose': 2,
+    'loosest': 2.5
   },
 
 
