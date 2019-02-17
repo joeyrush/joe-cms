@@ -36,7 +36,7 @@
 		</p>
 		<br>
 		<p class="leading-normal p-12 pt-2 pb-8 sm:pb-2">
-			Honourable Mentions: Having a decent understanding of <span class="text-pink-darker font-bold">OOP</span> and <span class="text-pink-darker font-bold">SOLID principles</span> as well as knowledge of a wide range of <span class="text-pink-dark">refactoring techniques</span>, a keen eye for <span class="text-pink-dark">UI design</span> and a desire to <span class="text-pink-dark">automate everything</span> - be it via bash scripting, cronjobs, git hooks, CI/CD and anything else I can get my hands on.
+			Honourable Mentions: Having a decent understanding of <span class="text-pink-darker font-bold">OOP & SOLID</span> as well as knowledge of a wide range of <span class="text-pink-dark">refactoring techniques</span>, a keen eye for <span class="text-pink-dark">UI design</span> and a desire to <span class="text-pink-dark">automate everything</span> with bash scripts, cronjobs, CI/CD and anything else I can get my hands on.
 		</p>
 
 		<p class="leading-normal text-center px-4 py-2 md:pb-3 bg-pink-lightest mt-6 md:mt-auto text-pink-darker text-sm">
