@@ -63,7 +63,7 @@
 			</div>
 			<img src="/img/ecommerce.svg" class="block w-1/2 mx-auto self-center pb-2" alt="key skills logo">
 		</a>
-		<a href="https://wrestling.ly" target="_blank" rel="noopener noreferrer" class="project bg-grey-lightest">
+		<a href="http://wrestling.joerushton.com/" target="_blank" rel="noopener noreferrer" class="project bg-grey-lightest">
 			<img src="/img/exercise.svg" class="block w-1/2 mx-auto self-center pb-2" alt="key skills logo">
 			<div class="flex flex-col pl-4 md:order-1 lg:order-0 md:text-center lg:text-left">
 				<h3 class="py-2 pt-4 lg:pt-0 md:text-md text-lg md:text-sm md:text-base text-pink-darker active:text-purple-darker hover:text-purple-dark focus:text-purple-darker">wrestling.ly</h3>
