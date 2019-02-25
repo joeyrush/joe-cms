@@ -6,130 +6,62 @@
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 <!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
 
+
 <url>
   <loc>https://joerushton.com/</loc>
-  <changefreq>monthly</changefreq>
+  <lastmod>2019-02-25T07:03:13+00:00</lastmod>
+  <priority>1.00</priority>
 </url>
 <url>
-  <loc>https://joerushton.com/projects</loc>
-  <changefreq>monthly</changefreq>
+  <loc>https://joerushton.com/blog/generating-seeders-from-existing-data-in-laravel</loc>
+  <lastmod>2019-02-25T07:03:13+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://joerushton.com/blog</loc>
-  <changefreq>monthly</changefreq>
+  <loc>https://joerushton.com/blog/git-bits-to-learn-as-a-gui-user</loc>
+  <lastmod>2019-02-25T07:03:13+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://joerushton.com/webroot/old/</loc>
-  <lastmod>2017-09-09T14:25:35+00:00</lastmod>
-  <changefreq>monthly</changefreq>
-</url>
-<url>
-  <loc>https://joerushton.com/old/CompDept/index.php</loc>
-  <changefreq>monthly</changefreq>
+  <loc>https://joerushton.com/blog/eliminating-smell-from-your-codebase-part-1</loc>
+  <lastmod>2019-02-25T07:03:13+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
   <loc>https://joerushton.com/blog/setting-up-windows-for-web-development</loc>
-  <changefreq>monthly</changefreq>
+  <lastmod>2019-02-25T07:03:13+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
   <loc>https://joerushton.com/blog/oauth-php56-on-laravel-homestead</loc>
-  <changefreq>monthly</changefreq>
+  <lastmod>2019-02-25T07:03:13+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
   <loc>https://joerushton.com/blog/paypal-recurring-payments</loc>
-  <changefreq>monthly</changefreq>
+  <lastmod>2019-02-25T07:03:13+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
   <loc>https://joerushton.com/blog/improve-mysql-performance-php</loc>
-  <changefreq>monthly</changefreq>
+  <lastmod>2019-02-25T07:03:13+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
   <loc>https://joerushton.com/blog/php-performance-with-notices-and-warnings</loc>
-  <changefreq>monthly</changefreq>
+  <lastmod>2019-02-25T07:03:13+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
   <loc>https://joerushton.com/blog/remembering-form-values-php</loc>
-  <changefreq>monthly</changefreq>
+  <lastmod>2019-02-25T07:03:13+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
   <loc>https://joerushton.com/blog/lazy-loading-iframes-slick-slider</loc>
-  <changefreq>monthly</changefreq>
+  <lastmod>2019-02-25T07:03:13+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
-<url>
-  <loc>https://joerushton.com/blog/new-site-launch</loc>
-  <changefreq>monthly</changefreq>
-</url>
-<url>
-  <loc>https://joerushton.com/webroot/old/CompDept/index.php</loc>
-  <changefreq>monthly</changefreq>
-</url>
-<url>
-  <loc>https://joerushton.com/webroot/old/dl/justgiving.pdf</loc>
-  <lastmod>2017-09-09T14:25:34+00:00</lastmod>
-  <changefreq>monthly</changefreq>
-</url>
-<url>
-  <loc>https://joerushton.com/old/CompDept/about.php</loc>
-  <changefreq>monthly</changefreq>
-</url>
-<url>
-  <loc>https://joerushton.com/old/CompDept/courses.php</loc>
-  <changefreq>monthly</changefreq>
-</url>
-<url>
-  <loc>https://joerushton.com/old/CompDept/staff.php</loc>
-  <changefreq>monthly</changefreq>
-</url>
-<url>
-  <loc>https://joerushton.com/old/CompDept/student-work.php</loc>
-  <changefreq>monthly</changefreq>
-</url>
-<url>
-  <loc>https://joerushton.com/old/CompDept/placements.php</loc>
-  <changefreq>monthly</changefreq>
-</url>
-<url>
-  <loc>https://joerushton.com/old/CompDept/industry.php</loc>
-  <changefreq>monthly</changefreq>
-</url>
-<url>
-  <loc>https://joerushton.com/old/CompDept/sitemap.php</loc>
-  <changefreq>monthly</changefreq>
-</url>
-<url>
-  <loc>https://joerushton.com/webroot/old/CompDept/about.php</loc>
-  <changefreq>monthly</changefreq>
-</url>
-<url>
-  <loc>https://joerushton.com/webroot/old/CompDept/courses.php</loc>
-  <changefreq>monthly</changefreq>
-</url>
-<url>
-  <loc>https://joerushton.com/webroot/old/CompDept/staff.php</loc>
-  <changefreq>monthly</changefreq>
-</url>
-<url>
-  <loc>https://joerushton.com/webroot/old/CompDept/student-work.php</loc>
-  <changefreq>monthly</changefreq>
-</url>
-<url>
-  <loc>https://joerushton.com/webroot/old/CompDept/placements.php</loc>
-  <changefreq>monthly</changefreq>
-</url>
-<url>
-  <loc>https://joerushton.com/webroot/old/CompDept/industry.php</loc>
-  <changefreq>monthly</changefreq>
-</url>
-<url>
-  <loc>https://joerushton.com/webroot/old/CompDept/sitemap.php</loc>
-  <changefreq>monthly</changefreq>
-</url>
-<url>
-  <loc>https://joerushton.com/old/CompDept/bsc-computing.php</loc>
-  <changefreq>monthly</changefreq>
-</url>
-<url>
-  <loc>https://joerushton.com/webroot/old/CompDept/bsc-computing.php</loc>
-  <changefreq>monthly</changefreq>
-</url>
+
+
 </urlset>
