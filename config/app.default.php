@@ -9,7 +9,8 @@ return [
      * Development Mode:
      * true: Errors and warnings shown.
      */
-    'debug' => filter_var(env('DEBUG', true), FILTER_VALIDATE_BOOLEAN),
+    //'debug' => filter_var(env('DEBUG', true), FILTER_VALIDATE_BOOLEAN),
+    'debug' => true,
 
     /**
      * Configure basic information about the application.
@@ -64,7 +65,7 @@ return [
      *   You should treat it as extremely sensitive data.
      */
     'Security' => [
-        'salt' => env('SECURITY_SALT', '__SALT__'),
+        'salt' => env('SECURITY_SALT', 'bb4a63edc7d82bb69e514c0257fcb794d3af4ca884e94cbe3362590a1d5ae96b'),
     ],
 
     /**
@@ -150,7 +151,7 @@ return [
      *   breathing room to complete logging or error handling.
      */
     'Error' => [
-        'errorLevel' => E_ALL,
+        'errorLevel' => 'E_ALL & ~E_USER_DEPRECATED',
         'exceptionRenderer' => 'Cake\Error\ExceptionRenderer',
         'skipLog' => [],
         'log' => true,
@@ -218,7 +219,7 @@ return [
      * See vendor\cakephp\cakephp\src\Database\Driver for complete list
      */
     'Datasources' => [
-        'default' => [
+        'local' => [
             'className' => 'Cake\Database\Connection',
             'driver' => 'Cake\Database\Driver\Mysql',
             'persistent' => false,
@@ -229,9 +230,9 @@ return [
              * the following line and set the port accordingly
              */
             //'port' => 'non_standard_port_number',
-            'username' => 'my_app',
+            'username' => 'root',
             'password' => 'secret',
-            'database' => 'my_app',
+            'database' => 'joe-cms',
             'encoding' => 'utf8',
             'timezone' => 'UTC',
             'flags' => [],
@@ -280,6 +281,48 @@ return [
             //'init' => ['SET GLOBAL innodb_stats_on_metadata = 0'],
             'url' => env('DATABASE_TEST_URL', null),
         ],
+        'default' => [
+            'className' => 'Cake\Database\Connection',
+            'driver' => 'Cake\Database\Driver\Mysql',
+            'persistent' => false,
+            'host' => '127.0.0.1',
+            /**
+             * CakePHP will use the default DB port based on the driver selected
+             * MySQL on MAMP uses port 8889, MAMP users will want to uncomment
+             * the following line and set the port accordingly
+             */
+            //'port' => 'non_standard_port_number',
+            'username' => env('DB_USER', null),
+            'password' => 'secret',
+            'database' => 'joe-cms',
+            'encoding' => 'utf8',
+            'timezone' => 'UTC',
+            'flags' => [],
+            'cacheMetadata' => true,
+            'log' => false,
+
+            /**
+             * Set identifier quoting to true if you are using reserved words or
+             * special characters in your table or column names. Enabling this
+             * setting will result in queries built using the Query Builder having
+             * identifiers quoted when creating SQL. It should be noted that this
+             * decreases performance because each query needs to be traversed and
+             * manipulated before being executed.
+             */
+            'quoteIdentifiers' => false,
+
+            /**
+             * During development, if using MySQL < 5.6, uncommenting the
+             * following line could boost the speed at which schema metadata is
+             * fetched from the database. It can also be set directly with the
+             * mysql configuration directive 'innodb_stats_on_metadata = 0'
+             * which is the recommended value in production environments
+             */
+            //'init' => ['SET GLOBAL innodb_stats_on_metadata = 0'],
+
+            'url' => env('DATABASE_URL', null),
+        ],
+
     ],
 
     /**
@@ -340,7 +383,11 @@ return [
      *
      * To use database sessions, load the SQL file located at config/Schema/sessions.sql
      */
-    'Session' => [
-        'defaults' => 'php',
-    ],
+     'Session' => [
+         'defaults' => 'cake',
+         'timeout' => 0,
+         'ini' => [
+           'session.gc_maxlifetime' => 144000
+         ]
+     ],
 ];

@@ -15,12 +15,13 @@
 namespace App\Controller;
 
 use Cake\Controller\Controller;
-use Cake\Event\Event;
 use Cake\Core\Configure;
+use Cake\Error\Debugger;
+use Cake\Event\Event;
 use Cake\Network\Exception\NotFoundException;
-use Cake\View\Exception\MissingTemplateException;
 use Cake\ORM\TableRegistry;
 use Cake\Routing\Router;
+use Cake\View\Exception\MissingTemplateException;
 
 /**
  * Application Controller
@@ -44,7 +45,7 @@ class AppController extends Controller
      */
     public function initialize()
     {
-        $this->forceSSL();
+        // $this->forceSSL();
         parent::initialize();
 
         $this->loadComponent('RequestHandler');
